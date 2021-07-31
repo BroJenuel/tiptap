@@ -1,23 +1,25 @@
-.history
+*.log
+.cache
 .DS_Store
+.temp
 node_modules
-dist/
-coverage/
-
-# local env files
-.env.local
-.env.*.local
+dist
+.env
+.env.*
 
 # Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw*
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+.rpt2_cache
+.rts2_cache
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
+
+tests/cypress/videos
+/tests/cypress/screenshots

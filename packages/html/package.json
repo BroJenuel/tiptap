@@ -1,0 +1,33 @@
+{
+  "name": "@tiptap/html",
+  "description": "utility package to render tiptap JSON as HTML",
+  "version": "2.0.0-beta.92",
+  "homepage": "https://tiptap.dev",
+  "keywords": [
+    "tiptap",
+    "tiptap utility"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ueberdosis"
+  },
+  "main": "dist/tiptap-html.cjs.js",
+  "umd": "dist/tiptap-html.umd.js",
+  "module": "dist/tiptap-html.esm.js",
+  "types": "dist/packages/html/src/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "dependencies": {
+    "@tiptap/core": "^2.0.0-beta.93",
+    "hostic-dom": "^0.8.7",
+    "prosemirror-model": "^1.14.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "directory": "packages/html"
+  }
+}

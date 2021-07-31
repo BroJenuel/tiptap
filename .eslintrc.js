@@ -1,62 +1,91 @@
 module.exports = {
-  plugins: ['html'],
-
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-
   env: {
     es6: true,
     node: true,
   },
-
-  globals: {
-    document: false,
-    navigator: false,
-    window: false,
-    collect: false,
-    cy: false,
-    test: false,
-    expect: false,
-    it: false,
-    describe: false,
-    FileReader: false,
-  },
-
-  extends: [
-    'plugin:vue/base',
-    'airbnb-base',
+  overrides: [
+    {
+      files: [
+        './**/*.ts',
+        './**/*.tsx',
+        './**/*.js',
+        './**/*.jsx',
+        './**/*.vue',
+      ],
+      plugins: [
+        'html',
+        'cypress',
+        '@typescript-eslint',
+      ],
+      env: {
+        'cypress/globals': true,
+      },
+      globals: {
+        document: false,
+        window: false,
+      },
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:vue/strongly-recommended',
+        'airbnb-base',
+      ],
+      rules: {
+        'no-continue': 'off',
+        'no-alert': 'off',
+        'no-console': ['warn', { allow: ['warn', 'error'] }],
+        semi: ['error', 'never'],
+        'import/order': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'import/no-unresolved': 'off',
+        'import/no-dynamic-require': 'off',
+        'arrow-parens': ['error', 'as-needed'],
+        'padded-blocks': 'off',
+        'class-methods-use-this': 'off',
+        'global-require': 'off',
+        'func-names': ['error', 'never'],
+        'arrow-body-style': 'off',
+        'max-len': 'off',
+        'vue/one-component-per-file': 'off',
+        'vue/this-in-template': ['error', 'never'],
+        'vue/max-attributes-per-line': ['error', {
+          singleline: 3,
+          multiline: {
+            max: 1,
+            allowFirstLine: false,
+          },
+        }],
+        'vue/singleline-html-element-content-newline': 'off',
+        'no-param-reassign': 'off',
+        'import/prefer-default-export': 'off',
+        'consistent-return': 'off',
+        'prefer-destructuring': 'off',
+        'no-redeclare': 'off',
+        '@typescript-eslint/no-redeclare': ['error'],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'no-dupe-class-members': 'off',
+        '@typescript-eslint/no-dupe-class-members': ['error'],
+        'lines-between-class-members': 'off',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/lines-between-class-members': ['error'],
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/explicit-module-boundary-type': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+      },
+    },
   ],
-
-  rules: {
-    // required semicolons
-    'semi': ['error', 'never'],
-
-    // error handling
-    'no-console': ['error', { allow: ['warn', 'error'] }],
-
-    // indent
-    'no-tabs': 'off',
-    'indent': 'off',
-
-    // disable some import stuff
-    'import/extensions': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/no-unresolved': 'off',
-    'import/no-dynamic-require': 'off',
-
-    // disable for '__svg__'
-    'no-underscore-dangle': 'off',
-
-    'arrow-parens': ['error', 'as-needed'],
-
-    'padded-blocks': 'off',
-
-    'class-methods-use-this': 'off',
-
-    'global-require': 'off',
-
-    'func-names': ['error', 'never'],
-  }
 }
