@@ -6,13 +6,14 @@
     "jsx": "react",
     "importHelpers": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "allowJs": false,
+    "allowJs": true,
     "checkJs": false,
     "paths": {
       "@tiptap/*": ["packages/*/dist", "packages/*/src"]
@@ -25,15 +26,16 @@
     ]
   },
   "files": [
-    "./shims/vue.d.ts"
+    "./env.d.ts"
   ],
   "include": [
+    "**/*.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.vue"
   ],
   "exclude": [
     "**/node_modules",
-    "**/dist",
-    "**/vue-3"
+    "**/dist"
   ]
 }

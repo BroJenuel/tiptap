@@ -3,6 +3,164 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.44...@tiptap/extension-table@2.0.0-beta.45) (2021-12-03)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.44](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.43...@tiptap/extension-table@2.0.0-beta.44) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.42...@tiptap/extension-table@2.0.0-beta.43) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.41...@tiptap/extension-table@2.0.0-beta.42) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.40...@tiptap/extension-table@2.0.0-beta.41) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.40](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.39...@tiptap/extension-table@2.0.0-beta.40) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.39](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.38...@tiptap/extension-table@2.0.0-beta.39) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.37...@tiptap/extension-table@2.0.0-beta.38) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.36...@tiptap/extension-table@2.0.0-beta.37) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.35...@tiptap/extension-table@2.0.0-beta.36) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.34...@tiptap/extension-table@2.0.0-beta.35) (2021-10-22)
+
+
+### Features
+
+* Add extension storage ([#2069](https://github.com/ueberdosis/tiptap/issues/2069)) ([7ffabf2](https://github.com/ueberdosis/tiptap/commit/7ffabf251c408a652eec1931cc78a8bd43cccb67))
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.33...@tiptap/extension-table@2.0.0-beta.34) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.32...@tiptap/extension-table@2.0.0-beta.33) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.31...@tiptap/extension-table@2.0.0-beta.32) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.30...@tiptap/extension-table@2.0.0-beta.31) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.29...@tiptap/extension-table@2.0.0-beta.30) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.28...@tiptap/extension-table@2.0.0-beta.29) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.27...@tiptap/extension-table@2.0.0-beta.28) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.26...@tiptap/extension-table@2.0.0-beta.27) (2021-08-09)
+
+
+### Bug Fixes
+
+* don’t resize tables if editable is set to false, fix [#1549](https://github.com/ueberdosis/tiptap/issues/1549) ([239a2e3](https://github.com/ueberdosis/tiptap/commit/239a2e36a47e4d0ad3012a54cda2d8b5c4f7a3ca))
+
+
+
+
+
 # [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.25...@tiptap/extension-table@2.0.0-beta.26) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-table

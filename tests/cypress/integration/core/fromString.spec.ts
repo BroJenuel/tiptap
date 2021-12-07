@@ -1,12 +1,18 @@
 /// <reference types="cypress" />
 
-import fromString from '@tiptap/core/src/utilities/fromString'
+import { fromString } from '@tiptap/core/src/utilities/fromString'
 
 describe('fromString', () => {
   it('should return a string', () => {
     const value = fromString('test')
 
     expect(value).to.eq('test')
+  })
+
+  it('should return an empty string', () => {
+    const value = fromString('')
+
+    expect(value).to.eq('')
   })
 
   it('should convert to a number', () => {

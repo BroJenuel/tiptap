@@ -66,13 +66,14 @@ declare module '@tiptap/core' {
     }
   }
 
-  interface NodeConfig<Options> {
+  interface NodeConfig<Options, Storage> {
     /**
      * Table Role
      */
     tableRole?: string | ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       parent: ParentConfig<NodeConfig<Options>>['tableRole'],
     }) => string),
   }
@@ -81,16 +82,18 @@ declare module '@tiptap/core' {
 export const Table = Node.create<TableOptions>({
   name: 'table',
 
-  defaultOptions: {
-    HTMLAttributes: {},
-    resizable: false,
-    handleWidth: 5,
-    cellMinWidth: 25,
-    // TODO: fix
-    // @ts-ignore
-    View: TableView,
-    lastColumnResizable: true,
-    allowTableNodeSelection: false,
+  // @ts-ignore
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+      resizable: false,
+      handleWidth: 5,
+      cellMinWidth: 25,
+      // TODO: fix
+      View: TableView,
+      lastColumnResizable: true,
+      allowTableNodeSelection: false,
+    }
   },
 
   content: 'tableRow+',
@@ -224,8 +227,10 @@ export const Table = Node.create<TableOptions>({
   },
 
   addProseMirrorPlugins() {
+    const isResizable = this.options.resizable && this.editor.isEditable
+
     return [
-      ...(this.options.resizable ? [columnResizing({
+      ...(isResizable ? [columnResizing({
         handleWidth: this.options.handleWidth,
         cellMinWidth: this.options.cellMinWidth,
         View: this.options.View,
@@ -243,6 +248,7 @@ export const Table = Node.create<TableOptions>({
     const context = {
       name: extension.name,
       options: extension.options,
+      storage: extension.storage,
     }
 
     return {

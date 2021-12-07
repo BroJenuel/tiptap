@@ -1,5 +1,4 @@
-import { Node, mergeAttributes } from '@tiptap/core'
-import { wrappingInputRule } from 'prosemirror-inputrules'
+import { Node, mergeAttributes, wrappingInputRule } from '@tiptap/core'
 
 export interface OrderedListOptions {
   HTMLAttributes: Record<string, any>,
@@ -21,8 +20,10 @@ export const inputRegex = /^(\d+)\.\s$/
 export const OrderedList = Node.create<OrderedListOptions>({
   name: 'orderedList',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   group: 'block list',
@@ -33,11 +34,11 @@ export const OrderedList = Node.create<OrderedListOptions>({
     return {
       start: {
         default: 1,
-        parseHTML: element => ({
-          start: element.hasAttribute('start')
+        parseHTML: element => {
+          return element.hasAttribute('start')
             ? parseInt(element.getAttribute('start') || '', 10)
-            : 1,
-        }),
+            : 1
+        },
       },
     }
   },
@@ -61,7 +62,7 @@ export const OrderedList = Node.create<OrderedListOptions>({
   addCommands() {
     return {
       toggleOrderedList: () => ({ commands }) => {
-        return commands.toggleList('orderedList', 'listItem')
+        return commands.toggleList(this.name, 'listItem')
       },
     }
   },
@@ -74,12 +75,12 @@ export const OrderedList = Node.create<OrderedListOptions>({
 
   addInputRules() {
     return [
-      wrappingInputRule(
-        inputRegex,
-        this.type,
-        match => ({ start: +match[1] }),
-        (match, node) => node.childCount + node.attrs.start === +match[1],
-      ),
+      wrappingInputRule({
+        find: inputRegex,
+        type: this.type,
+        getAttributes: match => ({ start: +match[1] }),
+        joinPredicate: (match, node) => node.childCount + node.attrs.start === +match[1],
+      }),
     ]
   },
 })

@@ -7,8 +7,10 @@ export interface ListItemOptions {
 export const ListItem = Node.create<ListItemOptions>({
   name: 'listItem',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   content: 'paragraph block*',
@@ -29,9 +31,9 @@ export const ListItem = Node.create<ListItemOptions>({
 
   addKeyboardShortcuts() {
     return {
-      Enter: () => this.editor.commands.splitListItem('listItem'),
-      Tab: () => this.editor.commands.sinkListItem('listItem'),
-      'Shift-Tab': () => this.editor.commands.liftListItem('listItem'),
+      Enter: () => this.editor.commands.splitListItem(this.name),
+      Tab: () => this.editor.commands.sinkListItem(this.name),
+      'Shift-Tab': () => this.editor.commands.liftListItem(this.name),
     }
   },
 })

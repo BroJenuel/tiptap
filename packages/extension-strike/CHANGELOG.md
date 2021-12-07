@@ -3,6 +3,95 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.26...@tiptap/extension-strike@2.0.0-beta.27) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove some magic strings ([6c34dec](https://github.com/ueberdosis/tiptap/commit/6c34dec33ac39c9f037a0a72e4525f3fc6d422bf))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.25...@tiptap/extension-strike@2.0.0-beta.26) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.24...@tiptap/extension-strike@2.0.0-beta.25) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.23...@tiptap/extension-strike@2.0.0-beta.24) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.22...@tiptap/extension-strike@2.0.0-beta.23) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.21...@tiptap/extension-strike@2.0.0-beta.22) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.20...@tiptap/extension-strike@2.0.0-beta.21) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.19...@tiptap/extension-strike@2.0.0-beta.20) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-strike
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.18...@tiptap/extension-strike@2.0.0-beta.19) (2021-10-10)
+
+
+### Bug Fixes
+
+* fix regex modifier for input rules and paste rules, fix [#2003](https://github.com/ueberdosis/tiptap/issues/2003) ([65eddf0](https://github.com/ueberdosis/tiptap/commit/65eddf0e789c620a53d9bec9509b515211fb9b3f))
+
+
+
+
+
+# [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.17...@tiptap/extension-strike@2.0.0-beta.18) (2021-10-08)
+
+
+### Features
+
+* Integrate input rules and paste rules into the core ([#1997](https://github.com/ueberdosis/tiptap/issues/1997)) ([723b955](https://github.com/ueberdosis/tiptap/commit/723b955cecc5c92c8aad897ce16c60fb62976571))
+
+
+
+
+
 # [2.0.0-beta.17](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-strike@2.0.0-beta.16...@tiptap/extension-strike@2.0.0-beta.17) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-strike

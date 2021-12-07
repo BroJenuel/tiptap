@@ -1,5 +1,4 @@
-import { Node, mergeAttributes } from '@tiptap/core'
-import { wrappingInputRule } from 'prosemirror-inputrules'
+import { Node, mergeAttributes, wrappingInputRule } from '@tiptap/core'
 
 export interface BulletListOptions {
   HTMLAttributes: Record<string, any>,
@@ -21,8 +20,10 @@ export const inputRegex = /^\s*([-+*])\s$/
 export const BulletList = Node.create<BulletListOptions>({
   name: 'bulletList',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   group: 'block list',
@@ -42,7 +43,7 @@ export const BulletList = Node.create<BulletListOptions>({
   addCommands() {
     return {
       toggleBulletList: () => ({ commands }) => {
-        return commands.toggleList('bulletList', 'listItem')
+        return commands.toggleList(this.name, 'listItem')
       },
     }
   },
@@ -55,7 +56,10 @@ export const BulletList = Node.create<BulletListOptions>({
 
   addInputRules() {
     return [
-      wrappingInputRule(inputRegex, this.type),
+      wrappingInputRule({
+        find: inputRegex,
+        type: this.type,
+      }),
     ]
   },
 })

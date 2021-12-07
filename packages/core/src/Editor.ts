@@ -6,26 +6,30 @@ import {
 } from 'prosemirror-state'
 import { EditorView } from 'prosemirror-view'
 import { Schema, MarkType, NodeType } from 'prosemirror-model'
-import getAttributes from './helpers/getAttributes'
-import getNodeAttributes from './helpers/getNodeAttributes'
-import getMarkAttributes from './helpers/getMarkAttributes'
-import isActive from './helpers/isActive'
-import removeElement from './utilities/removeElement'
-import createDocument from './helpers/createDocument'
-import getHTMLFromFragment from './helpers/getHTMLFromFragment'
-import isNodeEmpty from './helpers/isNodeEmpty'
-import createStyleTag from './utilities/createStyleTag'
-import CommandManager from './CommandManager'
-import ExtensionManager from './ExtensionManager'
-import EventEmitter from './EventEmitter'
+import { getAttributes } from './helpers/getAttributes'
+import { isActive } from './helpers/isActive'
+import { createDocument } from './helpers/createDocument'
+import { getHTMLFromFragment } from './helpers/getHTMLFromFragment'
+import { getText } from './helpers/getText'
+import { isNodeEmpty } from './helpers/isNodeEmpty'
+import { resolveFocusPosition } from './helpers/resolveFocusPosition'
+import { getTextSeralizersFromSchema } from './helpers/getTextSeralizersFromSchema'
+import { createStyleTag } from './utilities/createStyleTag'
+import { isFunction } from './utilities/isFunction'
+import { CommandManager } from './CommandManager'
+import { ExtensionManager } from './ExtensionManager'
+import { EventEmitter } from './EventEmitter'
 import {
   EditorOptions,
   CanCommands,
   ChainedCommands,
+  JSONContent,
   SingleCommands,
+  TextSerializer,
+  EditorEvents,
 } from './types'
 import * as extensions from './extensions'
-import style from './style'
+import { style } from './style'
 
 export { extensions }
 
@@ -33,7 +37,7 @@ export interface HTMLElement {
   editor?: Editor
 }
 
-export class Editor extends EventEmitter {
+export class Editor extends EventEmitter<EditorEvents> {
 
   private commandManager!: CommandManager
 
@@ -47,6 +51,8 @@ export class Editor extends EventEmitter {
 
   public isFocused = false
 
+  public extensionStorage: Record<string, any> = {}
+
   public options: EditorOptions = {
     element: document.createElement('div'),
     content: '',
@@ -58,6 +64,7 @@ export class Editor extends EventEmitter {
     parseOptions: {},
     enableInputRules: true,
     enablePasteRules: true,
+    enableCoreExtensions: true,
     onBeforeCreate: () => null,
     onCreate: () => null,
     onUpdate: () => null,
@@ -97,24 +104,31 @@ export class Editor extends EventEmitter {
   }
 
   /**
+   * Returns the editor storage.
+   */
+  public get storage(): Record<string, any> {
+    return this.extensionStorage
+  }
+
+  /**
    * An object of all registered commands.
    */
   public get commands(): SingleCommands {
-    return this.commandManager.createCommands()
+    return this.commandManager.commands
   }
 
   /**
    * Create a command chain to call multiple commands at once.
    */
   public chain(): ChainedCommands {
-    return this.commandManager.createChain()
+    return this.commandManager.chain()
   }
 
   /**
    * Check if a command or a command chain can be executed. Without executing it.
    */
   public can(): CanCommands {
-    return this.commandManager.createCan()
+    return this.commandManager.can()
   }
 
   /**
@@ -132,7 +146,20 @@ export class Editor extends EventEmitter {
    * @param options A list of options
    */
   public setOptions(options: Partial<EditorOptions> = {}): void {
-    this.options = { ...this.options, ...options }
+    this.options = {
+      ...this.options,
+      ...options,
+    }
+
+    if (!this.view || !this.state || this.isDestroyed) {
+      return
+    }
+
+    if (this.options.editorProps) {
+      this.view.setProps(this.options.editorProps)
+    }
+
+    this.view.updateState(this.state)
   }
 
   /**
@@ -140,17 +167,18 @@ export class Editor extends EventEmitter {
    */
   public setEditable(editable: boolean): void {
     this.setOptions({ editable })
-
-    if (this.view && this.state && !this.isDestroyed) {
-      this.view.updateState(this.state)
-    }
   }
 
   /**
    * Returns whether the editor is editable.
    */
   public get isEditable(): boolean {
-    return this.view && this.view.editable
+    // since plugins are applied after creating the view
+    // `editable` is always `true` for one tick.
+    // that’s why we also have to check for `options.editable`
+    return this.options.editable
+      && this.view
+      && this.view.editable
   }
 
   /**
@@ -167,7 +195,7 @@ export class Editor extends EventEmitter {
    * @param handlePlugins Control how to merge the plugin into the existing plugins.
    */
   public registerPlugin(plugin: Plugin, handlePlugins?: (newPlugin: Plugin, plugins: Plugin[]) => Plugin[]): void {
-    const plugins = typeof handlePlugins === 'function'
+    const plugins = isFunction(handlePlugins)
       ? handlePlugins(plugin, this.state.plugins)
       : [...this.state.plugins, plugin]
 
@@ -179,7 +207,7 @@ export class Editor extends EventEmitter {
   /**
    * Unregister a ProseMirror plugin.
    *
-   * @param name The plugins name
+   * @param nameOrPluginKey The plugins name
    */
   public unregisterPlugin(nameOrPluginKey: string | PluginKey): void {
     if (this.isDestroyed) {
@@ -203,7 +231,9 @@ export class Editor extends EventEmitter {
    * Creates an extension manager.
    */
   private createExtensionManager(): void {
-    const coreExtensions = Object.entries(extensions).map(([, extension]) => extension)
+    const coreExtensions = this.options.enableCoreExtensions
+      ? Object.values(extensions)
+      : []
     const allExtensions = [...coreExtensions, ...this.options.extensions].filter(extension => {
       return ['extension', 'node', 'mark'].includes(extension?.type)
     })
@@ -215,7 +245,9 @@ export class Editor extends EventEmitter {
    * Creates an command manager.
    */
   private createCommandManager(): void {
-    this.commandManager = new CommandManager(this, this.extensionManager.commands)
+    this.commandManager = new CommandManager({
+      editor: this,
+    })
   }
 
   /**
@@ -229,11 +261,15 @@ export class Editor extends EventEmitter {
    * Creates a ProseMirror view.
    */
   private createView(): void {
+    const doc = createDocument(this.options.content, this.schema, this.options.parseOptions)
+    const selection = resolveFocusPosition(doc, this.options.autofocus)
+
     this.view = new EditorView(this.options.element, {
       ...this.options.editorProps,
       dispatchTransaction: this.dispatchTransaction.bind(this),
       state: EditorState.create({
-        doc: createDocument(this.options.content, this.schema, this.options.parseOptions),
+        doc,
+        selection,
       }),
     })
 
@@ -250,6 +286,7 @@ export class Editor extends EventEmitter {
     // Let’s store the editor instance in the DOM element.
     // So we’ll have access to it for tests.
     const dom = this.view.dom as HTMLElement
+
     dom.editor = this
   }
 
@@ -308,6 +345,7 @@ export class Editor extends EventEmitter {
     if (selectionHasChanged) {
       this.emit('selectionUpdate', {
         editor: this,
+        transaction,
       })
     }
 
@@ -318,6 +356,7 @@ export class Editor extends EventEmitter {
       this.emit('focus', {
         editor: this,
         event: focus.event,
+        transaction,
       })
     }
 
@@ -325,6 +364,7 @@ export class Editor extends EventEmitter {
       this.emit('blur', {
         editor: this,
         event: blur.event,
+        transaction,
       })
     }
 
@@ -343,28 +383,6 @@ export class Editor extends EventEmitter {
    */
   public getAttributes(nameOrType: string | NodeType | MarkType): Record<string, any> {
     return getAttributes(this.state, nameOrType)
-  }
-
-  /**
-   * Get attributes of the currently selected node.
-   *
-   * @param name Name of the node
-   */
-  public getNodeAttributes(name: string): Record<string, any> {
-    console.warn('[tiptap warn]: editor.getNodeAttributes() is deprecated. please use editor.getAttributes() instead.')
-
-    return getNodeAttributes(this.state, name)
-  }
-
-  /**
-   * Get attributes of the currently selected mark.
-   *
-   * @param name Name of the mark
-   */
-  public getMarkAttributes(name: string): Record<string, any> {
-    console.warn('[tiptap warn]: editor.getMarkAttributes() is deprecated. please use editor.getAttributes() instead.')
-
-    return getMarkAttributes(this.state, name)
   }
 
   /**
@@ -390,7 +408,7 @@ export class Editor extends EventEmitter {
   /**
    * Get the document as JSON.
    */
-  public getJSON(): Record<string, any> {
+  public getJSON(): JSONContent {
     return this.state.doc.toJSON()
   }
 
@@ -398,7 +416,28 @@ export class Editor extends EventEmitter {
    * Get the document as HTML.
    */
   public getHTML(): string {
-    return getHTMLFromFragment(this.state.doc, this.schema)
+    return getHTMLFromFragment(this.state.doc.content, this.schema)
+  }
+
+  /**
+   * Get the document as text.
+   */
+  public getText(options?: {
+    blockSeparator?: string,
+    textSerializers?: Record<string, TextSerializer>,
+  }): string {
+    const {
+      blockSeparator = '\n\n',
+      textSerializers = {},
+    } = options || {}
+
+    return getText(this.state.doc, {
+      blockSeparator,
+      textSerializers: {
+        ...textSerializers,
+        ...getTextSeralizersFromSchema(this.schema),
+      },
+    })
   }
 
   /**
@@ -426,7 +465,6 @@ export class Editor extends EventEmitter {
     }
 
     this.removeAllListeners()
-    removeElement(this.css)
   }
 
   /**

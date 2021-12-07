@@ -1,4 +1,4 @@
-export default function mergeAttributes(...objects: Record<string, any>[]): Record<string, any> {
+export function mergeAttributes(...objects: Record<string, any>[]): Record<string, any> {
   return objects
     .filter(item => !!item)
     .reduce((items, item) => {
@@ -9,6 +9,7 @@ export default function mergeAttributes(...objects: Record<string, any>[]): Reco
 
         if (!exists) {
           mergedAttributes[key] = value
+
           return
         }
 

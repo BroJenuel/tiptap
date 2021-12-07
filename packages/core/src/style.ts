@@ -1,12 +1,14 @@
-const style = `.ProseMirror {
+export const style = `.ProseMirror {
   position: relative;
 }
 
 .ProseMirror {
   word-wrap: break-word;
   white-space: pre-wrap;
+  white-space: break-spaces;
   -webkit-font-variant-ligatures: none;
   font-variant-ligatures: none;
+  font-feature-settings: "liga" 0; /* the above doesn't seem to work in Edge */
 }
 
 .ProseMirror [contenteditable="false"] {
@@ -21,10 +23,19 @@ const style = `.ProseMirror {
   white-space: pre-wrap;
 }
 
+img.ProseMirror-separator {
+  display: inline !important;
+  border: none !important;
+  margin: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+}
+
 .ProseMirror-gapcursor {
   display: none;
   pointer-events: none;
   position: absolute;
+  margin: 0;
 }
 
 .ProseMirror-gapcursor:after {
@@ -62,5 +73,3 @@ const style = `.ProseMirror {
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0
 }`
-
-export default style

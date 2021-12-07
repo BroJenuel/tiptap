@@ -3,6 +3,243 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.46](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.45...@tiptap/extension-floating-menu@2.0.0-beta.46) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.44...@tiptap/extension-floating-menu@2.0.0-beta.45) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.44](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.43...@tiptap/extension-floating-menu@2.0.0-beta.44) (2021-11-10)
+
+
+### Bug Fixes
+
+* remove composition check for floating menu ([#2137](https://github.com/ueberdosis/tiptap/issues/2137)) ([d0d0696](https://github.com/ueberdosis/tiptap/commit/d0d069626626d173f9fd038d1b231d15a17a43bb))
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.42...@tiptap/extension-floating-menu@2.0.0-beta.43) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.41...@tiptap/extension-floating-menu@2.0.0-beta.42) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.40...@tiptap/extension-floating-menu@2.0.0-beta.41) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.40](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.39...@tiptap/extension-floating-menu@2.0.0-beta.40) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.39](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.38...@tiptap/extension-floating-menu@2.0.0-beta.39) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.37...@tiptap/extension-floating-menu@2.0.0-beta.38) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.36...@tiptap/extension-floating-menu@2.0.0-beta.37) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.35...@tiptap/extension-floating-menu@2.0.0-beta.36) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.34...@tiptap/extension-floating-menu@2.0.0-beta.35) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.33...@tiptap/extension-floating-menu@2.0.0-beta.34) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.32...@tiptap/extension-floating-menu@2.0.0-beta.33) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.31...@tiptap/extension-floating-menu@2.0.0-beta.32) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.30...@tiptap/extension-floating-menu@2.0.0-beta.31) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.29...@tiptap/extension-floating-menu@2.0.0-beta.30) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.28...@tiptap/extension-floating-menu@2.0.0-beta.29) (2021-09-22)
+
+
+### Bug Fixes
+
+* Fix "destory" method in view plugins. ([#1882](https://github.com/ueberdosis/tiptap/issues/1882)) ([33420f4](https://github.com/ueberdosis/tiptap/commit/33420f4ae06d0d7eec16201a2e650be83cbb9de9))
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.27...@tiptap/extension-floating-menu@2.0.0-beta.28) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.26...@tiptap/extension-floating-menu@2.0.0-beta.27) (2021-09-07)
+
+
+### Bug Fixes
+
+* don’t initialize tippy on requestAnimationFrame to avoid race conditions ([#1820](https://github.com/ueberdosis/tiptap/issues/1820)) ([ca3763d](https://github.com/ueberdosis/tiptap/commit/ca3763d3c29cc0715727fe12a0e907ad86d99806))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.25...@tiptap/extension-floating-menu@2.0.0-beta.26) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.24...@tiptap/extension-floating-menu@2.0.0-beta.25) (2021-08-23)
+
+
+### Bug Fixes
+
+* make shouldShow and pluginKey option for menus, fix [#1779](https://github.com/ueberdosis/tiptap/issues/1779) ([70a328b](https://github.com/ueberdosis/tiptap/commit/70a328bd3dea174170ad8e92db4c4f7f9368fd1b))
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.23...@tiptap/extension-floating-menu@2.0.0-beta.24) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.22...@tiptap/extension-floating-menu@2.0.0-beta.23) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/extension-floating-menu
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.21...@tiptap/extension-floating-menu@2.0.0-beta.22) (2021-08-13)
+
+
+### Bug Fixes
+
+* rename key to pluginKey for menus ([89d26f7](https://github.com/ueberdosis/tiptap/commit/89d26f7cba2a115aa342f0ee621f0b65c840dfb8))
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.20...@tiptap/extension-floating-menu@2.0.0-beta.21) (2021-08-12)
+
+
+### Bug Fixes
+
+* fix some react focus issues ([#1724](https://github.com/ueberdosis/tiptap/issues/1724)), fix [#1716](https://github.com/ueberdosis/tiptap/issues/1716), fix [#1608](https://github.com/ueberdosis/tiptap/issues/1608), fix [#1520](https://github.com/ueberdosis/tiptap/issues/1520) ([956566e](https://github.com/ueberdosis/tiptap/commit/956566eaad0a522d6bc27d44594aa36d6c33f8b3))
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.19...@tiptap/extension-floating-menu@2.0.0-beta.20) (2021-08-11)
+
+
+### Features
+
+* add key option and shouldShow option to menus (fix [#1480](https://github.com/ueberdosis/tiptap/issues/1480), fix [#1043](https://github.com/ueberdosis/tiptap/issues/1043), fix [#1268](https://github.com/ueberdosis/tiptap/issues/1268), fix [#1503](https://github.com/ueberdosis/tiptap/issues/1503)) ([9ba61c1](https://github.com/ueberdosis/tiptap/commit/9ba61c1582cee838f2214d00285773ace2fb229e))
+
+
+
+
+
 # [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-floating-menu@2.0.0-beta.18...@tiptap/extension-floating-menu@2.0.0-beta.19) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-floating-menu

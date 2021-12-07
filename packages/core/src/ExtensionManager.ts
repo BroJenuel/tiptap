@@ -1,21 +1,24 @@
 import { keymap } from 'prosemirror-keymap'
 import { Schema, Node as ProsemirrorNode } from 'prosemirror-model'
-import { inputRules as inputRulesPlugin } from 'prosemirror-inputrules'
+import { inputRulesPlugin } from './InputRule'
+import { pasteRulesPlugin } from './PasteRule'
 import { EditorView, Decoration } from 'prosemirror-view'
 import { Plugin } from 'prosemirror-state'
 import { Editor } from './Editor'
 import { Extensions, RawCommands, AnyConfig } from './types'
-import getExtensionField from './helpers/getExtensionField'
-import getSchemaByResolvedExtensions from './helpers/getSchemaByResolvedExtensions'
-import getSchemaTypeByName from './helpers/getSchemaTypeByName'
-import getNodeType from './helpers/getNodeType'
-import splitExtensions from './helpers/splitExtensions'
-import getAttributesFromExtensions from './helpers/getAttributesFromExtensions'
-import getRenderedAttributes from './helpers/getRenderedAttributes'
-import callOrReturn from './utilities/callOrReturn'
+import { getExtensionField } from './helpers/getExtensionField'
+import { getSchemaByResolvedExtensions } from './helpers/getSchemaByResolvedExtensions'
+import { getSchemaTypeByName } from './helpers/getSchemaTypeByName'
+import { getNodeType } from './helpers/getNodeType'
+import { splitExtensions } from './helpers/splitExtensions'
+import { getAttributesFromExtensions } from './helpers/getAttributesFromExtensions'
+import { getRenderedAttributes } from './helpers/getRenderedAttributes'
+import { isExtensionRulesEnabled } from './helpers/isExtensionRulesEnabled'
+import { callOrReturn } from './utilities/callOrReturn'
+import { findDuplicates } from './utilities/findDuplicates'
 import { NodeConfig } from '.'
 
-export default class ExtensionManager {
+export class ExtensionManager {
 
   editor: Editor
 
@@ -31,9 +34,13 @@ export default class ExtensionManager {
     this.schema = getSchemaByResolvedExtensions(this.extensions)
 
     this.extensions.forEach(extension => {
+      // store extension storage in editor
+      this.editor.extensionStorage[extension.name] = extension.storage
+
       const context = {
         name: extension.name,
         options: extension.options,
+        storage: extension.storage,
         editor: this.editor,
         type: getSchemaTypeByName(extension.name, this.schema),
       }
@@ -129,7 +136,14 @@ export default class ExtensionManager {
   }
 
   static resolve(extensions: Extensions): Extensions {
-    return ExtensionManager.sort(ExtensionManager.flatten(extensions))
+    const resolvedExtensions = ExtensionManager.sort(ExtensionManager.flatten(extensions))
+    const duplicatedNames = findDuplicates(resolvedExtensions.map(extension => extension.name))
+
+    if (duplicatedNames.length) {
+      console.warn(`[tiptap warn]: Duplicate extension names found: [${duplicatedNames.map(item => `'${item}'`).join(', ')}]. This can lead to issues.`)
+    }
+
+    return resolvedExtensions
   }
 
   static flatten(extensions: Extensions): Extensions {
@@ -138,6 +152,7 @@ export default class ExtensionManager {
         const context = {
           name: extension.name,
           options: extension.options,
+          storage: extension.storage,
         }
 
         const addExtensions = getExtensionField<AnyConfig['addExtensions']>(
@@ -183,6 +198,7 @@ export default class ExtensionManager {
       const context = {
         name: extension.name,
         options: extension.options,
+        storage: extension.storage,
         editor: this.editor,
         type: getSchemaTypeByName(extension.name, this.schema),
       }
@@ -205,13 +221,25 @@ export default class ExtensionManager {
   }
 
   get plugins(): Plugin[] {
-    return [...this.extensions]
-      .reverse()
+    const { editor } = this
+
+    // With ProseMirror, first plugins within an array are executed first.
+    // In tiptap, we provide the ability to override plugins,
+    // so it feels more natural to run plugins at the end of an array first.
+    // That’s why we have to reverse the `extensions` array and sort again
+    // based on the `priority` option.
+    const extensions = ExtensionManager.sort([...this.extensions].reverse())
+
+    const inputRules: any[] = []
+    const pasteRules: any[] = []
+
+    const allPlugins = extensions
       .map(extension => {
         const context = {
           name: extension.name,
           options: extension.options,
-          editor: this.editor,
+          storage: extension.storage,
+          editor,
           type: getSchemaTypeByName(extension.name, this.schema),
         }
 
@@ -228,7 +256,7 @@ export default class ExtensionManager {
             Object
               .entries(addKeyboardShortcuts())
               .map(([shortcut, method]) => {
-                return [shortcut, () => method({ editor: this.editor })]
+                return [shortcut, () => method({ editor })]
               }),
           )
 
@@ -243,13 +271,8 @@ export default class ExtensionManager {
           context,
         )
 
-        if (this.editor.options.enableInputRules && addInputRules) {
-          const inputRules = addInputRules()
-          const inputRulePlugins = inputRules.length
-            ? [inputRulesPlugin({ rules: inputRules })]
-            : []
-
-          plugins.push(...inputRulePlugins)
+        if (isExtensionRulesEnabled(extension, editor.options.enableInputRules) && addInputRules) {
+          inputRules.push(...addInputRules())
         }
 
         const addPasteRules = getExtensionField<AnyConfig['addPasteRules']>(
@@ -258,10 +281,8 @@ export default class ExtensionManager {
           context,
         )
 
-        if (this.editor.options.enablePasteRules && addPasteRules) {
-          const pasteRulePlugins = addPasteRules()
-
-          plugins.push(...pasteRulePlugins)
+        if (isExtensionRulesEnabled(extension, editor.options.enablePasteRules) && addPasteRules) {
+          pasteRules.push(...addPasteRules())
         }
 
         const addProseMirrorPlugins = getExtensionField<AnyConfig['addProseMirrorPlugins']>(
@@ -279,6 +300,18 @@ export default class ExtensionManager {
         return plugins
       })
       .flat()
+
+    return [
+      inputRulesPlugin({
+        editor,
+        rules: inputRules,
+      }),
+      pasteRulesPlugin({
+        editor,
+        rules: pasteRules,
+      }),
+      ...allPlugins,
+    ]
   }
 
   get attributes() {
@@ -296,6 +329,7 @@ export default class ExtensionManager {
         const context = {
           name: extension.name,
           options: extension.options,
+          storage: extension.storage,
           editor,
           type: getNodeType(extension.name, this.schema),
         }
@@ -330,31 +364,4 @@ export default class ExtensionManager {
         return [extension.name, nodeview]
       }))
   }
-
-  get textSerializers() {
-    const { editor } = this
-    const { nodeExtensions } = splitExtensions(this.extensions)
-
-    return Object.fromEntries(nodeExtensions
-      .filter(extension => !!getExtensionField(extension, 'renderText'))
-      .map(extension => {
-        const context = {
-          name: extension.name,
-          options: extension.options,
-          editor,
-          type: getNodeType(extension.name, this.schema),
-        }
-
-        const renderText = getExtensionField<NodeConfig['renderText']>(extension, 'renderText', context)
-
-        if (!renderText) {
-          return []
-        }
-
-        const textSerializer = (props: { node: ProsemirrorNode }) => renderText(props)
-
-        return [extension.name, textSerializer]
-      }))
-  }
-
 }

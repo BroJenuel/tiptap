@@ -3,6 +3,128 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.29...@tiptap/extension-task-item@2.0.0-beta.30) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove some magic strings ([6c34dec](https://github.com/ueberdosis/tiptap/commit/6c34dec33ac39c9f037a0a72e4525f3fc6d422bf))
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.28...@tiptap/extension-task-item@2.0.0-beta.29) (2021-11-25)
+
+
+### Features
+
+* add scrollIntoView option to focus command, fix [#2172](https://github.com/ueberdosis/tiptap/issues/2172) ([e0f6490](https://github.com/ueberdosis/tiptap/commit/e0f64904b665512fbde80db87bb394557433e164))
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.27...@tiptap/extension-task-item@2.0.0-beta.28) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.26...@tiptap/extension-task-item@2.0.0-beta.27) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.25...@tiptap/extension-task-item@2.0.0-beta.26) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.24...@tiptap/extension-task-item@2.0.0-beta.25) (2021-11-08)
+
+
+### Bug Fixes
+
+* add checkboxes to TaskItem HTML output, fix [#2037](https://github.com/ueberdosis/tiptap/issues/2037) ([c94d2b0](https://github.com/ueberdosis/tiptap/commit/c94d2b0517e62afea84cb9dd6999874abf0bf3cd))
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.23...@tiptap/extension-task-item@2.0.0-beta.24) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.22...@tiptap/extension-task-item@2.0.0-beta.23) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.21...@tiptap/extension-task-item@2.0.0-beta.22) (2021-10-18)
+
+
+### Bug Fixes
+
+* add HTMLAttributes to task item node view ([81d8097](https://github.com/ueberdosis/tiptap/commit/81d809795908e28b1a96ccad33147b711910b27a))
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.20...@tiptap/extension-task-item@2.0.0-beta.21) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.19...@tiptap/extension-task-item@2.0.0-beta.20) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.18...@tiptap/extension-task-item@2.0.0-beta.19) (2021-10-08)
+
+
+### Features
+
+* Integrate input rules and paste rules into the core ([#1997](https://github.com/ueberdosis/tiptap/issues/1997)) ([723b955](https://github.com/ueberdosis/tiptap/commit/723b955cecc5c92c8aad897ce16c60fb62976571))
+
+
+
+
+
+# [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.17...@tiptap/extension-task-item@2.0.0-beta.18) (2021-09-08)
+
+
+### Features
+
+* parseHTML for attributes should return the value instead of an object now, fix [#1863](https://github.com/ueberdosis/tiptap/issues/1863) ([8a3b47a](https://github.com/ueberdosis/tiptap/commit/8a3b47a529d28b28b50d634c6ff69b8e5aad3080))
+
+
+
+
+
 # [2.0.0-beta.17](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.16...@tiptap/extension-task-item@2.0.0-beta.17) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-task-item

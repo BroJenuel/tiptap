@@ -3,6 +3,234 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.60](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.59...@tiptap/extension-code-block-lowlight@2.0.0-beta.60) (2021-12-05)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.59](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.58...@tiptap/extension-code-block-lowlight@2.0.0-beta.59) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.58](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.57...@tiptap/extension-code-block-lowlight@2.0.0-beta.58) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.57](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.56...@tiptap/extension-code-block-lowlight@2.0.0-beta.57) (2021-11-18)
+
+
+### Bug Fixes
+
+* Remove console.log statement ([#2168](https://github.com/ueberdosis/tiptap/issues/2168)) ([6e25e99](https://github.com/ueberdosis/tiptap/commit/6e25e99c7a8699166a63fee1f4b5584ab617c9cd))
+
+
+
+
+
+# [2.0.0-beta.56](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.55...@tiptap/extension-code-block-lowlight@2.0.0-beta.56) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.55](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.54...@tiptap/extension-code-block-lowlight@2.0.0-beta.55) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.54](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.53...@tiptap/extension-code-block-lowlight@2.0.0-beta.54) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.53](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.52...@tiptap/extension-code-block-lowlight@2.0.0-beta.53) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.52](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.51...@tiptap/extension-code-block-lowlight@2.0.0-beta.52) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.51](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.50...@tiptap/extension-code-block-lowlight@2.0.0-beta.51) (2021-11-05)
+
+
+### Features
+
+* add defaultLanguage option to CodeBlockLowlight extension, fix [#2121](https://github.com/ueberdosis/tiptap/issues/2121) ([0f94bcd](https://github.com/ueberdosis/tiptap/commit/0f94bcd591e98c0a767d0914b87a1efee8b002e0))
+
+
+
+
+
+# [2.0.0-beta.50](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.49...@tiptap/extension-code-block-lowlight@2.0.0-beta.50) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.49](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.48...@tiptap/extension-code-block-lowlight@2.0.0-beta.49) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.48](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.47...@tiptap/extension-code-block-lowlight@2.0.0-beta.48) (2021-10-25)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.47](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.46...@tiptap/extension-code-block-lowlight@2.0.0-beta.47) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.46](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.45...@tiptap/extension-code-block-lowlight@2.0.0-beta.46) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.44...@tiptap/extension-code-block-lowlight@2.0.0-beta.45) (2021-10-13)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.44](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.43...@tiptap/extension-code-block-lowlight@2.0.0-beta.44) (2021-10-12)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.42...@tiptap/extension-code-block-lowlight@2.0.0-beta.43) (2021-10-12)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.41...@tiptap/extension-code-block-lowlight@2.0.0-beta.42) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.40...@tiptap/extension-code-block-lowlight@2.0.0-beta.41) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.40](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.39...@tiptap/extension-code-block-lowlight@2.0.0-beta.40) (2021-09-30)
+
+
+### Bug Fixes
+
+* compatibility with lowlight v2 ([#1939](https://github.com/ueberdosis/tiptap/issues/1939)) ([f79347e](https://github.com/ueberdosis/tiptap/commit/f79347e128be11860ee54109d8d333b436426b45))
+
+
+
+
+
+# [2.0.0-beta.39](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.38...@tiptap/extension-code-block-lowlight@2.0.0-beta.39) (2021-09-21)
+
+
+### Bug Fixes
+
+* Allow extending code-block-lowlight ([#1917](https://github.com/ueberdosis/tiptap/issues/1917)) ([54be0e5](https://github.com/ueberdosis/tiptap/commit/54be0e570e24c4a7bbb772c8222cfeac2ba1ff38))
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.37...@tiptap/extension-code-block-lowlight@2.0.0-beta.38) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.36...@tiptap/extension-code-block-lowlight@2.0.0-beta.37) (2021-09-08)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.35...@tiptap/extension-code-block-lowlight@2.0.0-beta.36) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.34...@tiptap/extension-code-block-lowlight@2.0.0-beta.35) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.33...@tiptap/extension-code-block-lowlight@2.0.0-beta.34) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/extension-code-block-lowlight
+
+
+
+
+
 # [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block-lowlight@2.0.0-beta.32...@tiptap/extension-code-block-lowlight@2.0.0-beta.33) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-code-block-lowlight

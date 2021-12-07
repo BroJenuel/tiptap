@@ -1,17 +1,19 @@
 import React from 'react'
+import { useReactNodeView } from './useReactNodeView'
 
 export interface NodeViewContentProps {
   [key: string]: any,
   as?: React.ElementType,
 }
 
-export const NodeViewContent: React.FC<NodeViewContentProps> = React.forwardRef((props, ref) => {
+export const NodeViewContent: React.FC<NodeViewContentProps> = props => {
   const Tag = props.as || 'div'
+  const { nodeViewContentRef } = useReactNodeView()
 
   return (
     <Tag
       {...props}
-      ref={ref}
+      ref={nodeViewContentRef}
       data-node-view-content=""
       style={{
         ...props.style,
@@ -19,4 +21,4 @@ export const NodeViewContent: React.FC<NodeViewContentProps> = React.forwardRef(
       }}
     />
   )
-})
+}

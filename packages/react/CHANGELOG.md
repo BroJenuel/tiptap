@@ -3,6 +3,393 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.98](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.97...@tiptap/react@2.0.0-beta.98) (2021-12-03)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.97](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.96...@tiptap/react@2.0.0-beta.97) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.96](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.95...@tiptap/react@2.0.0-beta.96) (2021-12-02)
+
+
+### Features
+
+* Add `as` option and pass through to ReactRenderer ([#2213](https://github.com/ueberdosis/tiptap/issues/2213)) ([dedcf17](https://github.com/ueberdosis/tiptap/commit/dedcf17d533aab0c5641b842877e42440883d5d8))
+
+
+
+
+
+# [2.0.0-beta.95](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.94...@tiptap/react@2.0.0-beta.95) (2021-11-18)
+
+
+### Features
+
+* add className option to ReactRenderer, see [#2166](https://github.com/ueberdosis/tiptap/issues/2166) ([c9dc1e1](https://github.com/ueberdosis/tiptap/commit/c9dc1e1ec3295fe3dce7ed7d314c5a7e4140af83))
+
+
+
+
+
+# [2.0.0-beta.94](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.93...@tiptap/react@2.0.0-beta.94) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.93](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.92...@tiptap/react@2.0.0-beta.93) (2021-11-10)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.92](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.91...@tiptap/react@2.0.0-beta.92) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.91](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.90...@tiptap/react@2.0.0-beta.91) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.90](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.89...@tiptap/react@2.0.0-beta.90) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.89](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.88...@tiptap/react@2.0.0-beta.89) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.88](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.87...@tiptap/react@2.0.0-beta.88) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.87](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.86...@tiptap/react@2.0.0-beta.87) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.86](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.85...@tiptap/react@2.0.0-beta.86) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.85](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.84...@tiptap/react@2.0.0-beta.85) (2021-10-25)
+
+
+### Bug Fixes
+
+* Check node type above custom update function for node views ([#2081](https://github.com/ueberdosis/tiptap/issues/2081)) ([ddc9ca8](https://github.com/ueberdosis/tiptap/commit/ddc9ca8d4f347566f83513a386922afe52f26da1))
+
+
+
+
+
+# [2.0.0-beta.84](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.83...@tiptap/react@2.0.0-beta.84) (2021-10-22)
+
+
+### Features
+
+* Add extension storage ([#2069](https://github.com/ueberdosis/tiptap/issues/2069)) ([7ffabf2](https://github.com/ueberdosis/tiptap/commit/7ffabf251c408a652eec1931cc78a8bd43cccb67))
+
+
+
+
+
+# [2.0.0-beta.83](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.82...@tiptap/react@2.0.0-beta.83) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.82](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.81...@tiptap/react@2.0.0-beta.82) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.81](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.80...@tiptap/react@2.0.0-beta.81) (2021-10-12)
+
+
+### Bug Fixes
+
+* Add `editor` dependency when registering `BubbleMenuPlugin` and `FloatingMenuPlugin` ([#2018](https://github.com/ueberdosis/tiptap/issues/2018)) ([e9465ec](https://github.com/ueberdosis/tiptap/commit/e9465ec0f6921abd428ed27b50596d20edc05b77))
+
+
+
+
+
+# [2.0.0-beta.80](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.79...@tiptap/react@2.0.0-beta.80) (2021-10-11)
+
+
+### Bug Fixes
+
+* fix editor type for ReactRenderer ([2af1870](https://github.com/ueberdosis/tiptap/commit/2af187023ddbc85edee086cdb898c5139f7668de))
+* Improve ReactRenderer types ([#2011](https://github.com/ueberdosis/tiptap/issues/2011)) ([31d8ab3](https://github.com/ueberdosis/tiptap/commit/31d8ab3593f18f8fec49b7e5ab22a7d979165ae6))
+
+
+
+
+
+# [2.0.0-beta.79](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.78...@tiptap/react@2.0.0-beta.79) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.78](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.77...@tiptap/react@2.0.0-beta.78) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.77](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.76...@tiptap/react@2.0.0-beta.77) (2021-09-30)
+
+
+### Bug Fixes
+
+* use ref to move contentDOM ([#1960](https://github.com/ueberdosis/tiptap/issues/1960)), fix [#1942](https://github.com/ueberdosis/tiptap/issues/1942) ([dead826](https://github.com/ueberdosis/tiptap/commit/dead82625095031bc4d32b47b205044bf75769bd))
+
+
+
+
+
+# [2.0.0-beta.76](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.75...@tiptap/react@2.0.0-beta.76) (2021-09-30)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.75](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.74...@tiptap/react@2.0.0-beta.75) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.74](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.73...@tiptap/react@2.0.0-beta.74) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.73](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.72...@tiptap/react@2.0.0-beta.73) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.72](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.71...@tiptap/react@2.0.0-beta.72) (2021-09-23)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.71](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.70...@tiptap/react@2.0.0-beta.71) (2021-09-22)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.70](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.69...@tiptap/react@2.0.0-beta.70) (2021-09-21)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.69](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.68...@tiptap/react@2.0.0-beta.69) (2021-09-20)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.68](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.67...@tiptap/react@2.0.0-beta.68) (2021-09-18)
+
+
+### Bug Fixes
+
+* set correct component type for ReactRenderer, fix [#1904](https://github.com/ueberdosis/tiptap/issues/1904) ([fe47c38](https://github.com/ueberdosis/tiptap/commit/fe47c388ce5ef49c286302a7b771a680c2f0c239))
+
+
+
+
+
+# [2.0.0-beta.67](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.66...@tiptap/react@2.0.0-beta.67) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.66](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.65...@tiptap/react@2.0.0-beta.66) (2021-09-07)
+
+
+### Features
+
+* add support for forwardRef component in reactRenderer ([#1690](https://github.com/ueberdosis/tiptap/issues/1690), fix [#1040](https://github.com/ueberdosis/tiptap/issues/1040)) ([d1f2ad2](https://github.com/ueberdosis/tiptap/commit/d1f2ad293f9df4004ee3fea5550a3921a03162f5))
+
+
+
+
+
+# [2.0.0-beta.65](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.64...@tiptap/react@2.0.0-beta.65) (2021-09-07)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.64](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.63...@tiptap/react@2.0.0-beta.64) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.63](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.62...@tiptap/react@2.0.0-beta.63) (2021-08-24)
+
+
+### Bug Fixes
+
+* fix a bug when using nested node views in react, fix [#1747](https://github.com/ueberdosis/tiptap/issues/1747) ([b15a8a8](https://github.com/ueberdosis/tiptap/commit/b15a8a8683bafbc9fd57dc64d60329f9ab08ecfd))
+
+
+
+
+
+# [2.0.0-beta.62](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.61...@tiptap/react@2.0.0-beta.62) (2021-08-23)
+
+
+### Bug Fixes
+
+* make shouldShow and pluginKey option for menus, fix [#1779](https://github.com/ueberdosis/tiptap/issues/1779) ([70a328b](https://github.com/ueberdosis/tiptap/commit/70a328bd3dea174170ad8e92db4c4f7f9368fd1b))
+
+
+
+
+
+# [2.0.0-beta.61](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.60...@tiptap/react@2.0.0-beta.61) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.60](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.59...@tiptap/react@2.0.0-beta.60) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.59](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.58...@tiptap/react@2.0.0-beta.59) (2021-08-13)
+
+
+### Bug Fixes
+
+* rename key to pluginKey for menus ([89d26f7](https://github.com/ueberdosis/tiptap/commit/89d26f7cba2a115aa342f0ee621f0b65c840dfb8))
+
+
+
+
+
+# [2.0.0-beta.58](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.57...@tiptap/react@2.0.0-beta.58) (2021-08-12)
+
+
+### Bug Fixes
+
+* fix some react focus issues ([#1724](https://github.com/ueberdosis/tiptap/issues/1724)), fix [#1716](https://github.com/ueberdosis/tiptap/issues/1716), fix [#1608](https://github.com/ueberdosis/tiptap/issues/1608), fix [#1520](https://github.com/ueberdosis/tiptap/issues/1520) ([956566e](https://github.com/ueberdosis/tiptap/commit/956566eaad0a522d6bc27d44594aa36d6c33f8b3))
+
+
+
+
+
+# [2.0.0-beta.57](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.56...@tiptap/react@2.0.0-beta.57) (2021-08-11)
+
+
+### Features
+
+* add key option and shouldShow option to menus (fix [#1480](https://github.com/ueberdosis/tiptap/issues/1480), fix [#1043](https://github.com/ueberdosis/tiptap/issues/1043), fix [#1268](https://github.com/ueberdosis/tiptap/issues/1268), fix [#1503](https://github.com/ueberdosis/tiptap/issues/1503)) ([9ba61c1](https://github.com/ueberdosis/tiptap/commit/9ba61c1582cee838f2214d00285773ace2fb229e))
+
+
+
+
+
+# [2.0.0-beta.56](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.55...@tiptap/react@2.0.0-beta.56) (2021-08-09)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
 # [2.0.0-beta.55](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.54...@tiptap/react@2.0.0-beta.55) (2021-07-28)
 
 

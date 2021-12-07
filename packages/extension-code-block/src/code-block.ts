@@ -1,5 +1,5 @@
-import { Node } from '@tiptap/core'
-import { textblockTypeInputRule } from 'prosemirror-inputrules'
+import { Node, textblockTypeInputRule } from '@tiptap/core'
+import { Plugin, PluginKey, TextSelection } from 'prosemirror-state'
 
 export interface CodeBlockOptions {
   languageClassPrefix: string,
@@ -21,15 +21,17 @@ declare module '@tiptap/core' {
   }
 }
 
-export const backtickInputRegex = /^```(?<language>[a-z]*)? $/
-export const tildeInputRegex = /^~~~(?<language>[a-z]*)? $/
+export const backtickInputRegex = /^```(?<language>[a-z]*)?[\s\n]$/
+export const tildeInputRegex = /^~~~(?<language>[a-z]*)?[\s\n]$/
 
 export const CodeBlock = Node.create<CodeBlockOptions>({
   name: 'codeBlock',
 
-  defaultOptions: {
-    languageClassPrefix: 'language-',
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      languageClassPrefix: 'language-',
+      HTMLAttributes: {},
+    }
   },
 
   content: 'text*',
@@ -47,17 +49,18 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
       language: {
         default: null,
         parseHTML: element => {
-          const classAttribute = element.firstElementChild?.getAttribute('class')
+          const { languageClassPrefix } = this.options
+          const classNames = [...element.firstElementChild?.classList || []]
+          const languages = classNames
+            .filter(className => className.startsWith(languageClassPrefix))
+            .map(className => className.replace(languageClassPrefix, ''))
+          const language = languages[0]
 
-          if (!classAttribute) {
+          if (!language) {
             return null
           }
 
-          const regexLanguageClassPrefix = new RegExp(`^(${this.options.languageClassPrefix})`)
-
-          return {
-            language: classAttribute.replace(regexLanguageClassPrefix, ''),
-          }
+          return language
         },
         renderHTML: attributes => {
           if (!attributes.language) {
@@ -88,10 +91,10 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
   addCommands() {
     return {
       setCodeBlock: attributes => ({ commands }) => {
-        return commands.setNode('codeBlock', attributes)
+        return commands.setNode(this.name, attributes)
       },
       toggleCodeBlock: attributes => ({ commands }) => {
-        return commands.toggleNode('codeBlock', 'paragraph', attributes)
+        return commands.toggleNode(this.name, 'paragraph', attributes)
       },
     }
   },
@@ -115,13 +118,104 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
 
         return false
       },
+
+      // escape node on triple enter
+      Enter: ({ editor }) => {
+        const { state } = editor
+        const { selection } = state
+        const { $from, empty } = selection
+
+        if (!empty || $from.parent.type !== this.type) {
+          return false
+        }
+
+        const isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2
+        const endsWithDoubleNewline = $from.parent.textContent.endsWith('\n\n')
+
+        if (!isAtEnd || !endsWithDoubleNewline) {
+          return false
+        }
+
+        return editor
+          .chain()
+          .command(({ tr }) => {
+            tr.delete($from.pos - 2, $from.pos)
+
+            return true
+          })
+          .exitCode()
+          .run()
+      },
     }
   },
 
   addInputRules() {
     return [
-      textblockTypeInputRule(backtickInputRegex, this.type, ({ groups }: any) => groups),
-      textblockTypeInputRule(tildeInputRegex, this.type, ({ groups }: any) => groups),
+      textblockTypeInputRule({
+        find: backtickInputRegex,
+        type: this.type,
+        getAttributes: ({ groups }) => groups,
+      }),
+      textblockTypeInputRule({
+        find: tildeInputRegex,
+        type: this.type,
+        getAttributes: ({ groups }) => groups,
+      }),
+    ]
+  },
+
+  addProseMirrorPlugins() {
+    return [
+      // this plugin creates a code block for pasted content from VS Code
+      // we can also detect the copied code language
+      new Plugin({
+        key: new PluginKey('codeBlockVSCodeHandler'),
+        props: {
+          handlePaste: (view, event) => {
+            if (!event.clipboardData) {
+              return false
+            }
+
+            // don’t create a new code block within code blocks
+            if (this.editor.isActive(this.type.name)) {
+              return false
+            }
+
+            const text = event.clipboardData.getData('text/plain')
+            const vscode = event.clipboardData.getData('vscode-editor-data')
+            const vscodeData = vscode
+              ? JSON.parse(vscode)
+              : undefined
+            const language = vscodeData?.mode
+
+            if (!text || !language) {
+              return false
+            }
+
+            const { tr } = view.state
+
+            // create an empty code block
+            tr.replaceSelectionWith(this.type.create({ language }))
+
+            // put cursor inside the newly created code block
+            tr.setSelection(TextSelection.near(tr.doc.resolve(Math.max(0, tr.selection.from - 2))))
+
+            // add text to code block
+            // strip carriage return chars from text pasted as code
+            // see: https://github.com/ProseMirror/prosemirror-view/commit/a50a6bcceb4ce52ac8fcc6162488d8875613aacd
+            tr.insertText(text.replace(/\r\n?/g, '\n'))
+
+            // store meta information
+            // this is useful for other plugins that depends on the paste event
+            // like the paste rule plugin
+            tr.setMeta('paste', true)
+
+            view.dispatch(tr)
+
+            return true
+          },
+        },
+      }),
     ]
   },
 })

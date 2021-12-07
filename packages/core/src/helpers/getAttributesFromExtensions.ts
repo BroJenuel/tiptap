@@ -1,5 +1,5 @@
-import splitExtensions from './splitExtensions'
-import getExtensionField from './getExtensionField'
+import { splitExtensions } from './splitExtensions'
+import { getExtensionField } from './getExtensionField'
 import {
   Extensions,
   GlobalAttributes,
@@ -14,7 +14,7 @@ import { NodeConfig, MarkConfig } from '..'
  * Get a list of all extension attributes defined in `addAttribute` and `addGlobalAttribute`.
  * @param extensions List of extensions
  */
-export default function getAttributesFromExtensions(extensions: Extensions): ExtensionAttribute[] {
+export function getAttributesFromExtensions(extensions: Extensions): ExtensionAttribute[] {
   const extensionAttributes: ExtensionAttribute[] = []
   const { nodeExtensions, markExtensions } = splitExtensions(extensions)
   const nodeAndMarkExtensions = [...nodeExtensions, ...markExtensions]
@@ -30,6 +30,7 @@ export default function getAttributesFromExtensions(extensions: Extensions): Ext
     const context = {
       name: extension.name,
       options: extension.options,
+      storage: extension.storage,
     }
 
     const addGlobalAttributes = getExtensionField<AnyConfig['addGlobalAttributes']>(
@@ -67,6 +68,7 @@ export default function getAttributesFromExtensions(extensions: Extensions): Ext
     const context = {
       name: extension.name,
       options: extension.options,
+      storage: extension.storage,
     }
 
     const addAttributes = getExtensionField<NodeConfig['addAttributes'] | MarkConfig['addAttributes']>(

@@ -1,5 +1,4 @@
-import { Node, mergeAttributes } from '@tiptap/core'
-import { wrappingInputRule } from 'prosemirror-inputrules'
+import { Node, mergeAttributes, wrappingInputRule } from '@tiptap/core'
 
 export interface TaskItemOptions {
   nested: boolean,
@@ -11,9 +10,11 @@ export const inputRegex = /^\s*(\[([ |x])\])\s$/
 export const TaskItem = Node.create<TaskItemOptions>({
   name: 'taskItem',
 
-  defaultOptions: {
-    nested: false,
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      nested: false,
+      HTMLAttributes: {},
+    }
   },
 
   content() {
@@ -26,13 +27,11 @@ export const TaskItem = Node.create<TaskItemOptions>({
     return {
       checked: {
         default: false,
-        parseHTML: element => ({
-          checked: element.getAttribute('data-checked') === 'true',
-        }),
+        keepOnSplit: false,
+        parseHTML: element => element.getAttribute('data-checked') === 'true',
         renderHTML: attributes => ({
           'data-checked': attributes.checked,
         }),
-        keepOnSplit: false,
       },
     }
   },
@@ -40,24 +39,44 @@ export const TaskItem = Node.create<TaskItemOptions>({
   parseHTML() {
     return [
       {
-        tag: 'li[data-type="taskItem"]',
+        tag: `li[data-type="${this.name}"]`,
         priority: 51,
       },
     ]
   },
 
-  renderHTML({ HTMLAttributes }) {
-    return ['li', mergeAttributes(
-      this.options.HTMLAttributes,
-      HTMLAttributes,
-      { 'data-type': 'taskItem' },
-    ), 0]
+  renderHTML({ node, HTMLAttributes }) {
+    return [
+      'li',
+      mergeAttributes(
+        this.options.HTMLAttributes,
+        HTMLAttributes,
+        { 'data-type': this.name },
+      ),
+      [
+        'label',
+        [
+          'input',
+          {
+            type: 'checkbox',
+            checked: node.attrs.checked
+              ? 'checked'
+              : null,
+          },
+        ],
+        ['span'],
+      ],
+      [
+        'div',
+        0,
+      ],
+    ]
   },
 
   addKeyboardShortcuts() {
     const shortcuts = {
-      Enter: () => this.editor.commands.splitListItem('taskItem'),
-      'Shift-Tab': () => this.editor.commands.liftListItem('taskItem'),
+      Enter: () => this.editor.commands.splitListItem(this.name),
+      'Shift-Tab': () => this.editor.commands.liftListItem(this.name),
     }
 
     if (!this.options.nested) {
@@ -66,7 +85,7 @@ export const TaskItem = Node.create<TaskItemOptions>({
 
     return {
       ...shortcuts,
-      Tab: () => this.editor.commands.sinkListItem('taskItem'),
+      Tab: () => this.editor.commands.sinkListItem(this.name),
     }
   },
 
@@ -99,7 +118,7 @@ export const TaskItem = Node.create<TaskItemOptions>({
         if (editor.isEditable && typeof getPos === 'function') {
           editor
             .chain()
-            .focus()
+            .focus(undefined, { scrollIntoView: false })
             .command(({ tr }) => {
               tr.setNodeMarkup(getPos(), undefined, {
                 checked,
@@ -109,6 +128,10 @@ export const TaskItem = Node.create<TaskItemOptions>({
             })
             .run()
         }
+      })
+
+      Object.entries(this.options.HTMLAttributes).forEach(([key, value]) => {
+        listItem.setAttribute(key, value)
       })
 
       listItem.dataset.checked = node.attrs.checked
@@ -148,13 +171,13 @@ export const TaskItem = Node.create<TaskItemOptions>({
 
   addInputRules() {
     return [
-      wrappingInputRule(
-        inputRegex,
-        this.type,
-        match => ({
+      wrappingInputRule({
+        find: inputRegex,
+        type: this.type,
+        getAttributes: match => ({
           checked: match[match.length - 1] === 'x',
         }),
-      ),
+      }),
     ]
   },
 })

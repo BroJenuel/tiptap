@@ -29,15 +29,17 @@ declare module '@tiptap/core' {
   }
 }
 
-export const inputRegex = /(?:^|\s)((?:==)((?:[^~]+))(?:==))$/gm
-export const pasteRegex = /(?:^|\s)((?:==)((?:[^~]+))(?:==))/gm
+export const inputRegex = /(?:^|\s)((?:==)((?:[^~]+))(?:==))$/
+export const pasteRegex = /(?:^|\s)((?:==)((?:[^~]+))(?:==))/g
 
 export const Highlight = Mark.create<HighlightOptions>({
   name: 'highlight',
 
-  defaultOptions: {
-    multicolor: false,
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      multicolor: false,
+      HTMLAttributes: {},
+    }
   },
 
   addAttributes() {
@@ -48,11 +50,7 @@ export const Highlight = Mark.create<HighlightOptions>({
     return {
       color: {
         default: null,
-        parseHTML: element => {
-          return {
-            color: element.getAttribute('data-color') || element.style.backgroundColor,
-          }
-        },
+        parseHTML: element => element.getAttribute('data-color') || element.style.backgroundColor,
         renderHTML: attributes => {
           if (!attributes.color) {
             return {}
@@ -82,13 +80,13 @@ export const Highlight = Mark.create<HighlightOptions>({
   addCommands() {
     return {
       setHighlight: attributes => ({ commands }) => {
-        return commands.setMark('highlight', attributes)
+        return commands.setMark(this.name, attributes)
       },
       toggleHighlight: attributes => ({ commands }) => {
-        return commands.toggleMark('highlight', attributes)
+        return commands.toggleMark(this.name, attributes)
       },
       unsetHighlight: () => ({ commands }) => {
-        return commands.unsetMark('highlight')
+        return commands.unsetMark(this.name)
       },
     }
   },
@@ -101,13 +99,19 @@ export const Highlight = Mark.create<HighlightOptions>({
 
   addInputRules() {
     return [
-      markInputRule(inputRegex, this.type),
+      markInputRule({
+        find: inputRegex,
+        type: this.type,
+      }),
     ]
   },
 
   addPasteRules() {
     return [
-      markPasteRule(inputRegex, this.type),
+      markPasteRule({
+        find: pasteRegex,
+        type: this.type,
+      }),
     ]
   },
 })

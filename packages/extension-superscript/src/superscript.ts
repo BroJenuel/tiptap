@@ -26,8 +26,10 @@ declare module '@tiptap/core' {
 export const Superscript = Mark.create<SuperscriptExtensionOptions>({
   name: 'superscript',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   parseHTML() {
@@ -56,13 +58,13 @@ export const Superscript = Mark.create<SuperscriptExtensionOptions>({
   addCommands() {
     return {
       setSuperscript: () => ({ commands }) => {
-        return commands.setMark('superscript')
+        return commands.setMark(this.name)
       },
       toggleSuperscript: () => ({ commands }) => {
-        return commands.toggleMark('superscript')
+        return commands.toggleMark(this.name)
       },
       unsetSuperscript: () => ({ commands }) => {
-        return commands.unsetMark('superscript')
+        return commands.unsetMark(this.name)
       },
     }
   },

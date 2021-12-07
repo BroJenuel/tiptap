@@ -9,20 +9,25 @@ export interface PlaceholderOptions {
   placeholder: ((PlaceholderProps: {
     editor: Editor,
     node: ProsemirrorNode,
+    pos: number,
   }) => string) | string,
   showOnlyWhenEditable: boolean,
   showOnlyCurrent: boolean,
+  includeChildren: boolean,
 }
 
 export const Placeholder = Extension.create<PlaceholderOptions>({
   name: 'placeholder',
 
-  defaultOptions: {
-    emptyEditorClass: 'is-editor-empty',
-    emptyNodeClass: 'is-empty',
-    placeholder: 'Write something …',
-    showOnlyWhenEditable: true,
-    showOnlyCurrent: true,
+  addOptions() {
+    return {
+      emptyEditorClass: 'is-editor-empty',
+      emptyNodeClass: 'is-empty',
+      placeholder: 'Write something …',
+      showOnlyWhenEditable: true,
+      showOnlyCurrent: true,
+      includeChildren: false,
+    }
   },
 
   addProseMirrorPlugins() {
@@ -55,6 +60,7 @@ export const Placeholder = Extension.create<PlaceholderOptions>({
                     ? this.options.placeholder({
                       editor: this.editor,
                       node,
+                      pos,
                     })
                     : this.options.placeholder,
                 })
@@ -62,7 +68,7 @@ export const Placeholder = Extension.create<PlaceholderOptions>({
                 decorations.push(decoration)
               }
 
-              return false
+              return this.options.includeChildren
             })
 
             return DecorationSet.create(doc, decorations)

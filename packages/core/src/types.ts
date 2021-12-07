@@ -31,6 +31,15 @@ export type ParentConfig<T> = Partial<{
     : T[P]
 }>
 
+export type Primitive =
+  | null
+  | undefined
+  | string
+  | number
+  | boolean
+  | symbol
+  | bigint
+
 export type RemoveThis<T> = T extends (...args: any) => any
   ? (...args: Parameters<T>) => ReturnType<T>
   : T
@@ -38,6 +47,23 @@ export type RemoveThis<T> = T extends (...args: any) => any
 export type MaybeReturnType<T> = T extends (...args: any) => any
   ? ReturnType<T>
   : T
+
+export type MaybeThisParameterType<T> = Exclude<T, Primitive> extends (...args: any) => any
+  ? ThisParameterType<Exclude<T, Primitive>>
+  : any
+
+export interface EditorEvents {
+  beforeCreate: { editor: Editor },
+  create: { editor: Editor },
+  update: { editor: Editor, transaction: Transaction },
+  selectionUpdate: { editor: Editor, transaction: Transaction },
+  transaction: { editor: Editor, transaction: Transaction },
+  focus: { editor: Editor, event: FocusEvent, transaction: Transaction },
+  blur: { editor: Editor, event: FocusEvent, transaction: Transaction },
+  destroy: void,
+}
+
+export type EnableRules = (AnyExtension | string)[] | boolean
 
 export interface EditorOptions {
   element: Element,
@@ -48,22 +74,23 @@ export interface EditorOptions {
   editable: boolean,
   editorProps: EditorProps,
   parseOptions: ParseOptions,
-  enableInputRules: boolean,
-  enablePasteRules: boolean,
-  onBeforeCreate: (props: { editor: Editor }) => void,
-  onCreate: (props: { editor: Editor }) => void,
-  onUpdate: (props: { editor: Editor }) => void,
-  onSelectionUpdate: (props: { editor: Editor }) => void,
-  onTransaction: (props: { editor: Editor, transaction: Transaction }) => void,
-  onFocus: (props: { editor: Editor, event: FocusEvent }) => void,
-  onBlur: (props: { editor: Editor, event: FocusEvent }) => void,
-  onDestroy: () => void,
+  enableInputRules: EnableRules,
+  enablePasteRules: EnableRules,
+  enableCoreExtensions: boolean,
+  onBeforeCreate: (props: EditorEvents['beforeCreate']) => void,
+  onCreate: (props: EditorEvents['create']) => void,
+  onUpdate: (props: EditorEvents['update']) => void,
+  onSelectionUpdate: (props: EditorEvents['selectionUpdate']) => void,
+  onTransaction: (props: EditorEvents['transaction']) => void,
+  onFocus: (props: EditorEvents['focus']) => void,
+  onBlur: (props: EditorEvents['blur']) => void,
+  onDestroy: (props: EditorEvents['destroy']) => void,
 }
 
 export type HTMLContent = string
 
 export type JSONContent = {
-  type: string,
+  type?: string,
   attrs?: Record<string, any>,
   content?: JSONContent[],
   marks?: {
@@ -98,7 +125,7 @@ export type Attribute = {
   default: any,
   rendered?: boolean,
   renderHTML?: ((attributes: Record<string, any>) => Record<string, any> | null) | null,
-  parseHTML?: ((element: HTMLElement) => Record<string, any> | null) | null,
+  parseHTML?: ((element: HTMLElement) => any | null) | null,
   keepOnSplit: boolean,
 }
 
@@ -121,18 +148,18 @@ export type GlobalAttributes = {
 
 export type PickValue<T, K extends keyof T> = T[K]
 
-export type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I)=>void)
+export type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I) => void)
   ? I
   : never
 
 export type Diff<T extends keyof any, U extends keyof any> =
   ({ [P in T]: P } & { [P in U]: never } & { [x: string]: never })[T]
 
-export type Overwrite<T, U> = Pick<T, Diff<keyof T, keyof U>> & U;
+export type Overwrite<T, U> = Pick<T, Diff<keyof T, keyof U>> & U
 
-export type ValuesOf<T> = T[keyof T];
+export type ValuesOf<T> = T[keyof T]
 
-export type KeysWithTypeOf<T, Type> = ({[P in keyof T]: T[P] extends Type ? P : never })[keyof T]
+export type KeysWithTypeOf<T, Type> = ({ [P in keyof T]: T[P] extends Type ? P : never })[keyof T]
 
 export type NodeViewProps = {
   editor: Editor,
@@ -185,7 +212,7 @@ export type ChainedCommands = {
 
 export type CanCommands = SingleCommands & { chain: () => ChainedCommands }
 
-export type FocusPosition = 'start' | 'end' | number | boolean | null
+export type FocusPosition = 'start' | 'end' | 'all' | number | boolean | null
 
 export type Range = {
   from: number,
@@ -209,4 +236,15 @@ export type Predicate = (node: ProseMirrorNode) => boolean
 export type NodeWithPos = {
   node: ProseMirrorNode,
   pos: number,
+}
+
+export type TextSerializer = (props: {
+  node: ProseMirrorNode,
+  pos: number,
+  parent: ProseMirrorNode,
+  index: number,
+}) => string
+
+export type ExtendedRegExpMatchArray = RegExpMatchArray & {
+  data?: Record<string, any>,
 }

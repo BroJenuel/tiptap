@@ -3,6 +3,135 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.29...@tiptap/extension-hard-break@2.0.0-beta.30) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.28...@tiptap/extension-hard-break@2.0.0-beta.29) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.27...@tiptap/extension-hard-break@2.0.0-beta.28) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.26...@tiptap/extension-hard-break@2.0.0-beta.27) (2021-11-05)
+
+
+### Bug Fixes
+
+* prevent adding hard breaks in isolated nodes ([9247fcb](https://github.com/ueberdosis/tiptap/commit/9247fcb6cf20493d021664ddce95ad1c23c5a152))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.25...@tiptap/extension-hard-break@2.0.0-beta.26) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.24...@tiptap/extension-hard-break@2.0.0-beta.25) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.23...@tiptap/extension-hard-break@2.0.0-beta.24) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.22...@tiptap/extension-hard-break@2.0.0-beta.23) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.21...@tiptap/extension-hard-break@2.0.0-beta.22) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.20...@tiptap/extension-hard-break@2.0.0-beta.21) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.19...@tiptap/extension-hard-break@2.0.0-beta.20) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.18...@tiptap/extension-hard-break@2.0.0-beta.19) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.17...@tiptap/extension-hard-break@2.0.0-beta.18) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/extension-hard-break
+
+
+
+
+
+# [2.0.0-beta.17](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.16...@tiptap/extension-hard-break@2.0.0-beta.17) (2021-09-23)
+
+
+### Features
+
+* setHardBreak now keeps splittable marks by default, fix [#1934](https://github.com/ueberdosis/tiptap/issues/1934) ([377bbb1](https://github.com/ueberdosis/tiptap/commit/377bbb177d30923a0aa2a80654cc5cf87384dcf3))
+
+
+
+
+
+# [2.0.0-beta.16](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.15...@tiptap/extension-hard-break@2.0.0-beta.16) (2021-09-06)
+
+
+### Bug Fixes
+
+* render line break in text/plain format for hard breaks, fix [#1842](https://github.com/ueberdosis/tiptap/issues/1842) ([787d784](https://github.com/ueberdosis/tiptap/commit/787d7848cdca3f198e727a4a35d83793e8ff9e11))
+
+
+
+
+
 # [2.0.0-beta.15](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-hard-break@2.0.0-beta.14...@tiptap/extension-hard-break@2.0.0-beta.15) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-hard-break

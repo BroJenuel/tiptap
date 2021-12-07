@@ -28,16 +28,18 @@ declare module '@tiptap/core' {
   }
 }
 
-export const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/gm
-export const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/gm
-export const underscoreInputRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))$/gm
-export const underscorePasteRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))/gm
+export const starInputRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/
+export const starPasteRegex = /(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g
+export const underscoreInputRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))$/
+export const underscorePasteRegex = /(?:^|\s)((?:__)((?:[^__]+))(?:__))/g
 
 export const Bold = Mark.create<BoldOptions>({
   name: 'bold',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   parseHTML() {
@@ -63,13 +65,13 @@ export const Bold = Mark.create<BoldOptions>({
   addCommands() {
     return {
       setBold: () => ({ commands }) => {
-        return commands.setMark('bold')
+        return commands.setMark(this.name)
       },
       toggleBold: () => ({ commands }) => {
-        return commands.toggleMark('bold')
+        return commands.toggleMark(this.name)
       },
       unsetBold: () => ({ commands }) => {
-        return commands.unsetMark('bold')
+        return commands.unsetMark(this.name)
       },
     }
   },
@@ -82,15 +84,27 @@ export const Bold = Mark.create<BoldOptions>({
 
   addInputRules() {
     return [
-      markInputRule(starInputRegex, this.type),
-      markInputRule(underscoreInputRegex, this.type),
+      markInputRule({
+        find: starInputRegex,
+        type: this.type,
+      }),
+      markInputRule({
+        find: underscoreInputRegex,
+        type: this.type,
+      }),
     ]
   },
 
   addPasteRules() {
     return [
-      markPasteRule(starPasteRegex, this.type),
-      markPasteRule(underscorePasteRegex, this.type),
+      markPasteRule({
+        find: starPasteRegex,
+        type: this.type,
+      }),
+      markPasteRule({
+        find: underscorePasteRegex,
+        type: this.type,
+      }),
     ]
   },
 })

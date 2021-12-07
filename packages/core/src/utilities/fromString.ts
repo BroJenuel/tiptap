@@ -1,9 +1,9 @@
-export default function fromString(value: any): any {
+export function fromString(value: any): any {
   if (typeof value !== 'string') {
     return value
   }
 
-  if (value.match(/^\d*(\.\d+)?$/)) {
+  if (value.match(/^[+-]?(?:\d*\.)?\d+$/)) {
     return Number(value)
   }
 

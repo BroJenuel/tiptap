@@ -1,5 +1,6 @@
-import createNodeFromContent from '../helpers/createNodeFromContent'
-import selectionToInsertionEnd from '../helpers/selectionToInsertionEnd'
+import { Fragment, Node as ProseMirrorNode, ParseOptions } from 'prosemirror-model'
+import { createNodeFromContent } from '../helpers/createNodeFromContent'
+import { selectionToInsertionEnd } from '../helpers/selectionToInsertionEnd'
 import {
   RawCommands,
   Content,
@@ -12,16 +13,34 @@ declare module '@tiptap/core' {
       /**
        * Insert a node or string of HTML at a specific position.
        */
-      insertContentAt: (position: number | Range, value: Content) => ReturnType,
+      insertContentAt: (
+        position: number | Range,
+        value: Content,
+        options?: {
+          parseOptions?: ParseOptions,
+          updateSelection?: boolean,
+        },
+      ) => ReturnType,
     }
   }
 }
 
-export const insertContentAt: RawCommands['insertContentAt'] = (position, value) => ({ tr, dispatch, editor }) => {
+const isFragment = (nodeOrFragment: ProseMirrorNode | Fragment): nodeOrFragment is Fragment => {
+  return nodeOrFragment.toString().startsWith('<')
+}
+
+export const insertContentAt: RawCommands['insertContentAt'] = (position, value, options) => ({ tr, dispatch, editor }) => {
   if (dispatch) {
+    options = {
+      parseOptions: {},
+      updateSelection: true,
+      ...options,
+    }
+
     const content = createNodeFromContent(value, editor.schema, {
       parseOptions: {
         preserveWhitespace: 'full',
+        ...options.parseOptions,
       },
     })
 
@@ -30,14 +49,44 @@ export const insertContentAt: RawCommands['insertContentAt'] = (position, value)
       return true
     }
 
-    const { from, to } = typeof position === 'number'
+    let { from, to } = typeof position === 'number'
       ? { from: position, to: position }
       : position
+
+    let isOnlyBlockContent = true
+    const nodes = isFragment(content)
+      ? content
+      : [content]
+
+    nodes.forEach(node => {
+      isOnlyBlockContent = isOnlyBlockContent
+        ? node.isBlock
+        : false
+    })
+
+    // check if we can replace the wrapping node by
+    // the newly inserted content
+    // example:
+    // replace an empty paragraph by an inserted image
+    // instead of inserting the image below the paragraph
+    if (from === to && isOnlyBlockContent) {
+      const { parent } = tr.doc.resolve(from)
+      const isEmptyTextBlock = parent.isTextblock
+        && !parent.type.spec.code
+        && !parent.childCount
+
+      if (isEmptyTextBlock) {
+        from -= 1
+        to += 1
+      }
+    }
 
     tr.replaceWith(from, to, content)
 
     // set cursor at end of inserted content
-    selectionToInsertionEnd(tr, tr.steps.length - 1, 1)
+    if (options.updateSelection) {
+      selectionToInsertionEnd(tr, tr.steps.length - 1, -1)
+    }
   }
 
   return true

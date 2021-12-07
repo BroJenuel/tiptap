@@ -1,3 +1,0 @@
-# undoInputRule
-
-<ContentMissing />

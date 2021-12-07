@@ -8,9 +8,13 @@ export type BubbleMenuOptions = Omit<BubbleMenuPluginProps, 'editor' | 'element'
 export const BubbleMenu = Extension.create<BubbleMenuOptions>({
   name: 'bubbleMenu',
 
-  defaultOptions: {
-    element: null,
-    tippyOptions: {},
+  addOptions() {
+    return {
+      element: null,
+      tippyOptions: {},
+      pluginKey: 'bubbleMenu',
+      shouldShow: null,
+    }
   },
 
   addProseMirrorPlugins() {
@@ -20,9 +24,11 @@ export const BubbleMenu = Extension.create<BubbleMenuOptions>({
 
     return [
       BubbleMenuPlugin({
+        pluginKey: this.options.pluginKey,
         editor: this.editor,
         element: this.options.element,
         tippyOptions: this.options.tippyOptions,
+        shouldShow: this.options.shouldShow,
       }),
     ]
   },

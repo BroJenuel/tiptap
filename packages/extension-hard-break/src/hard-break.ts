@@ -1,6 +1,7 @@
 import { Node, mergeAttributes } from '@tiptap/core'
 
 export interface HardBreakOptions {
+  keepMarks: boolean,
   HTMLAttributes: Record<string, any>,
 }
 
@@ -18,8 +19,11 @@ declare module '@tiptap/core' {
 export const HardBreak = Node.create<HardBreakOptions>({
   name: 'hardBreak',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      keepMarks: true,
+      HTMLAttributes: {},
+    }
   },
 
   inline: true,
@@ -38,12 +42,46 @@ export const HardBreak = Node.create<HardBreakOptions>({
     return ['br', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes)]
   },
 
+  renderText() {
+    return '\n'
+  },
+
   addCommands() {
     return {
-      setHardBreak: () => ({ commands }) => {
+      setHardBreak: () => ({
+        commands,
+        chain,
+        state,
+        editor,
+      }) => {
         return commands.first([
           () => commands.exitCode(),
-          () => commands.insertContent({ type: this.name }),
+          () => commands.command(() => {
+            const { selection, storedMarks } = state
+
+            if (selection.$from.parent.type.spec.isolating) {
+              return false
+            }
+
+            const { keepMarks } = this.options
+            const { splittableMarks } = editor.extensionManager
+            const marks = storedMarks
+              || (selection.$to.parentOffset && selection.$from.marks())
+
+            return chain()
+              .insertContent({ type: this.name })
+              .command(({ tr, dispatch }) => {
+                if (dispatch && marks && keepMarks) {
+                  const filteredMarks = marks
+                    .filter(mark => splittableMarks.includes(mark.type.name))
+
+                  tr.ensureMarks(filteredMarks)
+                }
+
+                return true
+              })
+              .run()
+          }),
         ])
       },
     }

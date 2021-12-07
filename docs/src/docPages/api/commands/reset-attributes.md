@@ -1,3 +1,0 @@
-# resetAttributes
-
-<ContentMissing />

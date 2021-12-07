@@ -5,9 +5,11 @@ import { Extension } from '@tiptap/core/src/Extension'
 describe('extension options', () => {
   it('should set options', () => {
     const extension = Extension.create({
-      defaultOptions: {
-        foo: 1,
-        bar: 1,
+      addOptions() {
+        return {
+          foo: 1,
+          bar: 1,
+        }
       },
     })
 
@@ -20,9 +22,11 @@ describe('extension options', () => {
   it('should pass through', () => {
     const extension = Extension
       .create({
-        defaultOptions: {
-          foo: 1,
-          bar: 1,
+        addOptions() {
+          return {
+            foo: 1,
+            bar: 1,
+          }
         },
       })
       .extend()
@@ -37,9 +41,11 @@ describe('extension options', () => {
   it('should be configurable', () => {
     const extension = Extension
       .create({
-        defaultOptions: {
-          foo: 1,
-          bar: 1,
+        addOptions() {
+          return {
+            foo: 1,
+            bar: 1,
+          }
         },
       })
       .configure({
@@ -54,16 +60,20 @@ describe('extension options', () => {
 
   it('should be extendable', () => {
     const extension = Extension.create({
-      defaultOptions: {
-        foo: 1,
-        bar: 1,
+      addOptions() {
+        return {
+          foo: 1,
+          bar: 1,
+        }
       },
     })
 
     const newExtension = extension.extend({
-      defaultOptions: {
-        ...extension.options,
-        baz: 1,
+      addOptions() {
+        return {
+          ...this.parent?.(),
+          baz: 1,
+        }
       },
     })
 
@@ -77,14 +87,18 @@ describe('extension options', () => {
   it('should be overwritable', () => {
     const extension = Extension
       .create({
-        defaultOptions: {
-          foo: 1,
-          bar: 1,
+        addOptions() {
+          return {
+            foo: 1,
+            bar: 1,
+          }
         },
       })
       .extend({
-        defaultOptions: {
-          baz: 1,
+        addOptions() {
+          return {
+            baz: 1,
+          }
         },
       })
 
@@ -99,11 +113,13 @@ describe('extension options', () => {
         foo: number[],
         HTMLAttributes: Record<string, any>,
       }>({
-        defaultOptions: {
-          foo: [1, 2, 3],
-          HTMLAttributes: {
-            class: 'foo',
-          },
+        addOptions() {
+          return {
+            foo: [1, 2, 3],
+            HTMLAttributes: {
+              class: 'foo',
+            },
+          }
         },
       })
       .configure({
@@ -125,9 +141,11 @@ describe('extension options', () => {
   it('should create its own instance on configure', () => {
     const extension = Extension
       .create({
-        defaultOptions: {
-          foo: 1,
-          bar: 2,
+        addOptions() {
+          return {
+            foo: 1,
+            bar: 2,
+          }
         },
       })
 

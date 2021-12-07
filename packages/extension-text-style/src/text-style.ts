@@ -22,8 +22,10 @@ declare module '@tiptap/core' {
 export const TextStyle = Mark.create<TextStyleOptions>({
   name: 'textStyle',
 
-  defaultOptions: {
-    HTMLAttributes: {},
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+    }
   },
 
   parseHTML() {
@@ -57,7 +59,7 @@ export const TextStyle = Mark.create<TextStyleOptions>({
           return true
         }
 
-        return commands.unsetMark('textStyle')
+        return commands.unsetMark(this.name)
       },
     }
   },

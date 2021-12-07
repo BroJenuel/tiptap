@@ -3,6 +3,164 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.44...@tiptap/extension-placeholder@2.0.0-beta.45) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.44](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.43...@tiptap/extension-placeholder@2.0.0-beta.44) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.42...@tiptap/extension-placeholder@2.0.0-beta.43) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.41...@tiptap/extension-placeholder@2.0.0-beta.42) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.40...@tiptap/extension-placeholder@2.0.0-beta.41) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.40](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.39...@tiptap/extension-placeholder@2.0.0-beta.40) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.39](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.38...@tiptap/extension-placeholder@2.0.0-beta.39) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.37...@tiptap/extension-placeholder@2.0.0-beta.38) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.36...@tiptap/extension-placeholder@2.0.0-beta.37) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.35...@tiptap/extension-placeholder@2.0.0-beta.36) (2021-10-25)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.34...@tiptap/extension-placeholder@2.0.0-beta.35) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.33...@tiptap/extension-placeholder@2.0.0-beta.34) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.32...@tiptap/extension-placeholder@2.0.0-beta.33) (2021-10-12)
+
+
+### Features
+
+* add pos to placeholder props ([eb53743](https://github.com/ueberdosis/tiptap/commit/eb5374321b09e8b4a8e89dcc620d0ed4a2657f78))
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.31...@tiptap/extension-placeholder@2.0.0-beta.32) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.30...@tiptap/extension-placeholder@2.0.0-beta.31) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.29...@tiptap/extension-placeholder@2.0.0-beta.30) (2021-09-08)
+
+
+### Features
+
+* add `includeChildren` option to placeholder extension ([#1416](https://github.com/ueberdosis/tiptap/issues/1416)) ([1799b90](https://github.com/ueberdosis/tiptap/commit/1799b907ec7db7988f2c78016755ee1eaaab35af))
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.28...@tiptap/extension-placeholder@2.0.0-beta.29) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.27...@tiptap/extension-placeholder@2.0.0-beta.28) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.26...@tiptap/extension-placeholder@2.0.0-beta.27) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
 # [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.25...@tiptap/extension-placeholder@2.0.0-beta.26) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-placeholder

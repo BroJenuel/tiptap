@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.32...@tiptap/extension-gapcursor@2.0.0-beta.33) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.31...@tiptap/extension-gapcursor@2.0.0-beta.32) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.30...@tiptap/extension-gapcursor@2.0.0-beta.31) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.29...@tiptap/extension-gapcursor@2.0.0-beta.30) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.28...@tiptap/extension-gapcursor@2.0.0-beta.29) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.27...@tiptap/extension-gapcursor@2.0.0-beta.28) (2021-10-22)
+
+
+### Features
+
+* Add extension storage ([#2069](https://github.com/ueberdosis/tiptap/issues/2069)) ([7ffabf2](https://github.com/ueberdosis/tiptap/commit/7ffabf251c408a652eec1931cc78a8bd43cccb67))
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.26...@tiptap/extension-gapcursor@2.0.0-beta.27) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.25...@tiptap/extension-gapcursor@2.0.0-beta.26) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.24...@tiptap/extension-gapcursor@2.0.0-beta.25) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.23...@tiptap/extension-gapcursor@2.0.0-beta.24) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.22...@tiptap/extension-gapcursor@2.0.0-beta.23) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.21...@tiptap/extension-gapcursor@2.0.0-beta.22) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.20...@tiptap/extension-gapcursor@2.0.0-beta.21) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.19...@tiptap/extension-gapcursor@2.0.0-beta.20) (2021-09-21)
+
+**Note:** Version bump only for package @tiptap/extension-gapcursor
+
+
+
+
+
 # [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-gapcursor@2.0.0-beta.18...@tiptap/extension-gapcursor@2.0.0-beta.19) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-gapcursor

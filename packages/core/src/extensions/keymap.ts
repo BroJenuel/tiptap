@@ -25,12 +25,12 @@ export const Keymap = Extension.create({
         () => commands.splitBlock(),
       ]),
       'Mod-Enter': () => this.editor.commands.exitCode(),
-      Backspace: () => handleBackspace(),
-      'Mod-Backspace': () => handleBackspace(),
-      Delete: () => handleDelete(),
-      'Mod-Delete': () => handleDelete(),
-      // we don’t need a custom `selectAll` for now
-      // 'Mod-a': () => this.editor.commands.selectAll(),
+      Backspace: handleBackspace,
+      'Mod-Backspace': handleBackspace,
+      'Shift-Backspace': handleBackspace,
+      Delete: handleDelete,
+      'Mod-Delete': handleDelete,
+      'Mod-a': () => this.editor.commands.selectAll(),
     }
   },
 })

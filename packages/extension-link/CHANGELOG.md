@@ -3,6 +3,133 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.32...@tiptap/extension-link@2.0.0-beta.33) (2021-12-06)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.31...@tiptap/extension-link@2.0.0-beta.32) (2021-12-03)
+
+
+### Bug Fixes
+
+* calculate correct autolink position when using leaf nodes in the same text block, fix [#2231](https://github.com/ueberdosis/tiptap/issues/2231) ([924b650](https://github.com/ueberdosis/tiptap/commit/924b6508f9211ba281b159676d4800748870b565))
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.30...@tiptap/extension-link@2.0.0-beta.31) (2021-12-03)
+
+
+### Features
+
+* Add support for autolink ([#2226](https://github.com/ueberdosis/tiptap/issues/2226)) ([3d68981](https://github.com/ueberdosis/tiptap/commit/3d68981b47d087fff40549d2143eb952fc9e0a50))
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.29...@tiptap/extension-link@2.0.0-beta.30) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.28...@tiptap/extension-link@2.0.0-beta.29) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove some magic strings ([6c34dec](https://github.com/ueberdosis/tiptap/commit/6c34dec33ac39c9f037a0a72e4525f3fc6d422bf))
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.27...@tiptap/extension-link@2.0.0-beta.28) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.26...@tiptap/extension-link@2.0.0-beta.27) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.25...@tiptap/extension-link@2.0.0-beta.26) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.24...@tiptap/extension-link@2.0.0-beta.25) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.23...@tiptap/extension-link@2.0.0-beta.24) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.22...@tiptap/extension-link@2.0.0-beta.23) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.21...@tiptap/extension-link@2.0.0-beta.22) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.20...@tiptap/extension-link@2.0.0-beta.21) (2021-10-08)
+
+
+### Features
+
+* Integrate input rules and paste rules into the core ([#1997](https://github.com/ueberdosis/tiptap/issues/1997)) ([723b955](https://github.com/ueberdosis/tiptap/commit/723b955cecc5c92c8aad897ce16c60fb62976571))
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.19...@tiptap/extension-link@2.0.0-beta.20) (2021-09-08)
+
+
+### Features
+
+* add extendEmptyMarkRange option to mark commands ([#1859](https://github.com/ueberdosis/tiptap/issues/1859)) ([14e458e](https://github.com/ueberdosis/tiptap/commit/14e458ea7d7475a51ac00d6f67509dc769919d0b))
+
+
+
+
+
 # [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.18...@tiptap/extension-link@2.0.0-beta.19) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-link

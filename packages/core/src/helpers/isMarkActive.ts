@@ -1,15 +1,15 @@
 import { EditorState } from 'prosemirror-state'
 import { MarkType } from 'prosemirror-model'
-import objectIncludes from '../utilities/objectIncludes'
-import getMarkType from './getMarkType'
+import { objectIncludes } from '../utilities/objectIncludes'
+import { getMarkType } from './getMarkType'
 import { MarkRange } from '../types'
 
-export default function isMarkActive(
+export function isMarkActive(
   state: EditorState,
   typeOrName: MarkType | string | null,
   attributes: Record<string, any> = {},
 ): boolean {
-  const { from, to, empty } = state.selection
+  const { empty, ranges } = state.selection
   const type = typeOrName
     ? getMarkType(typeOrName, state.schema)
     : null
@@ -23,26 +23,33 @@ export default function isMarkActive(
 
         return type.name === mark.type.name
       })
-      .find(mark => objectIncludes(mark.attrs, attributes))
+      .find(mark => objectIncludes(mark.attrs, attributes, { strict: false }))
   }
 
   let selectionRange = 0
-  let markRanges: MarkRange[] = []
+  const markRanges: MarkRange[] = []
 
-  state.doc.nodesBetween(from, to, (node, pos) => {
-    if (node.isText) {
+  ranges.forEach(({ $from, $to }) => {
+    const from = $from.pos
+    const to = $to.pos
+
+    state.doc.nodesBetween(from, to, (node, pos) => {
+      if (!node.isText && !node.marks.length) {
+        return
+      }
+
       const relativeFrom = Math.max(from, pos)
       const relativeTo = Math.min(to, pos + node.nodeSize)
       const range = relativeTo - relativeFrom
 
       selectionRange += range
 
-      markRanges = [...markRanges, ...node.marks.map(mark => ({
+      markRanges.push(...node.marks.map(mark => ({
         mark,
         from: relativeFrom,
         to: relativeTo,
-      }))]
-    }
+      })))
+    })
   })
 
   if (selectionRange === 0) {
@@ -58,12 +65,8 @@ export default function isMarkActive(
 
       return type.name === markRange.mark.type.name
     })
-    .filter(markRange => objectIncludes(markRange.mark.attrs, attributes))
-    .reduce((sum, markRange) => {
-      const size = markRange.to - markRange.from
-
-      return sum + size
-    }, 0)
+    .filter(markRange => objectIncludes(markRange.mark.attrs, attributes, { strict: false }))
+    .reduce((sum, markRange) => sum + markRange.to - markRange.from, 0)
 
   // calculate range of marks that excludes the searched mark
   // for example `code` doesn’t allow any other marks
@@ -76,11 +79,7 @@ export default function isMarkActive(
       return markRange.mark.type !== type
         && markRange.mark.type.excludes(type)
     })
-    .reduce((sum, markRange) => {
-      const size = markRange.to - markRange.from
-
-      return sum + size
-    }, 0)
+    .reduce((sum, markRange) => sum + markRange.to - markRange.from, 0)
 
   // we only include the result of `excludedRange`
   // if there is a match at all

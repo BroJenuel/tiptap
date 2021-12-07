@@ -3,6 +3,219 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.85](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.84...@tiptap/suggestion@2.0.0-beta.85) (2021-12-04)
+
+
+### Bug Fixes
+
+* call onExit hook when editor is destroyed, fix [#1645](https://github.com/ueberdosis/tiptap/issues/1645) ([5d2ef71](https://github.com/ueberdosis/tiptap/commit/5d2ef71d33bea9ba6bf1aeb3cceee08af27f1e75))
+
+
+
+
+
+# [2.0.0-beta.84](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.83...@tiptap/suggestion@2.0.0-beta.84) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.83](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.82...@tiptap/suggestion@2.0.0-beta.83) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.82](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.81...@tiptap/suggestion@2.0.0-beta.82) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.81](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.80...@tiptap/suggestion@2.0.0-beta.81) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.80](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.79...@tiptap/suggestion@2.0.0-beta.80) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.79](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.78...@tiptap/suggestion@2.0.0-beta.79) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.78](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.77...@tiptap/suggestion@2.0.0-beta.78) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.77](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.76...@tiptap/suggestion@2.0.0-beta.77) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.76](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.75...@tiptap/suggestion@2.0.0-beta.76) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.75](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.74...@tiptap/suggestion@2.0.0-beta.75) (2021-10-25)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.74](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.73...@tiptap/suggestion@2.0.0-beta.74) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.73](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.72...@tiptap/suggestion@2.0.0-beta.73) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.72](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.71...@tiptap/suggestion@2.0.0-beta.72) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.71](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.70...@tiptap/suggestion@2.0.0-beta.71) (2021-09-20)
+
+
+### Bug Fixes
+
+* Add type for async items on suggestions (fix TS strict types complaining) ([#1912](https://github.com/ueberdosis/tiptap/issues/1912)) ([4a6c3cb](https://github.com/ueberdosis/tiptap/commit/4a6c3cbaac9690f1261b8d435195878b6f60ad64))
+
+
+
+
+
+# [2.0.0-beta.70](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.69...@tiptap/suggestion@2.0.0-beta.70) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.69](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.68...@tiptap/suggestion@2.0.0-beta.69) (2021-09-06)
+
+
+### Features
+
+* allow triggering suggestions without prefix space ([#1826](https://github.com/ueberdosis/tiptap/issues/1826), fix [#1384](https://github.com/ueberdosis/tiptap/issues/1384)) ([4dd0d6d](https://github.com/ueberdosis/tiptap/commit/4dd0d6d4dce20c78974bf53619a827f8ba1718e3))
+
+
+
+
+
+# [2.0.0-beta.68](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.67...@tiptap/suggestion@2.0.0-beta.68) (2021-08-23)
+
+
+### Bug Fixes
+
+* get correct clientRect when using async suggesteion items, fix [#1782](https://github.com/ueberdosis/tiptap/issues/1782) ([839acc1](https://github.com/ueberdosis/tiptap/commit/839acc1d9f713b89f366cd7da63330fd0243c31b))
+
+
+
+
+
+# [2.0.0-beta.67](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.66...@tiptap/suggestion@2.0.0-beta.67) (2021-08-23)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.66](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.65...@tiptap/suggestion@2.0.0-beta.66) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.65](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.64...@tiptap/suggestion@2.0.0-beta.65) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/suggestion
+
+
+
+
+
+# [2.0.0-beta.64](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.63...@tiptap/suggestion@2.0.0-beta.64) (2021-08-13)
+
+
+### Bug Fixes
+
+* improve suggestion handling for chinese input, fix [#1449](https://github.com/ueberdosis/tiptap/issues/1449) ([9789372](https://github.com/ueberdosis/tiptap/commit/9789372cea901b21059d53c30ff301efb35fb720))
+
+
+
+
+
+# [2.0.0-beta.63](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.62...@tiptap/suggestion@2.0.0-beta.63) (2021-08-13)
+
+
+### Bug Fixes
+
+* add pluginKey option to suggestion plugin, fix [#1282](https://github.com/ueberdosis/tiptap/issues/1282) ([7cf3350](https://github.com/ueberdosis/tiptap/commit/7cf3350a832181f8cc1fa7ea1afec8f8d083e507))
+
+
+
+
+
+# [2.0.0-beta.62](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.61...@tiptap/suggestion@2.0.0-beta.62) (2021-08-09)
+
+
+### Bug Fixes
+
+* use correct state when doc changed externally ([#1646](https://github.com/ueberdosis/tiptap/issues/1646)) ([60606f9](https://github.com/ueberdosis/tiptap/commit/60606f99a1df3c694cc2faa0522c772ef419e9fe))
+
+
+
+
+
 # [2.0.0-beta.61](https://github.com/ueberdosis/tiptap/compare/@tiptap/suggestion@2.0.0-beta.60...@tiptap/suggestion@2.0.0-beta.61) (2021-07-26)
 
 

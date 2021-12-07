@@ -1,3 +1,0 @@
-# deleteNode
-
-<ContentMissing />

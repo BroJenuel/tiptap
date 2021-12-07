@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.23...@tiptap/extension-task-list@2.0.0-beta.24) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove some magic strings ([6c34dec](https://github.com/ueberdosis/tiptap/commit/6c34dec33ac39c9f037a0a72e4525f3fc6d422bf))
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.22...@tiptap/extension-task-list@2.0.0-beta.23) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.21...@tiptap/extension-task-list@2.0.0-beta.22) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.20...@tiptap/extension-task-list@2.0.0-beta.21) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.19...@tiptap/extension-task-list@2.0.0-beta.20) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.18...@tiptap/extension-task-list@2.0.0-beta.19) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.17...@tiptap/extension-task-list@2.0.0-beta.18) (2021-10-15)
+
+
+### Bug Fixes
+
+* add missing HTMLAttributes to task list, fix [#2042](https://github.com/ueberdosis/tiptap/issues/2042) ([7503d1b](https://github.com/ueberdosis/tiptap/commit/7503d1bed1651899ee90bc9adf76899d90ace9e7))
+
+
+
+
+
 # [2.0.0-beta.17](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.16...@tiptap/extension-task-list@2.0.0-beta.17) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-task-list

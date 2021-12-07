@@ -1,10 +1,14 @@
 import { Plugin, Transaction } from 'prosemirror-state'
-import { InputRule } from 'prosemirror-inputrules'
+import { InputRule } from './InputRule'
+import { PasteRule } from './PasteRule'
 import { Editor } from './Editor'
 import { Node } from './Node'
 import { Mark } from './Mark'
-import mergeDeep from './utilities/mergeDeep'
+import { mergeDeep } from './utilities/mergeDeep'
+import { callOrReturn } from './utilities/callOrReturn'
+import { getExtensionField } from './helpers/getExtensionField'
 import {
+  AnyConfig,
   Extensions,
   GlobalAttributes,
   RawCommands,
@@ -14,7 +18,7 @@ import {
 import { ExtensionConfig } from '.'
 
 declare module '@tiptap/core' {
-  interface ExtensionConfig<Options = any> {
+  interface ExtensionConfig<Options = any, Storage = any> {
     [key: string]: any;
 
     /**
@@ -33,12 +37,30 @@ declare module '@tiptap/core' {
     defaultOptions?: Options,
 
     /**
+     * Default Options
+     */
+    addOptions?: (this: {
+      name: string,
+      parent: Exclude<ParentConfig<ExtensionConfig<Options, Storage>>['addOptions'], undefined>,
+    }) => Options,
+
+    /**
+     * Default Storage
+     */
+    addStorage?: (this: {
+      name: string,
+      options: Options,
+      parent: Exclude<ParentConfig<ExtensionConfig<Options, Storage>>['addStorage'], undefined>,
+    }) => Storage,
+
+    /**
      * Global attributes
      */
     addGlobalAttributes?: (this: {
       name: string,
       options: Options,
-      parent: ParentConfig<ExtensionConfig<Options>>['addGlobalAttributes'],
+      storage: Storage,
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addGlobalAttributes'],
     }) => GlobalAttributes | {},
 
     /**
@@ -47,8 +69,9 @@ declare module '@tiptap/core' {
     addCommands?: (this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['addCommands'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addCommands'],
     }) => Partial<RawCommands>,
 
     /**
@@ -57,8 +80,9 @@ declare module '@tiptap/core' {
     addKeyboardShortcuts?: (this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['addKeyboardShortcuts'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addKeyboardShortcuts'],
     }) => {
       [key: string]: KeyboardShortcutCommand,
     },
@@ -69,8 +93,9 @@ declare module '@tiptap/core' {
     addInputRules?: (this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['addInputRules'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addInputRules'],
     }) => InputRule[],
 
     /**
@@ -79,9 +104,10 @@ declare module '@tiptap/core' {
     addPasteRules?: (this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['addPasteRules'],
-    }) => Plugin[],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addPasteRules'],
+    }) => PasteRule[],
 
     /**
      * ProseMirror plugins
@@ -89,8 +115,9 @@ declare module '@tiptap/core' {
     addProseMirrorPlugins?: (this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['addProseMirrorPlugins'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addProseMirrorPlugins'],
     }) => Plugin[],
 
     /**
@@ -99,7 +126,8 @@ declare module '@tiptap/core' {
     addExtensions?: (this: {
       name: string,
       options: Options,
-      parent: ParentConfig<ExtensionConfig<Options>>['addExtensions'],
+      storage: Storage,
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['addExtensions'],
     }) => Extensions,
 
     /**
@@ -109,7 +137,8 @@ declare module '@tiptap/core' {
       this: {
         name: string,
         options: Options,
-        parent: ParentConfig<ExtensionConfig<Options>>['extendNodeSchema'],
+        storage: Storage,
+        parent: ParentConfig<ExtensionConfig<Options, Storage>>['extendNodeSchema'],
       },
       extension: Node,
     ) => Record<string, any>) | null,
@@ -121,7 +150,8 @@ declare module '@tiptap/core' {
       this: {
         name: string,
         options: Options,
-        parent: ParentConfig<ExtensionConfig<Options>>['extendMarkSchema'],
+        storage: Storage,
+        parent: ParentConfig<ExtensionConfig<Options, Storage>>['extendMarkSchema'],
       },
       extension: Mark,
     ) => Record<string, any>) | null,
@@ -132,8 +162,9 @@ declare module '@tiptap/core' {
     onBeforeCreate?: ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['onBeforeCreate'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['onBeforeCreate'],
     }) => void) | null,
 
     /**
@@ -142,8 +173,9 @@ declare module '@tiptap/core' {
     onCreate?: ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['onCreate'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['onCreate'],
     }) => void) | null,
 
     /**
@@ -152,8 +184,9 @@ declare module '@tiptap/core' {
     onUpdate?: ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['onUpdate'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['onUpdate'],
     }) => void) | null,
 
     /**
@@ -162,8 +195,9 @@ declare module '@tiptap/core' {
     onSelectionUpdate?: ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['onSelectionUpdate'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['onSelectionUpdate'],
     }) => void) | null,
 
     /**
@@ -173,8 +207,9 @@ declare module '@tiptap/core' {
       this: {
         name: string,
         options: Options,
+        storage: Storage,
         editor: Editor,
-        parent: ParentConfig<ExtensionConfig<Options>>['onTransaction'],
+        parent: ParentConfig<ExtensionConfig<Options, Storage>>['onTransaction'],
       },
       props: {
         transaction: Transaction,
@@ -188,8 +223,9 @@ declare module '@tiptap/core' {
       this: {
         name: string,
         options: Options,
+        storage: Storage,
         editor: Editor,
-        parent: ParentConfig<ExtensionConfig<Options>>['onFocus'],
+        parent: ParentConfig<ExtensionConfig<Options, Storage>>['onFocus'],
       },
       props: {
         event: FocusEvent,
@@ -203,8 +239,9 @@ declare module '@tiptap/core' {
       this: {
         name: string,
         options: Options,
+        storage: Storage,
         editor: Editor,
-        parent: ParentConfig<ExtensionConfig<Options>>['onBlur'],
+        parent: ParentConfig<ExtensionConfig<Options, Storage>>['onBlur'],
       },
       props: {
         event: FocusEvent,
@@ -217,13 +254,14 @@ declare module '@tiptap/core' {
     onDestroy?: ((this: {
       name: string,
       options: Options,
+      storage: Storage,
       editor: Editor,
-      parent: ParentConfig<ExtensionConfig<Options>>['onDestroy'],
+      parent: ParentConfig<ExtensionConfig<Options, Storage>>['onDestroy'],
     }) => void) | null,
   }
 }
 
-export class Extension<Options = any> {
+export class Extension<Options = any, Storage = any> {
   type = 'extension'
 
   name = 'extension'
@@ -234,23 +272,50 @@ export class Extension<Options = any> {
 
   options: Options
 
+  storage: Storage
+
   config: ExtensionConfig = {
     name: this.name,
     defaultOptions: {},
   }
 
-  constructor(config: Partial<ExtensionConfig<Options>> = {}) {
+  constructor(config: Partial<ExtensionConfig<Options, Storage>> = {}) {
     this.config = {
       ...this.config,
       ...config,
     }
 
     this.name = this.config.name
+
+    if (config.defaultOptions) {
+      console.warn(`[tiptap warn]: BREAKING CHANGE: "defaultOptions" is deprecated. Please use "addOptions" instead. Found in extension: "${this.name}".`)
+    }
+
+    // TODO: remove `addOptions` fallback
     this.options = this.config.defaultOptions
+
+    if (this.config.addOptions) {
+      this.options = callOrReturn(getExtensionField<AnyConfig['addOptions']>(
+        this,
+        'addOptions',
+        {
+          name: this.name,
+        },
+      ))
+    }
+
+    this.storage = callOrReturn(getExtensionField<AnyConfig['addStorage']>(
+      this,
+      'addStorage',
+      {
+        name: this.name,
+        options: this.options,
+      },
+    )) || {}
   }
 
-  static create<O>(config: Partial<ExtensionConfig<O>> = {}) {
-    return new Extension<O>(config)
+  static create<O = any, S = any>(config: Partial<ExtensionConfig<O, S>> = {}) {
+    return new Extension<O, S>(config)
   }
 
   configure(options: Partial<Options> = {}) {
@@ -260,11 +325,20 @@ export class Extension<Options = any> {
 
     extension.options = mergeDeep(this.options, options) as Options
 
+    extension.storage = callOrReturn(getExtensionField<AnyConfig['addStorage']>(
+      extension,
+      'addStorage',
+      {
+        name: extension.name,
+        options: extension.options,
+      },
+    ))
+
     return extension
   }
 
-  extend<ExtendedOptions = Options>(extendedConfig: Partial<ExtensionConfig<ExtendedOptions>> = {}) {
-    const extension = new Extension<ExtendedOptions>(extendedConfig)
+  extend<ExtendedOptions = Options, ExtendedStorage = Storage>(extendedConfig: Partial<ExtensionConfig<ExtendedOptions, ExtendedStorage>> = {}) {
+    const extension = new Extension<ExtendedOptions, ExtendedStorage>(extendedConfig)
 
     extension.parent = this
 
@@ -274,9 +348,26 @@ export class Extension<Options = any> {
       ? extendedConfig.name
       : extension.parent.name
 
-    extension.options = extendedConfig.defaultOptions
-      ? extendedConfig.defaultOptions
-      : extension.parent.options
+    if (extendedConfig.defaultOptions) {
+      console.warn(`[tiptap warn]: BREAKING CHANGE: "defaultOptions" is deprecated. Please use "addOptions" instead. Found in extension: "${extension.name}".`)
+    }
+
+    extension.options = callOrReturn(getExtensionField<AnyConfig['addOptions']>(
+      extension,
+      'addOptions',
+      {
+        name: extension.name,
+      },
+    ))
+
+    extension.storage = callOrReturn(getExtensionField<AnyConfig['addStorage']>(
+      extension,
+      'addStorage',
+      {
+        name: extension.name,
+        options: extension.options,
+      },
+    ))
 
     return extension
   }

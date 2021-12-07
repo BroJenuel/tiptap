@@ -1,52 +1,68 @@
+import * as extensions from './extensions'
+
+export { extensions }
 export * from './Editor'
 export * from './Extension'
 export * from './Node'
 export * from './Mark'
 export * from './NodeView'
 export * from './Tracker'
+export * from './InputRule'
+export * from './PasteRule'
+export * from './CommandManager'
 export * from './types'
 
-export { default as nodeInputRule } from './inputRules/nodeInputRule'
-export { default as markInputRule } from './inputRules/markInputRule'
-export { default as markPasteRule } from './pasteRules/markPasteRule'
+export * from './inputRules/nodeInputRule'
+export * from './inputRules/markInputRule'
+export * from './inputRules/textblockTypeInputRule'
+export * from './inputRules/textInputRule'
+export * from './inputRules/wrappingInputRule'
+export * from './pasteRules/markPasteRule'
+export * from './pasteRules/textPasteRule'
 
-export { default as callOrReturn } from './utilities/callOrReturn'
-export { default as mergeAttributes } from './utilities/mergeAttributes'
+export * from './utilities/callOrReturn'
+export * from './utilities/mergeAttributes'
 
-export { default as getExtensionField } from './helpers/getExtensionField'
-export { default as findChildren } from './helpers/findChildren'
-export { default as findChildrenInRange } from './helpers/findChildrenInRange'
-export { default as findParentNode } from './helpers/findParentNode'
-export { default as findParentNodeClosestToPos } from './helpers/findParentNodeClosestToPos'
-export { default as generateHTML } from './helpers/generateHTML'
-export { default as generateJSON } from './helpers/generateJSON'
-export { default as getSchema } from './helpers/getSchema'
-export { default as getHTMLFromFragment } from './helpers/getHTMLFromFragment'
-export { default as getDebugJSON } from './helpers/getDebugJSON'
-export { default as getAttributes } from './helpers/getAttributes'
-export { default as getMarkAttributes } from './helpers/getMarkAttributes'
-export { default as getMarkRange } from './helpers/getMarkRange'
-export { default as getMarkType } from './helpers/getMarkType'
-export { default as getMarksBetween } from './helpers/getMarksBetween'
-export { default as getNodeAttributes } from './helpers/getNodeAttributes'
-export { default as getNodeType } from './helpers/getNodeType'
-export { default as isActive } from './helpers/isActive'
-export { default as isList } from './helpers/isList'
-export { default as isMarkActive } from './helpers/isMarkActive'
-export { default as isNodeActive } from './helpers/isNodeActive'
-export { default as isNodeEmpty } from './helpers/isNodeEmpty'
-export { default as isNodeSelection } from './helpers/isNodeSelection'
-export { default as isTextSelection } from './helpers/isTextSelection'
-export { default as posToDOMRect } from './helpers/posToDOMRect'
+export * from './helpers/combineTransactionSteps'
+export * from './helpers/defaultBlockAt'
+export * from './helpers/getExtensionField'
+export * from './helpers/findChildren'
+export * from './helpers/findChildrenInRange'
+export * from './helpers/findParentNode'
+export * from './helpers/findParentNodeClosestToPos'
+export * from './helpers/generateHTML'
+export * from './helpers/generateJSON'
+export * from './helpers/generateText'
+export * from './helpers/getChangedRanges'
+export * from './helpers/getSchema'
+export * from './helpers/getHTMLFromFragment'
+export * from './helpers/getDebugJSON'
+export * from './helpers/getAttributes'
+export * from './helpers/getMarkAttributes'
+export * from './helpers/getMarkRange'
+export * from './helpers/getMarkType'
+export * from './helpers/getMarksBetween'
+export * from './helpers/getNodeAttributes'
+export * from './helpers/getNodeType'
+export * from './helpers/getText'
+export * from './helpers/getTextBetween'
+export * from './helpers/isActive'
+export * from './helpers/isList'
+export * from './helpers/isMarkActive'
+export * from './helpers/isNodeActive'
+export * from './helpers/isNodeEmpty'
+export * from './helpers/isNodeSelection'
+export * from './helpers/isTextSelection'
+export * from './helpers/posToDOMRect'
 
 // eslint-disable-next-line
 export interface Commands<ReturnType = any> {}
 
 // eslint-disable-next-line
-export interface ExtensionConfig<Options = any> {}
+export interface ExtensionConfig<Options = any, Storage = any> {}
 
 // eslint-disable-next-line
-export interface NodeConfig<Options = any> {}
+export interface NodeConfig<Options = any, Storage = any> {}
 
 // eslint-disable-next-line
-export interface MarkConfig<Options = any> {}
+export interface MarkConfig<Options = any, Storage = any> {}

@@ -3,7 +3,7 @@ import { NodeSelection } from 'prosemirror-state'
 import { Node as ProseMirrorNode } from 'prosemirror-model'
 import { Editor as CoreEditor } from './Editor'
 import { Node } from './Node'
-import isiOS from './utilities/isiOS'
+import { isiOS } from './utilities/isiOS'
 import { NodeViewRendererProps, NodeViewRendererOptions } from './types'
 
 export class NodeView<
@@ -113,11 +113,12 @@ export class NodeView<
       return false
     }
 
+    const isDropEvent = event.type === 'drop'
     const isInput = ['INPUT', 'BUTTON', 'SELECT', 'TEXTAREA'].includes(target.tagName)
       || target.isContentEditable
 
     // any input event within node views should be ignored by ProseMirror
-    if (isInput) {
+    if (isInput && !isDropEvent) {
       return true
     }
 
@@ -129,7 +130,7 @@ export class NodeView<
     const isPasteEvent = event.type === 'paste'
     const isCutEvent = event.type === 'cut'
     const isClickEvent = event.type === 'mousedown'
-    const isDragEvent = event.type.startsWith('drag') || event.type === 'drop'
+    const isDragEvent = event.type.startsWith('drag')
 
     // ProseMirror tries to drag selectable nodes
     // even if `draggable` is set to `false`
@@ -165,6 +166,7 @@ export class NodeView<
     // these events are handled by prosemirror
     if (
       isDragging
+      || isDropEvent
       || isCopyEvent
       || isPasteEvent
       || isCutEvent
@@ -200,7 +202,12 @@ export class NodeView<
     // this is because ProseMirror can’t preventDispatch on enter
     // this will lead to a re-render of the node view on enter
     // see: https://github.com/ueberdosis/tiptap/issues/1214
-    if (this.dom.contains(mutation.target) && mutation.type === 'childList' && isiOS()) {
+    if (
+      this.dom.contains(mutation.target)
+      && mutation.type === 'childList'
+      && isiOS()
+      && this.editor.isFocused
+    ) {
       const changedNodes = [
         ...Array.from(mutation.addedNodes),
         ...Array.from(mutation.removedNodes),

@@ -3,6 +3,468 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.149](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.148...@tiptap/html@2.0.0-beta.149) (2021-12-06)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.148](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.147...@tiptap/html@2.0.0-beta.148) (2021-12-05)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.147](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.146...@tiptap/html@2.0.0-beta.147) (2021-12-03)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.146](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.145...@tiptap/html@2.0.0-beta.146) (2021-12-03)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.145](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.144...@tiptap/html@2.0.0-beta.145) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.144](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.143...@tiptap/html@2.0.0-beta.144) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.143](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.142...@tiptap/html@2.0.0-beta.143) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.142](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.141...@tiptap/html@2.0.0-beta.142) (2021-11-25)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.141](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.140...@tiptap/html@2.0.0-beta.141) (2021-11-23)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.140](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.139...@tiptap/html@2.0.0-beta.140) (2021-11-22)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.139](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.138...@tiptap/html@2.0.0-beta.139) (2021-11-18)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.138](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.137...@tiptap/html@2.0.0-beta.138) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.137](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.136...@tiptap/html@2.0.0-beta.137) (2021-11-10)
+
+
+### Bug Fixes
+
+* update zeed dom ([#2155](https://github.com/ueberdosis/tiptap/issues/2155)) ([75e55e5](https://github.com/ueberdosis/tiptap/commit/75e55e548d31078689c1b511edabd0299b755e62))
+
+
+
+
+
+# [2.0.0-beta.136](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.135...@tiptap/html@2.0.0-beta.136) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.135](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.134...@tiptap/html@2.0.0-beta.135) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.134](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.133...@tiptap/html@2.0.0-beta.134) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.133](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.132...@tiptap/html@2.0.0-beta.133) (2021-11-09)
+
+
+### Bug Fixes
+
+* Switch from hostic dom to zeed dom ([#2151](https://github.com/ueberdosis/tiptap/issues/2151)) ([56a75db](https://github.com/ueberdosis/tiptap/commit/56a75db024327c9de1956c67c08386a9778c706a))
+
+
+
+
+
+# [2.0.0-beta.132](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.131...@tiptap/html@2.0.0-beta.132) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.131](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.130...@tiptap/html@2.0.0-beta.131) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.130](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.129...@tiptap/html@2.0.0-beta.130) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.129](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.128...@tiptap/html@2.0.0-beta.129) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.128](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.127...@tiptap/html@2.0.0-beta.128) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.127](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.126...@tiptap/html@2.0.0-beta.127) (2021-10-25)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.126](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.125...@tiptap/html@2.0.0-beta.126) (2021-10-22)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.125](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.124...@tiptap/html@2.0.0-beta.125) (2021-10-22)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.124](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.123...@tiptap/html@2.0.0-beta.124) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.123](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.122...@tiptap/html@2.0.0-beta.123) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.122](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.121...@tiptap/html@2.0.0-beta.122) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.121](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.120...@tiptap/html@2.0.0-beta.121) (2021-10-10)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.120](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.119...@tiptap/html@2.0.0-beta.120) (2021-10-10)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.119](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.118...@tiptap/html@2.0.0-beta.119) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.118](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.117...@tiptap/html@2.0.0-beta.118) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.117](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.116...@tiptap/html@2.0.0-beta.117) (2021-10-03)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.116](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.115...@tiptap/html@2.0.0-beta.116) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.115](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.114...@tiptap/html@2.0.0-beta.115) (2021-09-30)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.114](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.113...@tiptap/html@2.0.0-beta.114) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.113](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.112...@tiptap/html@2.0.0-beta.113) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.112](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.111...@tiptap/html@2.0.0-beta.112) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.111](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.110...@tiptap/html@2.0.0-beta.111) (2021-09-23)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.110](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.109...@tiptap/html@2.0.0-beta.110) (2021-09-22)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.109](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.108...@tiptap/html@2.0.0-beta.109) (2021-09-21)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.108](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.107...@tiptap/html@2.0.0-beta.108) (2021-09-21)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.107](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.106...@tiptap/html@2.0.0-beta.107) (2021-09-20)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.106](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.105...@tiptap/html@2.0.0-beta.106) (2021-09-18)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.105](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.104...@tiptap/html@2.0.0-beta.105) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.104](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.103...@tiptap/html@2.0.0-beta.104) (2021-09-09)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.103](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.102...@tiptap/html@2.0.0-beta.103) (2021-09-08)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.102](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.101...@tiptap/html@2.0.0-beta.102) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.101](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.100...@tiptap/html@2.0.0-beta.101) (2021-08-26)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.100](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.99...@tiptap/html@2.0.0-beta.100) (2021-08-24)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.99](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.98...@tiptap/html@2.0.0-beta.99) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.98](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.97...@tiptap/html@2.0.0-beta.98) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.97](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.96...@tiptap/html@2.0.0-beta.97) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.96](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.95...@tiptap/html@2.0.0-beta.96) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.95](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.94...@tiptap/html@2.0.0-beta.95) (2021-08-12)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.94](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.93...@tiptap/html@2.0.0-beta.94) (2021-08-11)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
+# [2.0.0-beta.93](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.92...@tiptap/html@2.0.0-beta.93) (2021-08-09)
+
+**Note:** Version bump only for package @tiptap/html
+
+
+
+
+
 # [2.0.0-beta.92](https://github.com/ueberdosis/tiptap/compare/@tiptap/html@2.0.0-beta.91...@tiptap/html@2.0.0-beta.92) (2021-07-30)
 
 **Note:** Version bump only for package @tiptap/html

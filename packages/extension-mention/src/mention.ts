@@ -1,5 +1,6 @@
 import { Node, mergeAttributes } from '@tiptap/core'
 import { Node as ProseMirrorNode } from 'prosemirror-model'
+import { PluginKey } from 'prosemirror-state'
 import Suggestion, { SuggestionOptions } from '@tiptap/suggestion'
 
 export type MentionOptions = {
@@ -11,36 +12,54 @@ export type MentionOptions = {
   suggestion: Omit<SuggestionOptions, 'editor'>,
 }
 
+export const MentionPluginKey = new PluginKey('mention')
+
 export const Mention = Node.create<MentionOptions>({
   name: 'mention',
 
-  defaultOptions: {
-    HTMLAttributes: {},
-    renderLabel({ options, node }) {
-      return `${options.suggestion.char}${node.attrs.label ?? node.attrs.id}`
-    },
-    suggestion: {
-      char: '@',
-      command: ({ editor, range, props }) => {
-        editor
-          .chain()
-          .focus()
-          .insertContentAt(range, [
-            {
-              type: 'mention',
-              attrs: props,
-            },
-            {
-              type: 'text',
-              text: ' ',
-            },
-          ])
-          .run()
+  addOptions() {
+    return {
+      HTMLAttributes: {},
+      renderLabel({ options, node }) {
+        return `${options.suggestion.char}${node.attrs.label ?? node.attrs.id}`
       },
-      allow: ({ editor, range }) => {
-        return editor.can().insertContentAt(range, { type: 'mention' })
+      suggestion: {
+        char: '@',
+        pluginKey: MentionPluginKey,
+        command: ({ editor, range, props }) => {
+          // increase range.to by one when the next node is of type "text"
+          // and starts with a space character
+          const nodeAfter = editor.view.state.selection.$to.nodeAfter
+          const overrideSpace = nodeAfter?.text?.startsWith(' ')
+
+          if (overrideSpace) {
+            range.to += 1
+          }
+
+          editor
+            .chain()
+            .focus()
+            .insertContentAt(range, [
+              {
+                type: this.name,
+                attrs: props,
+              },
+              {
+                type: 'text',
+                text: ' ',
+              },
+            ])
+            .run()
+        },
+        allow: ({ editor, range }) => {
+          const $from = editor.state.doc.resolve(range.from)
+          const type = editor.schema.nodes[this.name]
+          const allow = !!$from.parent.type.contentMatch.matchType(type)
+
+          return allow
+        },
       },
-    },
+    }
   },
 
   group: 'inline',
@@ -55,11 +74,7 @@ export const Mention = Node.create<MentionOptions>({
     return {
       id: {
         default: null,
-        parseHTML: element => {
-          return {
-            id: element.getAttribute('data-id'),
-          }
-        },
+        parseHTML: element => element.getAttribute('data-id'),
         renderHTML: attributes => {
           if (!attributes.id) {
             return {}
@@ -73,11 +88,7 @@ export const Mention = Node.create<MentionOptions>({
 
       label: {
         default: null,
-        parseHTML: element => {
-          return {
-            label: element.getAttribute('data-label'),
-          }
-        },
+        parseHTML: element => element.getAttribute('data-label'),
         renderHTML: attributes => {
           if (!attributes.label) {
             return {}
@@ -94,7 +105,7 @@ export const Mention = Node.create<MentionOptions>({
   parseHTML() {
     return [
       {
-        tag: 'span[data-mention]',
+        tag: `span[data-type="${this.name}"]`,
       },
     ]
   },
@@ -102,7 +113,7 @@ export const Mention = Node.create<MentionOptions>({
   renderHTML({ node, HTMLAttributes }) {
     return [
       'span',
-      mergeAttributes({ 'data-mention': '' }, this.options.HTMLAttributes, HTMLAttributes),
+      mergeAttributes({ 'data-type': this.name }, this.options.HTMLAttributes, HTMLAttributes),
       this.options.renderLabel({
         options: this.options,
         node,

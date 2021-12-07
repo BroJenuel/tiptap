@@ -3,6 +3,244 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.71](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.70...@tiptap/vue-2@2.0.0-beta.71) (2021-12-03)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.70](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.69...@tiptap/vue-2@2.0.0-beta.70) (2021-12-02)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.69](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.68...@tiptap/vue-2@2.0.0-beta.69) (2021-11-17)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.68](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.67...@tiptap/vue-2@2.0.0-beta.68) (2021-11-10)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.67](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.66...@tiptap/vue-2@2.0.0-beta.67) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.66](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.65...@tiptap/vue-2@2.0.0-beta.66) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.65](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.64...@tiptap/vue-2@2.0.0-beta.65) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.64](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.63...@tiptap/vue-2@2.0.0-beta.64) (2021-11-08)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.63](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.62...@tiptap/vue-2@2.0.0-beta.63) (2021-11-05)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.62](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.61...@tiptap/vue-2@2.0.0-beta.62) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.61](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.60...@tiptap/vue-2@2.0.0-beta.61) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.60](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.59...@tiptap/vue-2@2.0.0-beta.60) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.59](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.58...@tiptap/vue-2@2.0.0-beta.59) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.58](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.57...@tiptap/vue-2@2.0.0-beta.58) (2021-10-08)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.57](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.56...@tiptap/vue-2@2.0.0-beta.57) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.56](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.55...@tiptap/vue-2@2.0.0-beta.56) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.55](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.54...@tiptap/vue-2@2.0.0-beta.55) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.54](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.53...@tiptap/vue-2@2.0.0-beta.54) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.53](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.52...@tiptap/vue-2@2.0.0-beta.53) (2021-09-22)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.52](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.51...@tiptap/vue-2@2.0.0-beta.52) (2021-09-18)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.51](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.50...@tiptap/vue-2@2.0.0-beta.51) (2021-09-15)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.50](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.49...@tiptap/vue-2@2.0.0-beta.50) (2021-09-07)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.49](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.48...@tiptap/vue-2@2.0.0-beta.49) (2021-09-06)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.48](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.47...@tiptap/vue-2@2.0.0-beta.48) (2021-08-23)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.47](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.46...@tiptap/vue-2@2.0.0-beta.47) (2021-08-20)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.46](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.45...@tiptap/vue-2@2.0.0-beta.46) (2021-08-13)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.44...@tiptap/vue-2@2.0.0-beta.45) (2021-08-13)
+
+
+### Bug Fixes
+
+* rename key to pluginKey for menus ([89d26f7](https://github.com/ueberdosis/tiptap/commit/89d26f7cba2a115aa342f0ee621f0b65c840dfb8))
+
+
+
+
+
+# [2.0.0-beta.44](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.43...@tiptap/vue-2@2.0.0-beta.44) (2021-08-12)
+
+**Note:** Version bump only for package @tiptap/vue-2
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.42...@tiptap/vue-2@2.0.0-beta.43) (2021-08-11)
+
+
+### Features
+
+* add key option and shouldShow option to menus (fix [#1480](https://github.com/ueberdosis/tiptap/issues/1480), fix [#1043](https://github.com/ueberdosis/tiptap/issues/1043), fix [#1268](https://github.com/ueberdosis/tiptap/issues/1268), fix [#1503](https://github.com/ueberdosis/tiptap/issues/1503)) ([9ba61c1](https://github.com/ueberdosis/tiptap/commit/9ba61c1582cee838f2214d00285773ace2fb229e))
+
+
+
+
+
 # [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-2@2.0.0-beta.41...@tiptap/vue-2@2.0.0-beta.42) (2021-07-28)
 
 

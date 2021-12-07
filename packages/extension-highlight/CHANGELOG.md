@@ -3,6 +3,149 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.30...@tiptap/extension-highlight@2.0.0-beta.31) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove some magic strings ([6c34dec](https://github.com/ueberdosis/tiptap/commit/6c34dec33ac39c9f037a0a72e4525f3fc6d422bf))
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.29...@tiptap/extension-highlight@2.0.0-beta.30) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.28...@tiptap/extension-highlight@2.0.0-beta.29) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.27...@tiptap/extension-highlight@2.0.0-beta.28) (2021-11-09)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.26...@tiptap/extension-highlight@2.0.0-beta.27) (2021-10-31)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.25...@tiptap/extension-highlight@2.0.0-beta.26) (2021-10-26)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.24...@tiptap/extension-highlight@2.0.0-beta.25) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.23...@tiptap/extension-highlight@2.0.0-beta.24) (2021-10-14)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.22...@tiptap/extension-highlight@2.0.0-beta.23) (2021-10-10)
+
+
+### Bug Fixes
+
+* fix regex modifier for input rules and paste rules, fix [#2003](https://github.com/ueberdosis/tiptap/issues/2003) ([65eddf0](https://github.com/ueberdosis/tiptap/commit/65eddf0e789c620a53d9bec9509b515211fb9b3f))
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.21...@tiptap/extension-highlight@2.0.0-beta.22) (2021-10-08)
+
+
+### Features
+
+* Integrate input rules and paste rules into the core ([#1997](https://github.com/ueberdosis/tiptap/issues/1997)) ([723b955](https://github.com/ueberdosis/tiptap/commit/723b955cecc5c92c8aad897ce16c60fb62976571))
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.20...@tiptap/extension-highlight@2.0.0-beta.21) (2021-10-02)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.19...@tiptap/extension-highlight@2.0.0-beta.20) (2021-09-29)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.18...@tiptap/extension-highlight@2.0.0-beta.19) (2021-09-28)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.17...@tiptap/extension-highlight@2.0.0-beta.18) (2021-09-27)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.17](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.16...@tiptap/extension-highlight@2.0.0-beta.17) (2021-09-21)
+
+
+### Bug Fixes
+
+* Use pasteRegex in addPasteRules ([#1922](https://github.com/ueberdosis/tiptap/issues/1922)) ([047ef8c](https://github.com/ueberdosis/tiptap/commit/047ef8c8c9d9a88a763a8a09424844b1c0912562))
+
+
+
+
+
+# [2.0.0-beta.16](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.15...@tiptap/extension-highlight@2.0.0-beta.16) (2021-09-08)
+
+
+### Features
+
+* parseHTML for attributes should return the value instead of an object now, fix [#1863](https://github.com/ueberdosis/tiptap/issues/1863) ([8a3b47a](https://github.com/ueberdosis/tiptap/commit/8a3b47a529d28b28b50d634c6ff69b8e5aad3080))
+
+
+
+
+
 # [2.0.0-beta.15](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.14...@tiptap/extension-highlight@2.0.0-beta.15) (2021-07-26)
 
 **Note:** Version bump only for package @tiptap/extension-highlight

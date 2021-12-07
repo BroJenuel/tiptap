@@ -4,20 +4,25 @@ import { LowlightPlugin } from './lowlight-plugin'
 
 export interface CodeBlockLowlightOptions extends CodeBlockOptions {
   lowlight: any,
+  defaultLanguage: string | null | undefined,
 }
 
 export const CodeBlockLowlight = CodeBlock.extend<CodeBlockLowlightOptions>({
-  defaultOptions: {
-    ...CodeBlock.options,
-    lowlight,
+  addOptions() {
+    return {
+      ...this.parent?.(),
+      lowlight,
+      defaultLanguage: null,
+    }
   },
 
   addProseMirrorPlugins() {
     return [
       ...this.parent?.() || [],
       LowlightPlugin({
-        name: 'codeBlock',
+        name: this.name,
         lowlight: this.options.lowlight,
+        defaultLanguage: this.options.defaultLanguage,
       }),
     ]
   },

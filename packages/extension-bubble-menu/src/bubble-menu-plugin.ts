@@ -9,9 +9,18 @@ import { EditorView } from 'prosemirror-view'
 import tippy, { Instance, Props } from 'tippy.js'
 
 export interface BubbleMenuPluginProps {
+  pluginKey: PluginKey | string,
   editor: Editor,
   element: HTMLElement,
   tippyOptions?: Partial<Props>,
+  shouldShow?: ((props: {
+    editor: Editor,
+    view: EditorView,
+    state: EditorState,
+    oldState?: EditorState,
+    from: number,
+    to: number,
+  }) => boolean) | null,
 }
 
 export type BubbleMenuViewProps = BubbleMenuPluginProps & {
@@ -27,22 +36,49 @@ export class BubbleMenuView {
 
   public preventHide = false
 
-  public tippy!: Instance
+  public tippy: Instance | undefined
+
+  public tippyOptions?: Partial<Props>
+
+  public shouldShow: Exclude<BubbleMenuPluginProps['shouldShow'], null> = ({ state, from, to }) => {
+    const { doc, selection } = state
+    const { empty } = selection
+
+    // Sometime check for `empty` is not enough.
+    // Doubleclick an empty paragraph returns a node size of 2.
+    // So we check also for an empty text size.
+    const isEmptyTextBlock = !doc.textBetween(from, to).length
+      && isTextSelection(state.selection)
+
+    if (empty || isEmptyTextBlock) {
+      return false
+    }
+
+    return true
+  }
 
   constructor({
     editor,
     element,
     view,
-    tippyOptions,
+    tippyOptions = {},
+    shouldShow,
   }: BubbleMenuViewProps) {
     this.editor = editor
     this.element = element
     this.view = view
+
+    if (shouldShow) {
+      this.shouldShow = shouldShow
+    }
+
     this.element.addEventListener('mousedown', this.mousedownHandler, { capture: true })
     this.view.dom.addEventListener('dragstart', this.dragstartHandler)
     this.editor.on('focus', this.focusHandler)
     this.editor.on('blur', this.blurHandler)
-    this.createTooltip(tippyOptions)
+    this.tippyOptions = tippyOptions
+    // Detaches menu content from its current parent
+    this.element.remove()
     this.element.style.visibility = 'visible'
   }
 
@@ -76,8 +112,15 @@ export class BubbleMenuView {
     this.hide()
   }
 
-  createTooltip(options: Partial<Props> = {}) {
-    this.tippy = tippy(this.view.dom, {
+  createTooltip() {
+    const { element: editorElement } = this.editor.options
+    const editorIsAttached = !!editorElement.parentElement
+
+    if (this.tippy || !editorIsAttached) {
+      return
+    }
+
+    this.tippy = tippy(editorElement, {
       duration: 0,
       getReferenceClientRect: null,
       content: this.element,
@@ -85,7 +128,7 @@ export class BubbleMenuView {
       trigger: 'manual',
       placement: 'top',
       hideOnClick: 'toggle',
-      ...options,
+      ...this.tippyOptions,
     })
   }
 
@@ -98,27 +141,31 @@ export class BubbleMenuView {
       return
     }
 
-    const { empty, ranges } = selection
+    this.createTooltip()
 
     // support for CellSelections
+    const { ranges } = selection
     const from = Math.min(...ranges.map(range => range.$from.pos))
     const to = Math.max(...ranges.map(range => range.$to.pos))
 
-    // Sometime check for `empty` is not enough.
-    // Doubleclick an empty paragraph returns a node size of 2.
-    // So we check also for an empty text size.
-    const isEmptyTextBlock = !doc.textBetween(from, to).length
-      && isTextSelection(view.state.selection)
+    const shouldShow = this.shouldShow?.({
+      editor: this.editor,
+      view,
+      state,
+      oldState,
+      from,
+      to,
+    })
 
-    if (empty || isEmptyTextBlock) {
+    if (!shouldShow) {
       this.hide()
 
       return
     }
 
-    this.tippy.setProps({
+    this.tippy?.setProps({
       getReferenceClientRect: () => {
-        if (isNodeSelection(view.state.selection)) {
+        if (isNodeSelection(state.selection)) {
           const node = view.nodeDOM(from) as HTMLElement
 
           if (node) {
@@ -134,27 +181,27 @@ export class BubbleMenuView {
   }
 
   show() {
-    this.tippy.show()
+    this.tippy?.show()
   }
 
   hide() {
-    this.tippy.hide()
+    this.tippy?.hide()
   }
 
   destroy() {
-    this.tippy.destroy()
-    this.element.removeEventListener('mousedown', this.mousedownHandler)
+    this.tippy?.destroy()
+    this.element.removeEventListener('mousedown', this.mousedownHandler, { capture: true })
     this.view.dom.removeEventListener('dragstart', this.dragstartHandler)
     this.editor.off('focus', this.focusHandler)
     this.editor.off('blur', this.blurHandler)
   }
 }
 
-export const BubbleMenuPluginKey = new PluginKey('menuBubble')
-
 export const BubbleMenuPlugin = (options: BubbleMenuPluginProps) => {
   return new Plugin({
-    key: BubbleMenuPluginKey,
+    key: typeof options.pluginKey === 'string'
+      ? new PluginKey(options.pluginKey)
+      : options.pluginKey,
     view: view => new BubbleMenuView({ view, ...options }),
   })
 }
