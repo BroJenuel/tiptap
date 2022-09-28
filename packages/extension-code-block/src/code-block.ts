@@ -1,8 +1,25 @@
-import { Node, textblockTypeInputRule } from '@tiptap/core'
+import { mergeAttributes, Node, textblockTypeInputRule } from '@tiptap/core'
 import { Plugin, PluginKey, TextSelection } from 'prosemirror-state'
 
 export interface CodeBlockOptions {
+  /**
+   * Adds a prefix to language classes that are applied to code tags.
+   * Defaults to `'language-'`.
+   */
   languageClassPrefix: string,
+  /**
+   * Define whether the node should be exited on triple enter.
+   * Defaults to `true`.
+   */
+  exitOnTripleEnter: boolean,
+  /**
+   * Define whether the node should be exited on arrow down if there is no node after it.
+   * Defaults to `true`.
+   */
+  exitOnArrowDown: boolean,
+  /**
+   * Custom HTML attributes that should be added to the rendered HTML tag.
+   */
   HTMLAttributes: Record<string, any>,
 }
 
@@ -21,8 +38,8 @@ declare module '@tiptap/core' {
   }
 }
 
-export const backtickInputRegex = /^```(?<language>[a-z]*)?[\s\n]$/
-export const tildeInputRegex = /^~~~(?<language>[a-z]*)?[\s\n]$/
+export const backtickInputRegex = /^```([a-z]+)?[\s\n]$/
+export const tildeInputRegex = /^~~~([a-z]+)?[\s\n]$/
 
 export const CodeBlock = Node.create<CodeBlockOptions>({
   name: 'codeBlock',
@@ -30,6 +47,8 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
   addOptions() {
     return {
       languageClassPrefix: 'language-',
+      exitOnTripleEnter: true,
+      exitOnArrowDown: true,
       HTMLAttributes: {},
     }
   },
@@ -62,15 +81,7 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
 
           return language
         },
-        renderHTML: attributes => {
-          if (!attributes.language) {
-            return null
-          }
-
-          return {
-            class: this.options.languageClassPrefix + attributes.language,
-          }
-        },
+        rendered: false,
       },
     }
   },
@@ -84,8 +95,20 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
     ]
   },
 
-  renderHTML({ HTMLAttributes }) {
-    return ['pre', this.options.HTMLAttributes, ['code', HTMLAttributes, 0]]
+  renderHTML({ node, HTMLAttributes }) {
+    return [
+      'pre',
+      mergeAttributes(this.options.HTMLAttributes, HTMLAttributes),
+      [
+        'code',
+        {
+          class: node.attrs.language
+            ? this.options.languageClassPrefix + node.attrs.language
+            : null,
+        },
+        0,
+      ],
+    ]
   },
 
   addCommands() {
@@ -119,8 +142,12 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
         return false
       },
 
-      // escape node on triple enter
+      // exit node on triple enter
       Enter: ({ editor }) => {
+        if (!this.options.exitOnTripleEnter) {
+          return false
+        }
+
         const { state } = editor
         const { selection } = state
         const { $from, empty } = selection
@@ -146,6 +173,41 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
           .exitCode()
           .run()
       },
+
+      // exit node on arrow down
+      ArrowDown: ({ editor }) => {
+        if (!this.options.exitOnArrowDown) {
+          return false
+        }
+
+        const { state } = editor
+        const { selection, doc } = state
+        const { $from, empty } = selection
+
+        if (!empty || $from.parent.type !== this.type) {
+          return false
+        }
+
+        const isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2
+
+        if (!isAtEnd) {
+          return false
+        }
+
+        const after = $from.after()
+
+        if (after === undefined) {
+          return false
+        }
+
+        const nodeAfter = doc.nodeAt(after)
+
+        if (nodeAfter) {
+          return false
+        }
+
+        return editor.commands.exitCode()
+      },
     }
   },
 
@@ -154,12 +216,16 @@ export const CodeBlock = Node.create<CodeBlockOptions>({
       textblockTypeInputRule({
         find: backtickInputRegex,
         type: this.type,
-        getAttributes: ({ groups }) => groups,
+        getAttributes: match => ({
+          language: match[1],
+        }),
       }),
       textblockTypeInputRule({
         find: tildeInputRegex,
         type: this.type,
-        getAttributes: ({ groups }) => groups,
+        getAttributes: match => ({
+          language: match[1],
+        }),
       }),
     ]
   },

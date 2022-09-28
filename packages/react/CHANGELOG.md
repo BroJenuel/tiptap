@@ -3,6 +3,193 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+
+### Bug Fixes
+
+* move React `flushSync` to microtask ([#3188](https://github.com/ueberdosis/tiptap/issues/3188)) ([9093cdf](https://github.com/ueberdosis/tiptap/commit/9093cdfcf52cbc5297b9b678073636103dfecb3f)), closes [#2985](https://github.com/ueberdosis/tiptap/issues/2985)
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.115](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.114...@tiptap/react@2.0.0-beta.115) (2022-09-03)
+
+
+### Bug Fixes
+
+* fix React Node View render problem in React 18 ([#2985](https://github.com/ueberdosis/tiptap/issues/2985)) ([f32293b](https://github.com/ueberdosis/tiptap/commit/f32293b0d5d36ffb546a3d1e3dfab1580ee5080a))
+
+
+
+
+
+# [2.0.0-beta.114](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.113...@tiptap/react@2.0.0-beta.114) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.113](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.112...@tiptap/react@2.0.0-beta.113) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.112](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.110...@tiptap/react@2.0.0-beta.112) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.110](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.110...@tiptap/react@2.0.0-beta.110) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.109](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.108...@tiptap/react@2.0.0-beta.109) (2022-04-27)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.108](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.107...@tiptap/react@2.0.0-beta.108) (2022-02-07)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.107](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.106...@tiptap/react@2.0.0-beta.107) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.106](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.105...@tiptap/react@2.0.0-beta.106) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.105](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.104...@tiptap/react@2.0.0-beta.105) (2022-01-11)
+
+
+### Bug Fixes
+
+* Mark `@tiptap/react` and `@tiptap/core` as side effect free ([#2361](https://github.com/ueberdosis/tiptap/issues/2361)) ([e609b2d](https://github.com/ueberdosis/tiptap/commit/e609b2d11615dd85fd219731d1b73deaeccccd69))
+
+
+
+
+
+# [2.0.0-beta.104](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.103...@tiptap/react@2.0.0-beta.104) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
+# [2.0.0-beta.103](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.102...@tiptap/react@2.0.0-beta.103) (2022-01-03)
+
+
+### Bug Fixes
+
+* change reactrenderer component type definition ([#2327](https://github.com/ueberdosis/tiptap/issues/2327)) ([64dfae8](https://github.com/ueberdosis/tiptap/commit/64dfae85118d2b9dc525a8bfa31f00688a56f049))
+
+
+
+
+
+# [2.0.0-beta.102](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.101...@tiptap/react@2.0.0-beta.102) (2021-12-22)
+
+
+### Bug Fixes
+
+* Remove `element.current` from `useEffect` in `BubbleMenu` and `FloatingMenu` ([#2297](https://github.com/ueberdosis/tiptap/issues/2297)) ([561941d](https://github.com/ueberdosis/tiptap/commit/561941d5e0d8c0bed852156e06820780e65f0656))
+
+
+
+
+
+# [2.0.0-beta.101](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.100...@tiptap/react@2.0.0-beta.101) (2021-12-17)
+
+
+### Reverts
+
+* Revert "fix: Make sure editor is available on first render (#2282), fix #2040, fix #2182" ([629f4d2](https://github.com/ueberdosis/tiptap/commit/629f4d2a76c62e82c104598bf42a53a6d32015a8)), closes [#2040](https://github.com/ueberdosis/tiptap/issues/2040) [#2182](https://github.com/ueberdosis/tiptap/issues/2182)
+
+
+
+
+
+# [2.0.0-beta.100](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.99...@tiptap/react@2.0.0-beta.100) (2021-12-16)
+
+
+### Bug Fixes
+
+* Make sure editor is available on first render ([#2282](https://github.com/ueberdosis/tiptap/issues/2282)), fix [#2040](https://github.com/ueberdosis/tiptap/issues/2040), fix [#2182](https://github.com/ueberdosis/tiptap/issues/2182) ([2436e2c](https://github.com/ueberdosis/tiptap/commit/2436e2c8fe88cdce6685ae3d712e5f2d3e70851d))
+
+
+
+
+
+# [2.0.0-beta.99](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.98...@tiptap/react@2.0.0-beta.99) (2021-12-15)
+
+**Note:** Version bump only for package @tiptap/react
+
+
+
+
+
 # [2.0.0-beta.98](https://github.com/ueberdosis/tiptap/compare/@tiptap/react@2.0.0-beta.97...@tiptap/react@2.0.0-beta.98) (2021-12-03)
 
 **Note:** Version bump only for package @tiptap/react

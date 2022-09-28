@@ -33,7 +33,7 @@ Okay, enough of the boring boilerplate work. Let’s finally install Tiptap! For
 npm install @tiptap/vue-3 @tiptap/starter-kit
 ```
 
-If you followed step 1 and 2, you can now start your project with `npm run dev`, and open [http://localhost:8080](http://localhost:8080) in your favorite browser. This might be different, if you’re working with an existing project.
+If you followed step 1 and 2, you can now start your project with `npm run serve`, and open [http://localhost:8080](http://localhost:8080) in your favorite browser. This might be different, if you’re working with an existing project.
 
 ## 3. Create a new component
 To actually start using Tiptap, you’ll need to add a new component to your app. Let’s call it `Tiptap` and put the following example code in `components/Tiptap.vue`.
@@ -106,6 +106,26 @@ export default {
 </script>
 ```
 
+Or feel free to use the new [`<script setup>` syntax](https://v3.vuejs.org/api/sfc-script-setup.html).
+
+```html
+<template>
+  <editor-content :editor="editor" />
+</template>
+
+<script setup>
+import { useEditor, EditorContent } from '@tiptap/vue-3'
+import StarterKit from '@tiptap/starter-kit'
+
+const editor = useEditor({
+  content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
+  extensions: [
+    StarterKit,
+  ],
+})
+</script>
+```
+
 ## 4. Add it to your app
 Now, let’s replace the content of `src/App.vue` with the following example code to use our new `Tiptap` component in our app.
 
@@ -131,62 +151,6 @@ export default {
 You should now see Tiptap in your browser. Time to give yourself a pat on the back! :)
 
 ## 5. Use v-model (optional)
-You’re probably used to bind your data with `v-model` in forms, that’s also possible with Tiptap. Here is how that would work with Tiptap:
+You’re probably used to binding your data with `v-model` in forms, that’s also possible with Tiptap. Here is how that would work with Tiptap:
 
-```html
-<template>
-  <editor-content :editor="editor" />
-</template>
-
-<script>
-import { Editor, EditorContent } from '@tiptap/vue-3'
-import StarterKit from '@tiptap/starter-kit'
-
-export default {
-  components: {
-    EditorContent,
-  },
-
-  props: {
-    modelValue: {
-      type: String,
-      default: '',
-    },
-  },
-
-  data() {
-    return {
-      editor: null,
-    }
-  },
-
-  watch: {
-    modelValue(value) {
-      const isSame = this.editor.getHTML() === value
-
-      if (isSame) {
-        return
-      }
-
-      this.editor.commands.setContent(value, false)
-    },
-  },
-
-  mounted() {
-    this.editor = new Editor({
-      content: this.modelValue,
-      extensions: [
-        StarterKit,
-      ],
-      onUpdate: () => {
-        this.$emit('update:modelValue', this.editor.getHTML())
-      },
-    })
-  },
-
-  beforeUnmount() {
-    this.editor.destroy()
-  },
-}
-</script>
-```
+https://embed.tiptap.dev/preview/GuideGettingStarted/VModel

@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.36...@tiptap/extension-task-item@2.0.0-beta.37) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.35...@tiptap/extension-task-item@2.0.0-beta.36) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-task-item
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.33...@tiptap/extension-task-item@2.0.0-beta.35) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.33...@tiptap/extension-task-item@2.0.0-beta.33) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.31...@tiptap/extension-task-item@2.0.0-beta.32) (2022-04-27)
+
+
+### Bug Fixes
+
+* allow [] as a prefix for task items ([06fd7fb](https://github.com/ueberdosis/tiptap/commit/06fd7fb4299195646200836dd8158238279c3a7a))
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.30...@tiptap/extension-task-item@2.0.0-beta.31) (2022-01-24)
+
+
+### Bug Fixes
+
+* merge attrributes correctly when clicking task checkbox, fix [#2422](https://github.com/ueberdosis/tiptap/issues/2422) ([fe27843](https://github.com/ueberdosis/tiptap/commit/fe27843e80af2d48350a4b05438ea9212ec0bba4))
+
+
+
+
+
 # [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-item@2.0.0-beta.29...@tiptap/extension-task-item@2.0.0-beta.30) (2021-12-02)
 
 

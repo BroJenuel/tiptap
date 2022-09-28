@@ -1,15 +1,10 @@
-import {
-  onMounted,
-  onBeforeUnmount,
-  shallowRef,
-  Ref,
-} from 'vue'
 import { EditorOptions } from '@tiptap/core'
+import { onBeforeUnmount, onMounted, shallowRef } from 'vue'
+
 import { Editor } from './Editor'
 
-// We set a custom return type. Otherwise TypeScript will throw TS4023. Not sure why.
-export const useEditor = (options: Partial<EditorOptions> = {}): Ref<Editor> => {
-  const editor = shallowRef<Editor>() as Ref<Editor>
+export const useEditor = (options: Partial<EditorOptions> = {}) => {
+  const editor = shallowRef<Editor>()
 
   onMounted(() => {
     editor.value = new Editor(options)

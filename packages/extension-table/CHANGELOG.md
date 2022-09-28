@@ -3,6 +3,117 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+
+### Bug Fixes
+
+* **types:** fix link and table type errors ([#3208](https://github.com/ueberdosis/tiptap/issues/3208)) ([ae13cf6](https://github.com/ueberdosis/tiptap/commit/ae13cf61ad0ead942515d8c597f96a4b4d026412))
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.54](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.53...@tiptap/extension-table@2.0.0-beta.54) (2022-06-27)
+
+
+### Bug Fixes
+
+* **maintainment:** fix cjs issues with prosemirror-tables ([eb92597](https://github.com/ueberdosis/tiptap/commit/eb925976038fbf59f6ba333ccc57ea84113da00e))
+
+
+
+
+
+# [2.0.0-beta.53](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.52...@tiptap/extension-table@2.0.0-beta.53) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.52](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.50...@tiptap/extension-table@2.0.0-beta.52) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.50](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.50...@tiptap/extension-table@2.0.0-beta.50) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.49](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.48...@tiptap/extension-table@2.0.0-beta.49) (2022-05-18)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.48](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.47...@tiptap/extension-table@2.0.0-beta.48) (2022-01-25)
+
+
+### Bug Fixes
+
+* use toggleHeader from prosemirror-tables ([#2412](https://github.com/ueberdosis/tiptap/issues/2412)), fix [#548](https://github.com/ueberdosis/tiptap/issues/548) ([c6bea9a](https://github.com/ueberdosis/tiptap/commit/c6bea9aa5c4d38523f2f1095a570cdfc6936392e))
+
+
+
+
+
+# [2.0.0-beta.47](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.46...@tiptap/extension-table@2.0.0-beta.47) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
+# [2.0.0-beta.46](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.45...@tiptap/extension-table@2.0.0-beta.46) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/extension-table
+
+
+
+
+
 # [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-table@2.0.0-beta.44...@tiptap/extension-table@2.0.0-beta.45) (2021-12-03)
 
 **Note:** Version bump only for package @tiptap/extension-table

@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-typography
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+
+### Features
+
+* **extension-typography:** add servicemark input rule ([#3220](https://github.com/ueberdosis/tiptap/issues/3220)) ([a397835](https://github.com/ueberdosis/tiptap/commit/a3978353ff602527329064f3c8c96bedc8fb2060))
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-typography
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-typography
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-typography@2.0.0-beta.20...@tiptap/extension-typography@2.0.0-beta.22) (2022-06-17)
+
+**Note:** Version bump only for package @tiptap/extension-typography
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-typography@2.0.0-beta.19...@tiptap/extension-typography@2.0.0-beta.20) (2022-02-07)
+
+
+### Features
+
+* Allow individual Typography rules to be disabled ([#2449](https://github.com/ueberdosis/tiptap/issues/2449)) ([7ce6687](https://github.com/ueberdosis/tiptap/commit/7ce6687184576f4d3ca0953d27e729f00c758e07))
+
+
+
+
+
 # [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-typography@2.0.0-beta.18...@tiptap/extension-typography@2.0.0-beta.19) (2021-11-09)
 
 **Note:** Version bump only for package @tiptap/extension-typography

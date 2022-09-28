@@ -203,6 +203,15 @@ Node.create({
 })
 ```
 
+#### Whitespace
+Controls way whitespace in this a node is parsed.
+
+```js
+Node.create({
+  whitespace: 'pre',
+})
+```
+
 #### Defining
 Nodes get dropped when their entire content is replaced (for example, when pasting new content) by default. If a node should be kept for such replace operations, configure them as `defining`.
 
@@ -260,6 +269,17 @@ Mark.create({
   excludes: 'bold'
   // exclude any other mark
   excludes: '_',
+})
+```
+
+#### Exitable
+By default a mark will "trap" the cursor meaning the cursor can't get out of the mark except by moving the cursor left to right into text without a mark.
+If this is set to true, the mark will be exitable when the mark is at the end of a node. This is handy for example code marks.
+
+```js
+Mark.create({
+  // make this mark exitable - default is false
+  exitable: true,
 })
 ```
 

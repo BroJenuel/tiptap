@@ -1,5 +1,6 @@
 import { Node as ProseMirrorNode } from 'prosemirror-model'
 import { Selection, TextSelection } from 'prosemirror-state'
+
 import { FocusPosition } from '../types'
 import { minMax } from '../utilities/minMax'
 
@@ -12,23 +13,31 @@ export function resolveFocusPosition(
     return null
   }
 
+  const selectionAtStart = Selection.atStart(doc)
+  const selectionAtEnd = Selection.atEnd(doc)
+
   if (position === 'start' || position === true) {
-    return Selection.atStart(doc)
+    return selectionAtStart
   }
 
   if (position === 'end') {
-    return Selection.atEnd(doc)
+    return selectionAtEnd
   }
+
+  const minPos = selectionAtStart.from
+  const maxPos = selectionAtEnd.to
 
   if (position === 'all') {
-    return TextSelection.create(doc, 0, doc.content.size)
+    return TextSelection.create(
+      doc,
+      minMax(0, minPos, maxPos),
+      minMax(doc.content.size, minPos, maxPos),
+    )
   }
 
-  // Check if `position` is in bounds of the doc if `position` is a number.
-  const minPos = Selection.atStart(doc).from
-  const maxPos = Selection.atEnd(doc).to
-  const resolvedFrom = minMax(position, minPos, maxPos)
-  const resolvedEnd = minMax(position, minPos, maxPos)
-
-  return TextSelection.create(doc, resolvedFrom, resolvedEnd)
+  return TextSelection.create(
+    doc,
+    minMax(position, minPos, maxPos),
+    minMax(position, minPos, maxPos),
+  )
 }

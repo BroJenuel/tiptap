@@ -1,15 +1,16 @@
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import react from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
+import fg from 'fast-glob'
+import fs from 'fs'
 import {
-  resolve,
   basename,
   dirname,
   join,
+  resolve,
 } from 'path'
 import { v4 as uuid } from 'uuid'
-import fs from 'fs'
-import fg from 'fast-glob'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import reactRefresh from '@vitejs/plugin-react-refresh'
 // import checker from 'vite-plugin-checker'
 
 const includeDependencies = fs.readFileSync('./includeDependencies.txt')
@@ -37,7 +38,113 @@ export default defineConfig({
     // checker({ typescript: { tsconfigPath: './tsconfig.vue-2.json' } }),
     // checker({ typescript: { tsconfigPath: './tsconfig.vue-3.json' } }),
     vue(),
-    reactRefresh(),
+    react(),
+    svelte(),
+
+    {
+      name: 'html-transform',
+      transformIndexHtml: {
+        enforce: 'pre',
+        transform(html: string, context) {
+          const dir = dirname(context.path)
+          const data = dir.split('/')
+          const demoCategory = data[2]
+          const demoName = data[3]
+
+          if (dir.endsWith('/JS')) {
+            return {
+              html: `
+                <!DOCTYPE html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  </head>
+                  <body>
+                    ${html}
+                    <script type="module">
+                      import setup from '../../../../setup/js.ts'
+                      import source from '@source'
+                      setup('${demoCategory}/${demoName}', source)
+                    </script>
+                  </body>
+                </html>
+              `,
+              tags: [],
+            }
+          }
+
+          if (dir.endsWith('/Vue')) {
+            return {
+              html: `
+                <!DOCTYPE html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  </head>
+                  <body>
+                    <div id="app"></div>
+                    <script type="module">
+                      import setup from '../../../../setup/vue.ts'
+                      import source from '@source'
+                      setup('${demoCategory}/${demoName}', source)
+                    </script>
+                  </body>
+                </html>
+              `,
+              tags: [],
+            }
+          }
+
+          if (dir.endsWith('/Svelte')) {
+            return {
+              html: `
+                <!DOCTYPE html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  </head>
+                  <body>
+                    <div id="app"></div>
+                    <script type="module">
+                      import setup from '../../../../setup/svelte.ts'
+                      import source from '@source'
+                      setup('${demoCategory}/${demoName}', source)
+                    </script>
+                  </body>
+                </html>
+              `,
+              tags: [],
+            }
+          }
+
+          if (dir.endsWith('/React')) {
+            return {
+              html: `
+                <!DOCTYPE html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                  </head>
+                  <body>
+                    <div id="app"></div>
+                    <script type="module">
+                      import setup from '../../../../setup/react.ts'
+                      import source from '@source'
+                      setup('${demoCategory}/${demoName}', source)
+                    </script>
+                  </body>
+                </html>
+              `,
+              tags: [],
+            }
+          }
+        },
+      },
+    },
 
     {
       name: 'raw',
@@ -97,13 +204,16 @@ export default defineConfig({
       load(id) {
         if (id.startsWith('source!')) {
           const path = id.split('!!')[0].replace('source!', '')
-          const files = fg.sync(`${path}/**/*`, {
-            ignore: [
-              '**/index.html',
-              '**/*.spec.js',
-              '**/*.spec.ts',
-            ],
-          })
+          const ignore = [
+            '**/*.spec.js',
+            '**/*.spec.ts',
+          ]
+
+          if (!path.endsWith('/JS')) {
+            ignore.push('**/index.html')
+          }
+
+          const files = fg.sync(`${path}/**/*`, { ignore })
             .map(filePath => {
               const name = filePath.replace(`${path}/`, '')
 

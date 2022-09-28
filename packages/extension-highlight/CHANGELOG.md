@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.33...@tiptap/extension-highlight@2.0.0-beta.35) (2022-06-17)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.32...@tiptap/extension-highlight@2.0.0-beta.33) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/extension-highlight
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.31...@tiptap/extension-highlight@2.0.0-beta.32) (2022-01-07)
+
+
+### Bug Fixes
+
+* fix a bug in the highlight regex, fix [#2355](https://github.com/ueberdosis/tiptap/issues/2355) ([b8a42fc](https://github.com/ueberdosis/tiptap/commit/b8a42fcaef7d75c1a30dbecfe403d7f0c3ec4e7d))
+
+
+
+
+
 # [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-highlight@2.0.0-beta.30...@tiptap/extension-highlight@2.0.0-beta.31) (2021-12-02)
 
 

@@ -1,10 +1,11 @@
 import { Fragment, Node as ProseMirrorNode, ParseOptions } from 'prosemirror-model'
+
 import { createNodeFromContent } from '../helpers/createNodeFromContent'
 import { selectionToInsertionEnd } from '../helpers/selectionToInsertionEnd'
 import {
-  RawCommands,
   Content,
   Range,
+  RawCommands,
 } from '../types'
 
 declare module '@tiptap/core' {
@@ -53,12 +54,20 @@ export const insertContentAt: RawCommands['insertContentAt'] = (position, value,
       ? { from: position, to: position }
       : position
 
+    let isOnlyTextContent = true
     let isOnlyBlockContent = true
     const nodes = isFragment(content)
       ? content
       : [content]
 
     nodes.forEach(node => {
+      // check if added node is valid
+      node.check()
+
+      isOnlyTextContent = isOnlyTextContent
+        ? node.isText && node.marks.length === 0
+        : false
+
       isOnlyBlockContent = isOnlyBlockContent
         ? node.isBlock
         : false
@@ -81,7 +90,13 @@ export const insertContentAt: RawCommands['insertContentAt'] = (position, value,
       }
     }
 
-    tr.replaceWith(from, to, content)
+    // if there is only plain text we have to use `insertText`
+    // because this will keep the current marks
+    if (isOnlyTextContent) {
+      tr.insertText(value as string, from, to)
+    } else {
+      tr.replaceWith(from, to, content)
+    }
 
     // set cursor at end of inserted content
     if (options.updateSelection) {

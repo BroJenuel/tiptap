@@ -1,5 +1,7 @@
-import React from 'react'
 import { Editor } from '@tiptap/core'
+import React from 'react'
+import { flushSync } from 'react-dom'
+
 import { Editor as ExtendedEditor } from './Editor'
 
 function isClassComponent(Component: any) {
@@ -24,12 +26,12 @@ export interface ReactRendererOptions {
   className?: string,
 }
 
-type ComponentType<R> =
-  | React.ComponentClass
-  | React.FunctionComponent
-  | React.ForwardRefExoticComponent<{ items: any[], command: any } & React.RefAttributes<R>>
+type ComponentType<R, P> =
+  React.ComponentClass<P> |
+  React.FunctionComponent<P> |
+  React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<R>>;
 
-export class ReactRenderer<R = unknown> {
+export class ReactRenderer<R = unknown, P = unknown> {
   id: string
 
   editor: ExtendedEditor
@@ -44,7 +46,7 @@ export class ReactRenderer<R = unknown> {
 
   ref: R | null = null
 
-  constructor(component: ComponentType<R>, {
+  constructor(component: ComponentType<R, P>, {
     editor,
     props = {},
     as = 'div',
@@ -76,14 +78,18 @@ export class ReactRenderer<R = unknown> {
 
     this.reactElement = <Component {...props } />
 
-    if (this.editor?.contentComponent) {
-      this.editor.contentComponent.setState({
-        renderers: this.editor.contentComponent.state.renderers.set(
-          this.id,
-          this,
-        ),
+    queueMicrotask(() => {
+      flushSync(() => {
+        if (this.editor?.contentComponent) {
+          this.editor.contentComponent.setState({
+            renderers: this.editor.contentComponent.state.renderers.set(
+              this.id,
+              this,
+            ),
+          })
+        }
       })
-    }
+    })
   }
 
   updateProps(props: Record<string, any> = {}): void {
@@ -96,14 +102,18 @@ export class ReactRenderer<R = unknown> {
   }
 
   destroy(): void {
-    if (this.editor?.contentComponent) {
-      const { renderers } = this.editor.contentComponent.state
+    queueMicrotask(() => {
+      flushSync(() => {
+        if (this.editor?.contentComponent) {
+          const { renderers } = this.editor.contentComponent.state
 
-      renderers.delete(this.id)
+          renderers.delete(this.id)
 
-      this.editor.contentComponent.setState({
-        renderers,
+          this.editor.contentComponent.setState({
+            renderers,
+          })
+        }
       })
-    }
+    })
   }
 }

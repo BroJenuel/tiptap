@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { NodeViewWrapper } from '@tiptap/react'
 import './Component.scss'
+
+import { NodeViewWrapper } from '@tiptap/react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 export default ({ editor }) => {
   const [items, setItems] = useState([])
@@ -28,6 +29,7 @@ export default ({ editor }) => {
       }
     })
 
+    transaction.setMeta('addToHistory', false)
     transaction.setMeta('preventUpdate', true)
 
     editor.view.dispatch(transaction)

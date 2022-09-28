@@ -1,7 +1,8 @@
-import React from 'react'
-import { useEditor, EditorContent, FloatingMenu } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
 import './styles.scss'
+
+import { EditorContent, FloatingMenu, useEditor } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
+import React, { useEffect } from 'react'
 
 export default () => {
   const editor = useEditor({
@@ -16,9 +17,21 @@ export default () => {
     `,
   })
 
+  const [isEditable, setIsEditable] = React.useState(true)
+
+  useEffect(() => {
+    if (editor) {
+      editor.setEditable(isEditable)
+    }
+  }, [isEditable, editor])
+
   return (
     <>
-      {editor && <FloatingMenu editor={editor}>
+      <div>
+        <input type="checkbox" checked={isEditable} onChange={() => setIsEditable(!isEditable)} />
+        Editable
+      </div>
+      {editor && <FloatingMenu editor={editor} tippyOptions={{ duration: 100 }}>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
           className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}

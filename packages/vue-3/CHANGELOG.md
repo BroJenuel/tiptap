@@ -3,6 +3,171 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.97](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.96...@tiptap/vue-3@2.0.0-beta.97) (2022-09-03)
+
+
+### Bug Fixes
+
+* vue inject grammar warning ([#3144](https://github.com/ueberdosis/tiptap/issues/3144)) ([c6c5fa6](https://github.com/ueberdosis/tiptap/commit/c6c5fa623a875411b0e72dc3f8f88166f2f8fa1e))
+
+
+
+
+
+# [2.0.0-beta.96](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.95...@tiptap/vue-3@2.0.0-beta.96) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.95](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.94...@tiptap/vue-3@2.0.0-beta.95) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.94](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.92...@tiptap/vue-3@2.0.0-beta.94) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.92](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.92...@tiptap/vue-3@2.0.0-beta.92) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.91](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.90...@tiptap/vue-3@2.0.0-beta.91) (2022-04-27)
+
+
+### Bug Fixes
+
+* improve Vue nodeViewProps typing ([190a699](https://github.com/ueberdosis/tiptap/commit/190a6993d4d93b4d37b978b33ef22690ed8269b6))
+
+
+
+
+
+# [2.0.0-beta.90](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.89...@tiptap/vue-3@2.0.0-beta.90) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.89](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.88...@tiptap/vue-3@2.0.0-beta.89) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.88](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.87...@tiptap/vue-3@2.0.0-beta.88) (2022-01-11)
+
+
+### Bug Fixes
+
+* Mark `@tiptap/vue-2` and `@tiptap/vue-3` as side effect free ([be8ca68](https://github.com/ueberdosis/tiptap/commit/be8ca68d97c8f169d548e72253d5e6406fcb4c5b))
+
+
+
+
+
+# [2.0.0-beta.87](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.86...@tiptap/vue-3@2.0.0-beta.87) (2022-01-05)
+
+
+### Bug Fixes
+
+* revert type changes for useEditor in vue-3 package ([3ba3afb](https://github.com/ueberdosis/tiptap/commit/3ba3afbea38b9b46b5d164e0d6a374ecd0ef63c6))
+
+
+
+
+
+# [2.0.0-beta.86](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.85...@tiptap/vue-3@2.0.0-beta.86) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.85](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.84...@tiptap/vue-3@2.0.0-beta.85) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.84](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.83...@tiptap/vue-3@2.0.0-beta.84) (2021-12-15)
+
+**Note:** Version bump only for package @tiptap/vue-3
+
+
+
+
+
+# [2.0.0-beta.83](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.82...@tiptap/vue-3@2.0.0-beta.83) (2021-12-10)
+
+
+### Features
+
+* add support for template strings in VueNodeViewRenderer, fix [#1987](https://github.com/ueberdosis/tiptap/issues/1987) ([7c98f80](https://github.com/ueberdosis/tiptap/commit/7c98f80547b8aff9d574732d20f8a3b565b9fdb2))
+
+
+
+
+
 # [2.0.0-beta.82](https://github.com/ueberdosis/tiptap/compare/@tiptap/vue-3@2.0.0-beta.81...@tiptap/vue-3@2.0.0-beta.82) (2021-12-02)
 
 **Note:** Version bump only for package @tiptap/vue-3

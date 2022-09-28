@@ -1,7 +1,7 @@
 {
   "name": "@tiptap/react",
   "description": "React components for tiptap",
-  "version": "2.0.0-beta.98",
+  "version": "2.0.0-beta.197",
   "homepage": "https://tiptap.dev",
   "keywords": [
     "tiptap",
@@ -21,24 +21,25 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "@types/react": "^18.0.1",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "peerDependencies": {
-    "@tiptap/core": "^2.0.0-beta.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "@tiptap/core": "^2.0.0-beta.193",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@tiptap/extension-bubble-menu": "^2.0.0-beta.51",
-    "@tiptap/extension-floating-menu": "^2.0.0-beta.46",
-    "prosemirror-view": "^1.23.3"
+    "@tiptap/extension-bubble-menu": "^2.0.0-beta.197",
+    "@tiptap/extension-floating-menu": "^2.0.0-beta.197",
+    "prosemirror-view": "^1.28.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ueberdosis/tiptap",
     "directory": "packages/react"
-  }
+  },
+  "sideEffects": false
 }

@@ -1,7 +1,7 @@
 import { Editor, Extension } from '@tiptap/core'
 import { Node as ProsemirrorNode } from 'prosemirror-model'
-import { Decoration, DecorationSet } from 'prosemirror-view'
 import { Plugin } from 'prosemirror-state'
+import { Decoration, DecorationSet } from 'prosemirror-view'
 
 export interface PlaceholderOptions {
   emptyEditorClass: string,
@@ -10,6 +10,7 @@ export interface PlaceholderOptions {
     editor: Editor,
     node: ProsemirrorNode,
     pos: number,
+    hasAnchor: boolean,
   }) => string) | string,
   showOnlyWhenEditable: boolean,
   showOnlyCurrent: boolean,
@@ -40,7 +41,7 @@ export const Placeholder = Extension.create<PlaceholderOptions>({
             const decorations: Decoration[] = []
 
             if (!active) {
-              return
+              return null
             }
 
             doc.descendants((node, pos) => {
@@ -61,6 +62,7 @@ export const Placeholder = Extension.create<PlaceholderOptions>({
                       editor: this.editor,
                       node,
                       pos,
+                      hasAnchor,
                     })
                     : this.options.placeholder,
                 })

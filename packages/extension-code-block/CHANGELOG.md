@@ -3,6 +3,136 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.41...@tiptap/extension-code-block@2.0.0-beta.42) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.40...@tiptap/extension-code-block@2.0.0-beta.41) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.40](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.38...@tiptap/extension-code-block@2.0.0-beta.40) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.38...@tiptap/extension-code-block@2.0.0-beta.38) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.36...@tiptap/extension-code-block@2.0.0-beta.37) (2022-01-26)
+
+
+### Bug Fixes
+
+* add attributes to pre tag instead of code tag by default, fix [#2440](https://github.com/ueberdosis/tiptap/issues/2440) ([85fcc29](https://github.com/ueberdosis/tiptap/commit/85fcc29ac6ef9e07847d5e0a5cdd318f4300a832))
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.35...@tiptap/extension-code-block@2.0.0-beta.36) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.34...@tiptap/extension-code-block@2.0.0-beta.35) (2022-01-05)
+
+
+### Bug Fixes
+
+* prevent named capturing groups, fix [#2128](https://github.com/ueberdosis/tiptap/issues/2128) ([0e9930f](https://github.com/ueberdosis/tiptap/commit/0e9930f90f253f8667d1436dcf6c93279fda9aed))
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.33...@tiptap/extension-code-block@2.0.0-beta.34) (2022-01-05)
+
+
+### Features
+
+* add exitOnTripleEnter and exitOnArrowDown options to CodeBlock extension ([a35b7fb](https://github.com/ueberdosis/tiptap/commit/a35b7fbe2cee0390895aaeb358503b5ead116b64))
+
+
+
+
+
+# [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.32...@tiptap/extension-code-block@2.0.0-beta.33) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/extension-code-block
+
+
+
+
+
+# [2.0.0-beta.32](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.31...@tiptap/extension-code-block@2.0.0-beta.32) (2021-12-16)
+
+
+### Features
+
+* escape code blocks on arrow down, fix [#1204](https://github.com/ueberdosis/tiptap/issues/1204) ([ffafff9](https://github.com/ueberdosis/tiptap/commit/ffafff9e365f9636fae4a67bb825d49b7d95cb94))
+
+
+
+
+
 # [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-code-block@2.0.0-beta.30...@tiptap/extension-code-block@2.0.0-beta.31) (2021-12-05)
 
 

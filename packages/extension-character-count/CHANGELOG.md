@@ -3,6 +3,161 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.31](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.30...@tiptap/extension-character-count@2.0.0-beta.31) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.29...@tiptap/extension-character-count@2.0.0-beta.30) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.27...@tiptap/extension-character-count@2.0.0-beta.29) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.27...@tiptap/extension-character-count@2.0.0-beta.27) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.25...@tiptap/extension-character-count@2.0.0-beta.26) (2022-04-27)
+
+
+### Bug Fixes
+
+* remove extension-text-style from character-cout peer dependencies ([2fc6a4b](https://github.com/ueberdosis/tiptap/commit/2fc6a4b780bdf7a365e21717ebd99a8e8b2c113d))
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.24...@tiptap/extension-character-count@2.0.0-beta.25) (2022-02-11)
+
+
+### Bug Fixes
+
+* improve bundle size of character count extension, fix [#2519](https://github.com/ueberdosis/tiptap/issues/2519) ([fbfe1d9](https://github.com/ueberdosis/tiptap/commit/fbfe1d9992ee3b49db62bdf50d99321a3fa7ad95))
+
+
+
+
+
+# [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.23...@tiptap/extension-character-count@2.0.0-beta.24) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/extension-character-count
+
+
+
+
+
+# [2.0.0-beta.23](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.22...@tiptap/extension-character-count@2.0.0-beta.23) (2021-12-14)
+
+
+### Bug Fixes
+
+* allow null and undefined for CharacterCount limit, fix [#2276](https://github.com/ueberdosis/tiptap/issues/2276) ([dd4bcb8](https://github.com/ueberdosis/tiptap/commit/dd4bcb81f05f980b143c46f97f108c28b02c1caf))
+
+
+
+
+
+# [2.0.0-beta.22](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.21...@tiptap/extension-character-count@2.0.0-beta.22) (2021-12-10)
+
+
+### Bug Fixes
+
+* mark characterCount storage method types as optional ([ed7f93a](https://github.com/ueberdosis/tiptap/commit/ed7f93a2b84234b365f74ff39424f72ca5cf42ea))
+
+
+
+
+
+# [2.0.0-beta.21](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.20...@tiptap/extension-character-count@2.0.0-beta.21) (2021-12-10)
+
+
+### Bug Fixes
+
+* fix types for characterCount storage methods ([d1daf9c](https://github.com/ueberdosis/tiptap/commit/d1daf9cca06b4ac5855485533255b1275391b524))
+
+
+
+
+
+# [2.0.0-beta.20](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.19...@tiptap/extension-character-count@2.0.0-beta.20) (2021-12-09)
+
+
+### Bug Fixes
+
+* calculate the number of words across linebreaks correctly ([0879a2f](https://github.com/ueberdosis/tiptap/commit/0879a2f71684e28e6de5a392b4ea675e11327d1f))
+
+
+
+
+
+# [2.0.0-beta.19](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.18...@tiptap/extension-character-count@2.0.0-beta.19) (2021-12-08)
+
+
+### Features
+
+* add some improvements to `CharacterCount` extension ([#2256](https://github.com/ueberdosis/tiptap/issues/2256)), fix [#1049](https://github.com/ueberdosis/tiptap/issues/1049), fix [#1550](https://github.com/ueberdosis/tiptap/issues/1550), fix [#1839](https://github.com/ueberdosis/tiptap/issues/1839), fix [#2245](https://github.com/ueberdosis/tiptap/issues/2245) ([5daa870](https://github.com/ueberdosis/tiptap/commit/5daa870b0906f0387fe07041681bc6f5b3774617))
+
+
+
+
+
 # [2.0.0-beta.18](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-character-count@2.0.0-beta.17...@tiptap/extension-character-count@2.0.0-beta.18) (2021-11-09)
 
 **Note:** Version bump only for package @tiptap/extension-character-count

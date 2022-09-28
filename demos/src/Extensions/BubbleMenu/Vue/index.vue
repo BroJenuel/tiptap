@@ -1,6 +1,10 @@
 <template>
   <div>
-    <bubble-menu :editor="editor" v-if="editor">
+    <div>
+      <input type="checkbox" :checked="isEditable" @change="() => isEditable = !isEditable">
+      Editable
+    </div>
+    <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }" v-if="editor">
       <button @click="editor.chain().focus().toggleBold().run()" :class="{ 'is-active': editor.isActive('bold') }">
         bold
       </button>
@@ -16,8 +20,8 @@
 </template>
 
 <script>
-import { Editor, EditorContent, BubbleMenu } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
+import { BubbleMenu, Editor, EditorContent } from '@tiptap/vue-3'
 
 export default {
   components: {
@@ -28,7 +32,14 @@ export default {
   data() {
     return {
       editor: null,
+      isEditable: true,
     }
+  },
+
+  watch: {
+    isEditable(value) {
+      this.editor.setEditable(value)
+    },
   },
 
   mounted() {
@@ -56,5 +67,9 @@ export default {
   > * + * {
     margin-top: 0.75em;
   }
+}
+
+input[type="checkbox"] {
+  margin-right: 4px;
 }
 </style>

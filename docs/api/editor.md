@@ -92,13 +92,6 @@ editor.isActive('heading', { level: 2 })
 editor.isActive({ textAlign: 'justify' })
 ```
 
-### getCharacterCount()
-Get the number of characters for the current document.
-
-```js
-editor.getCharacterCount()
-```
-
 ### registerPlugin()
 Register a ProseMirror plugin.
 
@@ -124,14 +117,14 @@ editor.setOptions({
   },
 })
 ```
-  
+
 ### setEditable()
 Update editable state of the editor.
-  
+
 | Parameter | Type    | Description                                                   |
 | --------- | ------- | ------------------------------------------------------------- |
 | editable  | boolean | `true` when the user should be able to write into the editor. |
-  
+
 ```js
 // Make the editor read-only
 editor.setEditable(false)
@@ -163,7 +156,7 @@ editor.isEmpty
 ## Settings
 
 ### element
-The `element` specifies the HTML element the editor will be binded too. The following code will integrate Tiptap with an element with the `.element` class:
+The `element` specifies the HTML element the editor will be binded to. The following code will integrate Tiptap with an element with the `.element` class:
 
 ```js
 import { Editor } from '@tiptap/core'
@@ -353,6 +346,22 @@ new Editor({
     StarterKit,
   ],
   injectCSS: false,
+})
+```
+
+### injectNonce
+When you use a [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) with `nonce`, you can specify a `nonce` to be added to dynamically created elements. Here is an example:
+
+```js
+import { Editor } from '@tiptap/core'
+import StarterKit from '@tiptap/starter-kit'
+
+new Editor({
+  extensions: [
+    StarterKit,
+  ],
+  injectCSS: true,
+  injectNonce: "your-nonce-here"
 })
 ```
 

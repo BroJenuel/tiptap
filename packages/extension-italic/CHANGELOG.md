@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-italic
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-italic
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-italic
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-italic
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-italic@2.0.0-beta.26...@tiptap/extension-italic@2.0.0-beta.28) (2022-06-17)
+
+**Note:** Version bump only for package @tiptap/extension-italic
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-italic@2.0.0-beta.25...@tiptap/extension-italic@2.0.0-beta.26) (2022-02-03)
+
+
+### Features
+
+* Add key bindings for uppercase letters for bold, italic and underline ([#2478](https://github.com/ueberdosis/tiptap/issues/2478)) ([b9bd469](https://github.com/ueberdosis/tiptap/commit/b9bd46964534c488dca21585786374b2f06ff03c)), closes [ProseMirror/prosemirror#895](https://github.com/ProseMirror/prosemirror/issues/895) [#2426](https://github.com/ueberdosis/tiptap/issues/2426)
+
+
+
+
+
 # [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-italic@2.0.0-beta.24...@tiptap/extension-italic@2.0.0-beta.25) (2021-12-02)
 
 

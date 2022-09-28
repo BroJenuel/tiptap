@@ -1,5 +1,7 @@
 import { Mark, markPasteRule, mergeAttributes } from '@tiptap/core'
-import { find } from 'linkifyjs'
+import { find, registerCustomProtocol } from 'linkifyjs'
+import { Plugin } from 'prosemirror-state'
+
 import { autolink } from './helpers/autolink'
 import { clickHandler } from './helpers/clickHandler'
 import { pasteHandler } from './helpers/pasteHandler'
@@ -9,6 +11,10 @@ export interface LinkOptions {
    * If enabled, it adds links as you type.
    */
   autolink: boolean,
+  /**
+   * An array of custom protocols to be registered with linkifyjs.
+   */
+  protocols: Array<string>,
   /**
    * If enabled, links will be opened on click.
    */
@@ -21,6 +27,12 @@ export interface LinkOptions {
    * A list of HTML attributes to be rendered.
    */
   HTMLAttributes: Record<string, any>,
+  /**
+   * A validation function that modifies link verification for the auto linker.
+   * @param url - The url to be validated.
+   * @returns - True if the url is valid, false otherwise.
+   */
+  validate?: (url: string) => boolean,
 }
 
 declare module '@tiptap/core' {
@@ -49,6 +61,10 @@ export const Link = Mark.create<LinkOptions>({
 
   keepOnSplit: false,
 
+  onCreate() {
+    this.options.protocols.forEach(registerCustomProtocol)
+  },
+
   inclusive() {
     return this.options.autolink
   },
@@ -58,10 +74,13 @@ export const Link = Mark.create<LinkOptions>({
       openOnClick: true,
       linkOnPaste: true,
       autolink: true,
+      protocols: [],
       HTMLAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow',
+        class: null,
       },
+      validate: undefined,
     }
   },
 
@@ -73,12 +92,15 @@ export const Link = Mark.create<LinkOptions>({
       target: {
         default: this.options.HTMLAttributes.target,
       },
+      class: {
+        default: this.options.HTMLAttributes.class,
+      },
     }
   },
 
   parseHTML() {
     return [
-      { tag: 'a[href]' },
+      { tag: 'a[href]:not([href *= "javascript:" i])' },
     ]
   },
 
@@ -92,16 +114,25 @@ export const Link = Mark.create<LinkOptions>({
 
   addCommands() {
     return {
-      setLink: attributes => ({ commands }) => {
-        return commands.setMark(this.name, attributes)
+      setLink: attributes => ({ chain }) => {
+        return chain()
+          .setMark(this.name, attributes)
+          .setMeta('preventAutolink', true)
+          .run()
       },
 
-      toggleLink: attributes => ({ commands }) => {
-        return commands.toggleMark(this.name, attributes, { extendEmptyMarkRange: true })
+      toggleLink: attributes => ({ chain }) => {
+        return chain()
+          .toggleMark(this.name, attributes, { extendEmptyMarkRange: true })
+          .setMeta('preventAutolink', true)
+          .run()
       },
 
-      unsetLink: () => ({ commands }) => {
-        return commands.unsetMark(this.name, { extendEmptyMarkRange: true })
+      unsetLink: () => ({ chain }) => {
+        return chain()
+          .unsetMark(this.name, { extendEmptyMarkRange: true })
+          .setMeta('preventAutolink', true)
+          .run()
       },
     }
   },
@@ -110,6 +141,13 @@ export const Link = Mark.create<LinkOptions>({
     return [
       markPasteRule({
         find: text => find(text)
+          .filter(link => {
+            if (this.options.validate) {
+              return this.options.validate(link.value)
+            }
+
+            return true
+          })
           .filter(link => link.isLink)
           .map(link => ({
             text: link.value,
@@ -125,11 +163,12 @@ export const Link = Mark.create<LinkOptions>({
   },
 
   addProseMirrorPlugins() {
-    const plugins = []
+    const plugins: Plugin[] = []
 
     if (this.options.autolink) {
       plugins.push(autolink({
         type: this.type,
+        validate: this.options.validate,
       }))
     }
 

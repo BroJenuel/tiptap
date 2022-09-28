@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
+import { Editor, EditorContent } from '@tiptap/vue-3'
 
 export default {
   components: {
@@ -18,6 +18,8 @@ export default {
     },
   },
 
+  emits: ['update:modelValue'],
+
   data() {
     return {
       editor: null,
@@ -30,7 +32,7 @@ export default {
       const isSame = this.editor.getHTML() === value
 
       // JSON
-      // const isSame = this.editor.getJSON().toString() === value.toString()
+      // const isSame = JSON.stringify(this.editor.getJSON()) === JSON.stringify(value)
 
       if (isSame) {
         return

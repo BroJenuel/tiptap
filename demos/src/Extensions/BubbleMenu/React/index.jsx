@@ -1,7 +1,8 @@
-import React from 'react'
-import { useEditor, EditorContent, BubbleMenu } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
 import './styles.scss'
+
+import { BubbleMenu, EditorContent, useEditor } from '@tiptap/react'
+import StarterKit from '@tiptap/starter-kit'
+import React, { useEffect } from 'react'
 
 export default () => {
   const editor = useEditor({
@@ -15,9 +16,21 @@ export default () => {
     `,
   })
 
+  const [isEditable, setIsEditable] = React.useState(true)
+
+  useEffect(() => {
+    if (editor) {
+      editor.setEditable(isEditable)
+    }
+  }, [isEditable, editor])
+
   return (
     <>
-      {editor && <BubbleMenu editor={editor}>
+      <div>
+        <input type="checkbox" checked={isEditable} onChange={() => setIsEditable(!isEditable)} />
+        Editable
+      </div>
+      {editor && <BubbleMenu editor={editor} tippyOptions={{ duration: 100 }}>
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}

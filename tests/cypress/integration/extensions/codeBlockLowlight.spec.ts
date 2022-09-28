@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
-import { Text } from '@tiptap/extension-text'
-import { Paragraph } from '@tiptap/extension-paragraph'
-import { Document } from '@tiptap/extension-document'
 import { Editor } from '@tiptap/core'
-import * as lowlight from 'lowlight'
+import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
+import { Document } from '@tiptap/extension-document'
+import { Paragraph } from '@tiptap/extension-paragraph'
+import { Text } from '@tiptap/extension-text'
+import { lowlight } from 'lowlight'
 
 describe('code block highlight', () => {
   let Frontmatter
@@ -25,10 +25,10 @@ describe('code block highlight', () => {
 
   beforeEach(() => {
     Frontmatter = CodeBlockLowlight
-      .configure({ lowlight })
       .extend({
         name: 'frontmatter',
       })
+      .configure({ lowlight })
 
     editor = new Editor({
       element: createEditorEl(),
@@ -36,7 +36,7 @@ describe('code block highlight', () => {
         Document,
         Text,
         Paragraph,
-        CodeBlockLowlight,
+        CodeBlockLowlight.configure({ lowlight }),
         Frontmatter,
       ],
       content: {

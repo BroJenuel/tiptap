@@ -3,6 +3,133 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+
+### Bug Fixes
+
+* **types:** fix link and table type errors ([#3208](https://github.com/ueberdosis/tiptap/issues/3208)) ([ae13cf6](https://github.com/ueberdosis/tiptap/commit/ae13cf61ad0ead942515d8c597f96a4b4d026412))
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.43](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.42...@tiptap/extension-link@2.0.0-beta.43) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.42](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.41...@tiptap/extension-link@2.0.0-beta.42) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.41](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.39...@tiptap/extension-link@2.0.0-beta.41) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.39](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.39...@tiptap/extension-link@2.0.0-beta.39) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.38](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.37...@tiptap/extension-link@2.0.0-beta.38) (2022-05-18)
+
+
+### Bug Fixes
+
+* **extension-link:** :bug: fix auto link validation not working on paste ([3a3eb53](https://github.com/ueberdosis/tiptap/commit/3a3eb5311c6fbf1c1000a099d21bb47c71370375))
+
+
+### Features
+
+* **extension-link:** :sparkles: add validate option to link extension ([23e67ad](https://github.com/ueberdosis/tiptap/commit/23e67adfa730df7364bc31220d0ed0e8ea522593)), closes [#2779](https://github.com/ueberdosis/tiptap/issues/2779)
+
+
+
+
+
+# [2.0.0-beta.37](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.36...@tiptap/extension-link@2.0.0-beta.37) (2022-04-27)
+
+
+### Bug Fixes
+
+* **extension-link:** restricts parsing `javascript:` pseudo-protocol ([947f311](https://github.com/ueberdosis/tiptap/commit/947f311c0ec9affdcaeb220d13d87c04c773f084))
+
+
+
+
+
+# [2.0.0-beta.36](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.35...@tiptap/extension-link@2.0.0-beta.36) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
+# [2.0.0-beta.35](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.34...@tiptap/extension-link@2.0.0-beta.35) (2022-01-07)
+
+
+### Bug Fixes
+
+* allow to remove autolinks with unsetLink ([ea10ffb](https://github.com/ueberdosis/tiptap/commit/ea10ffbc6a0f447c33680dcc6f6dc2fa6337c4c2))
+
+
+
+
+
+# [2.0.0-beta.34](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.33...@tiptap/extension-link@2.0.0-beta.34) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/extension-link
+
+
+
+
+
 # [2.0.0-beta.33](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-link@2.0.0-beta.32...@tiptap/extension-link@2.0.0-beta.33) (2021-12-06)
 
 **Note:** Version bump only for package @tiptap/extension-link

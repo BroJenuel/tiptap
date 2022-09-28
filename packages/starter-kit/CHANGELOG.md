@@ -3,6 +3,377 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.193](https://github.com/ueberdosis/tiptap/compare/v0.1.2...v2.0.0-beta.193) (2022-09-10)
+
+
+### Bug Fixes
+
+* add exports to package.json ([1277fa4](https://github.com/ueberdosis/tiptap/commit/1277fa47151e9c039508cdb219bdd0ffe647f4ee))
+* export starter kit extension options ([4a2a428](https://github.com/ueberdosis/tiptap/commit/4a2a428a4c59fd3cdae589816f823d759d7926bd))
+* improve export for StarterKitOptions ([8fcc80d](https://github.com/ueberdosis/tiptap/commit/8fcc80d68ec9471523ec0a8108035afef4d0f9f3))
+* let StarterKit be imported as cjs module ([#2967](https://github.com/ueberdosis/tiptap/issues/2967)) ([69d22d2](https://github.com/ueberdosis/tiptap/commit/69d22d2d3c3b3064641e0a1ba66a0a9ada90d6bd))
+* revert adding exports ([bc320d0](https://github.com/ueberdosis/tiptap/commit/bc320d0b4b80b0e37a7e47a56e0f6daec6e65d98))
+* revert adding type: module ([f8d6475](https://github.com/ueberdosis/tiptap/commit/f8d6475e2151faea6f96baecdd6bd75880d50d2c))
+
+
+### Features
+
+* add StarterKit extension ([21384fc](https://github.com/ueberdosis/tiptap/commit/21384fc7a66dd7d1e3849be52ae4ab9adc26cf4e))
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.192](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.191...@tiptap/starter-kit@2.0.0-beta.192) (2022-09-03)
+
+
+### Bug Fixes
+
+* let StarterKit be imported as cjs module ([#2967](https://github.com/ueberdosis/tiptap/issues/2967)) ([69d22d2](https://github.com/ueberdosis/tiptap/commit/69d22d2d3c3b3064641e0a1ba66a0a9ada90d6bd))
+
+
+
+
+
+# [2.0.0-beta.191](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.190...@tiptap/starter-kit@2.0.0-beta.191) (2022-07-06)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.190](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.189...@tiptap/starter-kit@2.0.0-beta.190) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.189](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.188...@tiptap/starter-kit@2.0.0-beta.189) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.188](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.186...@tiptap/starter-kit@2.0.0-beta.188) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.186](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.186...@tiptap/starter-kit@2.0.0-beta.186) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.185](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.184...@tiptap/starter-kit@2.0.0-beta.185) (2022-05-18)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.184](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.183...@tiptap/starter-kit@2.0.0-beta.184) (2022-04-27)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.183](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.182...@tiptap/starter-kit@2.0.0-beta.183) (2022-02-07)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.182](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.181...@tiptap/starter-kit@2.0.0-beta.182) (2022-02-07)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.181](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.180...@tiptap/starter-kit@2.0.0-beta.181) (2022-02-03)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.180](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.179...@tiptap/starter-kit@2.0.0-beta.180) (2022-01-28)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.179](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.178...@tiptap/starter-kit@2.0.0-beta.179) (2022-01-27)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.178](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.177...@tiptap/starter-kit@2.0.0-beta.178) (2022-01-27)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.177](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.176...@tiptap/starter-kit@2.0.0-beta.177) (2022-01-26)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.176](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.175...@tiptap/starter-kit@2.0.0-beta.176) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.175](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.174...@tiptap/starter-kit@2.0.0-beta.175) (2022-01-24)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.174](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.173...@tiptap/starter-kit@2.0.0-beta.174) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.173](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.172...@tiptap/starter-kit@2.0.0-beta.173) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.172](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.171...@tiptap/starter-kit@2.0.0-beta.172) (2022-01-20)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.171](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.170...@tiptap/starter-kit@2.0.0-beta.171) (2022-01-13)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.170](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.169...@tiptap/starter-kit@2.0.0-beta.170) (2022-01-11)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.169](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.168...@tiptap/starter-kit@2.0.0-beta.169) (2022-01-10)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.168](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.167...@tiptap/starter-kit@2.0.0-beta.168) (2022-01-05)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.167](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.166...@tiptap/starter-kit@2.0.0-beta.167) (2022-01-05)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.166](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.165...@tiptap/starter-kit@2.0.0-beta.166) (2022-01-05)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.165](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.164...@tiptap/starter-kit@2.0.0-beta.165) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.164](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.163...@tiptap/starter-kit@2.0.0-beta.164) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.163](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.162...@tiptap/starter-kit@2.0.0-beta.163) (2021-12-17)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.162](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.161...@tiptap/starter-kit@2.0.0-beta.162) (2021-12-16)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.161](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.160...@tiptap/starter-kit@2.0.0-beta.161) (2021-12-16)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.160](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.159...@tiptap/starter-kit@2.0.0-beta.160) (2021-12-15)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.159](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.158...@tiptap/starter-kit@2.0.0-beta.159) (2021-12-15)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.158](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.157...@tiptap/starter-kit@2.0.0-beta.158) (2021-12-14)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.157](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.156...@tiptap/starter-kit@2.0.0-beta.157) (2021-12-13)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.156](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.155...@tiptap/starter-kit@2.0.0-beta.156) (2021-12-10)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.155](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.154...@tiptap/starter-kit@2.0.0-beta.155) (2021-12-10)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
+# [2.0.0-beta.154](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.153...@tiptap/starter-kit@2.0.0-beta.154) (2021-12-08)
+
+**Note:** Version bump only for package @tiptap/starter-kit
+
+
+
+
+
 # [2.0.0-beta.153](https://github.com/ueberdosis/tiptap/compare/@tiptap/starter-kit@2.0.0-beta.152...@tiptap/starter-kit@2.0.0-beta.153) (2021-12-06)
 
 **Note:** Version bump only for package @tiptap/starter-kit

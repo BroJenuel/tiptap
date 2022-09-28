@@ -1,16 +1,17 @@
 import { EditorState, Plugin } from 'prosemirror-state'
-import { Editor } from './Editor'
+
 import { CommandManager } from './CommandManager'
+import { Editor } from './Editor'
 import { createChainableState } from './helpers/createChainableState'
-import { isRegExp } from './utilities/isRegExp'
-import { isNumber } from './utilities/isNumber'
 import {
-  Range,
-  ExtendedRegExpMatchArray,
-  SingleCommands,
-  ChainedCommands,
   CanCommands,
+  ChainedCommands,
+  ExtendedRegExpMatchArray,
+  Range,
+  SingleCommands,
 } from './types'
+import { isNumber } from './utilities/isNumber'
+import { isRegExp } from './utilities/isRegExp'
 
 export type PasteRuleMatch = {
   index: number,
@@ -34,7 +35,7 @@ export class PasteRule {
     commands: SingleCommands,
     chain: () => ChainedCommands,
     can: () => CanCommands,
-  }) => void
+  }) => void | null
 
   constructor(config: {
     find: PasteRuleFinder,
@@ -45,7 +46,7 @@ export class PasteRule {
       commands: SingleCommands,
       chain: () => ChainedCommands,
       can: () => CanCommands,
-    }) => void,
+    }) => void | null,
   }) {
     this.find = config.find
     this.handler = config.handler
@@ -88,21 +89,22 @@ function run(config: {
   state: EditorState,
   from: number,
   to: number,
-  rules: PasteRule[],
-  plugin: Plugin,
-}): any {
+  rule: PasteRule,
+}): boolean {
   const {
     editor,
     state,
     from,
     to,
-    rules,
+    rule,
   } = config
 
   const { commands, chain, can } = new CommandManager({
     editor,
     state,
   })
+
+  const handlers: (void | null)[] = []
 
   state.doc.nodesBetween(from, to, (node, pos) => {
     if (!node.isTextblock || node.type.spec.code) {
@@ -118,32 +120,36 @@ function run(config: {
       '\ufffc',
     )
 
-    rules.forEach(rule => {
-      const matches = pasteRuleMatcherHandler(textToMatch, rule.find)
+    const matches = pasteRuleMatcherHandler(textToMatch, rule.find)
 
-      matches.forEach(match => {
-        if (match.index === undefined) {
-          return
-        }
+    matches.forEach(match => {
+      if (match.index === undefined) {
+        return
+      }
 
-        const start = resolvedFrom + match.index + 1
-        const end = start + match[0].length
-        const range = {
-          from: state.tr.mapping.map(start),
-          to: state.tr.mapping.map(end),
-        }
+      const start = resolvedFrom + match.index + 1
+      const end = start + match[0].length
+      const range = {
+        from: state.tr.mapping.map(start),
+        to: state.tr.mapping.map(end),
+      }
 
-        rule.handler({
-          state,
-          range,
-          match,
-          commands,
-          chain,
-          can,
-        })
+      const handler = rule.handler({
+        state,
+        range,
+        match,
+        commands,
+        chain,
+        can,
       })
+
+      handlers.push(handler)
     })
   })
+
+  const success = handlers.every(handler => handler !== null)
+
+  return success
 }
 
 /**
@@ -151,65 +157,91 @@ function run(config: {
  * text that matches any of the given rules to trigger the rule’s
  * action.
  */
-export function pasteRulesPlugin(props: { editor: Editor, rules: PasteRule[] }): Plugin {
+export function pasteRulesPlugin(props: { editor: Editor, rules: PasteRule[] }): Plugin[] {
   const { editor, rules } = props
-  let isProseMirrorHTML = false
+  let dragSourceElement: Element | null = null
+  let isPastedFromProseMirror = false
+  let isDroppedFromProseMirror = false
 
-  const plugin = new Plugin({
-    props: {
-      handlePaste: (view, event) => {
-        const html = event.clipboardData?.getData('text/html')
+  const plugins = rules.map(rule => {
+    return new Plugin({
+      // we register a global drag handler to track the current drag source element
+      view(view) {
+        const handleDragstart = (event: DragEvent) => {
+          dragSourceElement = view.dom.parentElement?.contains(event.target as Element)
+            ? view.dom.parentElement
+            : null
+        }
 
-        isProseMirrorHTML = !!html?.includes('data-pm-slice')
+        window.addEventListener('dragstart', handleDragstart)
 
-        return false
+        return {
+          destroy() {
+            window.removeEventListener('dragstart', handleDragstart)
+          },
+        }
       },
-    },
-    appendTransaction: (transactions, oldState, state) => {
-      const transaction = transactions[0]
 
-      // stop if there is not a paste event
-      if (!transaction.getMeta('paste') || isProseMirrorHTML) {
-        return
-      }
+      props: {
+        handleDOMEvents: {
+          drop: view => {
+            isDroppedFromProseMirror = dragSourceElement === view.dom.parentElement
 
-      // stop if there is no changed range
-      const { doc, before } = transaction
-      const from = before.content.findDiffStart(doc.content)
-      const to = before.content.findDiffEnd(doc.content)
+            return false
+          },
 
-      if (!isNumber(from) || !to || from === to.b) {
-        return
-      }
+          paste: (view, event: Event) => {
+            const html = (event as ClipboardEvent).clipboardData?.getData('text/html')
 
-      // build a chainable state
-      // so we can use a single transaction for all paste rules
-      const tr = state.tr
-      const chainableState = createChainableState({
-        state,
-        transaction: tr,
-      })
+            isPastedFromProseMirror = !!html?.includes('data-pm-slice')
 
-      run({
-        editor,
-        state: chainableState,
-        from: Math.max(from - 1, 0),
-        to: to.b,
-        rules,
-        plugin,
-      })
+            return false
+          },
+        },
+      },
 
-      // stop if there are no changes
-      if (!tr.steps.length) {
-        return
-      }
+      appendTransaction: (transactions, oldState, state) => {
+        const transaction = transactions[0]
+        const isPaste = transaction.getMeta('uiEvent') === 'paste' && !isPastedFromProseMirror
+        const isDrop = transaction.getMeta('uiEvent') === 'drop' && !isDroppedFromProseMirror
 
-      return tr
-    },
+        if (!isPaste && !isDrop) {
+          return
+        }
 
-    // @ts-ignore
-    isPasteRules: true,
+        // stop if there is no changed range
+        const from = oldState.doc.content.findDiffStart(state.doc.content)
+        const to = oldState.doc.content.findDiffEnd(state.doc.content)
+
+        if (!isNumber(from) || !to || from === to.b) {
+          return
+        }
+
+        // build a chainable state
+        // so we can use a single transaction for all paste rules
+        const tr = state.tr
+        const chainableState = createChainableState({
+          state,
+          transaction: tr,
+        })
+
+        const handler = run({
+          editor,
+          state: chainableState,
+          from: Math.max(from - 1, 0),
+          to: to.b - 1,
+          rule,
+        })
+
+        // stop if there are no changes
+        if (!handler || !tr.steps.length) {
+          return
+        }
+
+        return tr
+      },
+    })
   })
 
-  return plugin
+  return plugins
 }

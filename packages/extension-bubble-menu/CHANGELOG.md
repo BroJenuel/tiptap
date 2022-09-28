@@ -3,6 +3,133 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+
+### Bug Fixes
+
+* **extension/bubble-menu:** :bug: fix bubble menu and floating menu being available when editor not editable ([#3195](https://github.com/ueberdosis/tiptap/issues/3195)) ([fa96749](https://github.com/ueberdosis/tiptap/commit/fa96749ce22ec67125da491cfeeb38623b9f0d6e))
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.62](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.61...@tiptap/extension-bubble-menu@2.0.0-beta.62) (2022-09-03)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.61](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.60...@tiptap/extension-bubble-menu@2.0.0-beta.61) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.60](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.59...@tiptap/extension-bubble-menu@2.0.0-beta.60) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.59](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.57...@tiptap/extension-bubble-menu@2.0.0-beta.59) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.57](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.57...@tiptap/extension-bubble-menu@2.0.0-beta.57) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.56](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.55...@tiptap/extension-bubble-menu@2.0.0-beta.56) (2022-04-27)
+
+
+### Bug Fixes
+
+* Mark the bubble/floating menu extensions as side effect free ([172513c](https://github.com/ueberdosis/tiptap/commit/172513cb445fa295dd9f7d7ec553ed22baa9d435))
+
+
+
+
+
+# [2.0.0-beta.55](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.54...@tiptap/extension-bubble-menu@2.0.0-beta.55) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.54](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.53...@tiptap/extension-bubble-menu@2.0.0-beta.54) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.53](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.52...@tiptap/extension-bubble-menu@2.0.0-beta.53) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/extension-bubble-menu
+
+
+
+
+
+# [2.0.0-beta.52](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.51...@tiptap/extension-bubble-menu@2.0.0-beta.52) (2021-12-15)
+
+
+### Bug Fixes
+
+* maybe hide tippy on blur, fix [#1433](https://github.com/ueberdosis/tiptap/issues/1433) ([063ced2](https://github.com/ueberdosis/tiptap/commit/063ced27ca55f331960b01ee6aea5623eee0ba49))
+
+
+
+
+
 # [2.0.0-beta.51](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-bubble-menu@2.0.0-beta.50...@tiptap/extension-bubble-menu@2.0.0-beta.51) (2021-12-02)
 
 **Note:** Version bump only for package @tiptap/extension-bubble-menu

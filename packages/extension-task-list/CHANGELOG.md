@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.29](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.27...@tiptap/extension-task-list@2.0.0-beta.29) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.27...@tiptap/extension-task-list@2.0.0-beta.27) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.25...@tiptap/extension-task-list@2.0.0-beta.26) (2021-12-22)
+
+**Note:** Version bump only for package @tiptap/extension-task-list
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.24...@tiptap/extension-task-list@2.0.0-beta.25) (2021-12-10)
+
+
+### Features
+
+* add itemTypeName option ([3d7c8e6](https://github.com/ueberdosis/tiptap/commit/3d7c8e642f31b1fa813e84dddc3968504477d536))
+
+
+
+
+
 # [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-task-list@2.0.0-beta.23...@tiptap/extension-task-list@2.0.0-beta.24) (2021-12-02)
 
 

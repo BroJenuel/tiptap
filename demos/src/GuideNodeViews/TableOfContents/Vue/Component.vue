@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { NodeViewWrapper, nodeViewProps } from '@tiptap/vue-3'
+import { nodeViewProps, NodeViewWrapper } from '@tiptap/vue-3'
 
 export default {
   components: {
@@ -55,6 +55,7 @@ export default {
         }
       })
 
+      transaction.setMeta('addToHistory', false)
       transaction.setMeta('preventUpdate', true)
 
       this.editor.view.dispatch(transaction)

@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-image
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-image
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-image
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-image
+
+
+
+
+
+# [2.0.0-beta.30](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.28...@tiptap/extension-image@2.0.0-beta.30) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.28](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.28...@tiptap/extension-image@2.0.0-beta.28) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.27](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.26...@tiptap/extension-image@2.0.0-beta.27) (2022-02-11)
+
+
+### Bug Fixes
+
+* don’t trigger image input rule on paste, fix [#2518](https://github.com/ueberdosis/tiptap/issues/2518) ([ecf270c](https://github.com/ueberdosis/tiptap/commit/ecf270c9e7b5848767e5380a37db622f9d8ab85e))
+
+
+
+
+
+# [2.0.0-beta.26](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.25...@tiptap/extension-image@2.0.0-beta.26) (2022-02-09)
+
+
+### Features
+
+* add allowBase64 option to image extension ([a97a46f](https://github.com/ueberdosis/tiptap/commit/a97a46fc51c5a4b2f46be21fa6701b977eb415f7))
+
+
+
+
+
+# [2.0.0-beta.25](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.24...@tiptap/extension-image@2.0.0-beta.25) (2022-01-28)
+
+
+### Bug Fixes
+
+* don’t allow base64 images at all, fix [#2455](https://github.com/ueberdosis/tiptap/issues/2455) ([999dbbe](https://github.com/ueberdosis/tiptap/commit/999dbbec1261d9b67fd3ab9ddba790d7d372d3ae))
+
+
+
+
+
 # [2.0.0-beta.24](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-image@2.0.0-beta.23...@tiptap/extension-image@2.0.0-beta.24) (2021-11-09)
 
 **Note:** Version bump only for package @tiptap/extension-image

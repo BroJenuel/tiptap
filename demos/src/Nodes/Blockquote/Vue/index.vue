@@ -3,10 +3,10 @@
     <button @click="editor.chain().focus().toggleBlockquote().run()" :class="{ 'is-active': editor.isActive('blockquote') }">
       toggleBlockquote
     </button>
-    <button @click="editor.chain().focus().setBlockquote().run()" :disabled="editor.isActive('blockquote')">
+    <button @click="editor.chain().focus().setBlockquote().run()" :disabled="!editor.can().setBlockquote()">
       setBlockquote
     </button>
-    <button @click="editor.chain().focus().unsetBlockquote().run()" :disabled="!editor.isActive('blockquote')">
+    <button @click="editor.chain().focus().unsetBlockquote().run()" :disabled="!editor.can().unsetBlockquote()">
       unsetBlockquote
     </button>
 
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import { Editor, EditorContent } from '@tiptap/vue-3'
+import Blockquote from '@tiptap/extension-blockquote'
 import Document from '@tiptap/extension-document'
 import Paragraph from '@tiptap/extension-paragraph'
 import Text from '@tiptap/extension-text'
-import Blockquote from '@tiptap/extension-blockquote'
+import { Editor, EditorContent } from '@tiptap/vue-3'
 
 export default {
   components: {

@@ -3,6 +3,108 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.197](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.196...v2.0.0-beta.197) (2022-09-26)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.196](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.195...v2.0.0-beta.196) (2022-09-20)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.195](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.194...v2.0.0-beta.195) (2022-09-14)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.194](https://github.com/ueberdosis/tiptap/compare/v2.0.0-beta.193...v2.0.0-beta.194) (2022-09-11)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.53](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.52...@tiptap/extension-placeholder@2.0.0-beta.53) (2022-06-27)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.52](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.51...@tiptap/extension-placeholder@2.0.0-beta.52) (2022-06-20)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.51](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.49...@tiptap/extension-placeholder@2.0.0-beta.51) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.49](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.49...@tiptap/extension-placeholder@2.0.0-beta.49) (2022-06-17)
+
+
+### Reverts
+
+* Revert "Publish" ([9c38d27](https://github.com/ueberdosis/tiptap/commit/9c38d2713e6feac5645ad9c1bfc57abdbf054576))
+
+
+
+
+
+# [2.0.0-beta.48](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.47...@tiptap/extension-placeholder@2.0.0-beta.48) (2022-02-03)
+
+
+### Bug Fixes
+
+* fix hasAnchor type for placeholder extension ([5257a3b](https://github.com/ueberdosis/tiptap/commit/5257a3b94832b22a49dfedfb6f2aeea9abc6255b))
+
+
+### Features
+
+* expose hasAnchor to custom placeholder function ([#2470](https://github.com/ueberdosis/tiptap/issues/2470)) ([2fe6e21](https://github.com/ueberdosis/tiptap/commit/2fe6e2135d677dd5cfa9de7d9aa5100619986056))
+
+
+
+
+
+# [2.0.0-beta.47](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.46...@tiptap/extension-placeholder@2.0.0-beta.47) (2022-01-25)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
+# [2.0.0-beta.46](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.45...@tiptap/extension-placeholder@2.0.0-beta.46) (2022-01-04)
+
+**Note:** Version bump only for package @tiptap/extension-placeholder
+
+
+
+
+
 # [2.0.0-beta.45](https://github.com/ueberdosis/tiptap/compare/@tiptap/extension-placeholder@2.0.0-beta.44...@tiptap/extension-placeholder@2.0.0-beta.45) (2021-12-02)
 
 **Note:** Version bump only for package @tiptap/extension-placeholder

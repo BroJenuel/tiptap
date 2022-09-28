@@ -1,35 +1,35 @@
 import {
-  Node,
-  ParentConfig,
-  mergeAttributes,
-  getExtensionField,
-  callOrReturn,
-} from '@tiptap/core'
-import {
-  tableEditing,
-  columnResizing,
-  goToNextCell,
-  addColumnBefore,
   addColumnAfter,
-  deleteColumn,
-  addRowBefore,
+  addColumnBefore,
   addRowAfter,
+  addRowBefore,
+  CellSelection,
+  columnResizing,
+  deleteColumn,
   deleteRow,
   deleteTable,
-  mergeCells,
-  splitCell,
-  toggleHeaderColumn,
-  toggleHeaderRow,
-  toggleHeaderCell,
-  setCellAttr,
   fixTables,
-  CellSelection,
-} from 'prosemirror-tables'
-import { NodeView } from 'prosemirror-view'
+  goToNextCell,
+  mergeCells,
+  setCellAttr,
+  splitCell,
+  tableEditing,
+  toggleHeader,
+  toggleHeaderCell,
+} from '@_ueberdosis/prosemirror-tables'
+import {
+  callOrReturn,
+  getExtensionField,
+  mergeAttributes,
+  Node,
+  ParentConfig,
+} from '@tiptap/core'
 import { TextSelection } from 'prosemirror-state'
+import { NodeView } from 'prosemirror-view'
+
+import { TableView } from './TableView'
 import { createTable } from './utilities/createTable'
 import { deleteTableWhenAllCellsSelected } from './utilities/deleteTableWhenAllCellsSelected'
-import { TableView } from './TableView'
 
 export interface TableOptions {
   HTMLAttributes: Record<string, any>,
@@ -157,10 +157,10 @@ export const Table = Node.create<TableOptions>({
         return splitCell(state, dispatch)
       },
       toggleHeaderColumn: () => ({ state, dispatch }) => {
-        return toggleHeaderColumn(state, dispatch)
+        return toggleHeader('column')(state, dispatch)
       },
       toggleHeaderRow: () => ({ state, dispatch }) => {
-        return toggleHeaderRow(state, dispatch)
+        return toggleHeader('row')(state, dispatch)
       },
       toggleHeaderCell: () => ({ state, dispatch }) => {
         return toggleHeaderCell(state, dispatch)

@@ -1,15 +1,17 @@
 import { EditorState, Plugin, TextSelection } from 'prosemirror-state'
-import { Editor } from './Editor'
+
 import { CommandManager } from './CommandManager'
+import { Editor } from './Editor'
 import { createChainableState } from './helpers/createChainableState'
-import { isRegExp } from './utilities/isRegExp'
+import { getTextContentFromNodes } from './helpers/getTextContentFromNodes'
 import {
-  Range,
-  ExtendedRegExpMatchArray,
-  SingleCommands,
-  ChainedCommands,
   CanCommands,
+  ChainedCommands,
+  ExtendedRegExpMatchArray,
+  Range,
+  SingleCommands,
 } from './types'
+import { isRegExp } from './utilities/isRegExp'
 
 export type InputRuleMatch = {
   index: number,
@@ -33,7 +35,7 @@ export class InputRule {
     commands: SingleCommands,
     chain: () => ChainedCommands,
     can: () => CanCommands,
-  }) => void
+  }) => void | null
 
   constructor(config: {
     find: InputRuleFinder,
@@ -44,7 +46,7 @@ export class InputRule {
       commands: SingleCommands,
       chain: () => ChainedCommands,
       can: () => CanCommands,
-    }) => void,
+    }) => void | null,
   }) {
     this.find = config.find
     this.handler = config.handler
@@ -87,7 +89,7 @@ function run(config: {
   text: string,
   rules: InputRule[],
   plugin: Plugin,
-}): any {
+}): boolean {
   const {
     editor,
     from,
@@ -114,13 +116,8 @@ function run(config: {
   }
 
   let matched = false
-  const maxMatch = 500
-  const textBefore = $from.parent.textBetween(
-    Math.max(0, $from.parentOffset - maxMatch),
-    $from.parentOffset,
-    undefined,
-    '\ufffc',
-  ) + text
+
+  const textBefore = getTextContentFromNodes($from) + text
 
   rules.forEach(rule => {
     if (matched) {
@@ -148,7 +145,7 @@ function run(config: {
       state,
     })
 
-    rule.handler({
+    const handler = rule.handler({
       state,
       range,
       match,
@@ -158,7 +155,7 @@ function run(config: {
     })
 
     // stop if there are no changes
-    if (!tr.steps.length) {
+    if (handler === null || !tr.steps.length) {
       return
     }
 
@@ -191,7 +188,7 @@ export function inputRulesPlugin(props: { editor: Editor, rules: InputRule[] }):
         return null
       },
       apply(tr, prev) {
-        const stored = tr.getMeta(this)
+        const stored = tr.getMeta(plugin)
 
         if (stored) {
           return stored
